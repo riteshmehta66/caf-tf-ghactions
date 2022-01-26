@@ -1,0 +1,139 @@
+
+keyvaults = {
+
+  eus2_storage_cmk_01 = {
+    name               = "{{configs.environment}}00sskv02loge2"         # change name to mgt{{configs.environment}}00ss0000akv02loge2 for actual deployments
+    resource_group_key = "eus2_kv_rg_01"
+    sku_name           = "standard"
+    
+
+    purge_protection_enabled = true
+    enabled_for_deployment        = true
+    // enabled_for_disk_encryption   = false
+    enabled_for_template_deployment = true
+
+
+    creation_policies = {
+      // logged_in_user = {
+      //   # if the key is set to "logged_in_user" add the user running terraform in the keyvault policy
+      //   # More examples in /examples/keyvault
+      //   key_permissions    = ["get", "purge", "create", "delete", "list", "update", "restore", "recover", "unwrapkey", "wrapkey", "purge", "encrypt", "decrypt", "sign", "verify"]
+      //   secret_permissions = ["Set", "Get", "List", "Delete", "Purge", "Recover"]
+      // }
+      aadgroup_kv_cmk = {
+        object_id        = "{{configs.diag_sa_encryption_kv_access_policy_group1_oid}}"
+        key_permissions    = ["get", "create", "delete", "list", "restore", "recover", "unwrapkey", "wrapkey", "encrypt", "decrypt", "sign", "verify"]
+        secret_permissions = ["Set", "Get", "List", "Delete", "Recover"]
+      }
+    }
+
+    // network = {
+    //   bypass         = "AzureServices"
+    //   default_action = "Deny"
+    //   ip_rules       = ["144.121.43.0/24"]
+    //   // subnets = {
+    //   //   subnet1 = {
+    //   //       lz_key                  = "caf_networking_vnets_vx1"
+    //   //       vnet_key                = "eus2_vnet_01"
+    //   //       subnet_key              = "eus2_vnet_01_snet_01"
+    //   //   }
+    //   //   subnet2 = {
+    //   //       lz_key                  = "caf_networking_vnets_vx1"
+    //   //       vnet_key                = "eus2_vnet_01"
+    //   //       subnet_key              = "eus2_vnet_01_snet_02"
+    //   //   }
+    //   // }
+    // }   
+    
+  }
+
+
+
+  cus_storage_cmk_01 = {
+    name               = "{{configs.environment}}00sskv02logc1"         # change name to mgt{{configs.environment}}00ss0000akv02logc1 for actual deployments
+    resource_group_key = "cus_kv_rg_01"
+    sku_name           = "standard"
+    
+
+    purge_protection_enabled = true
+    enabled_for_deployment        = true
+    // enabled_for_disk_encryption   = false
+    enabled_for_template_deployment = true
+
+
+    creation_policies = {
+      // logged_in_user = {
+      //   # if the key is set to "logged_in_user" add the user running terraform in the keyvault policy
+      //   # More examples in /examples/keyvault
+      //   key_permissions    = ["get", "purge", "create", "delete", "list", "update", "restore", "recover", "unwrapkey", "wrapkey", "purge", "encrypt", "decrypt", "sign", "verify"]
+      //   secret_permissions = ["Set", "Get", "List", "Delete", "Purge", "Recover"]
+      // }
+      aadgroup_kv_cmk = {
+        object_id        = "{{configs.diag_sa_encryption_kv_access_policy_group1_oid}}"
+        key_permissions    = ["get", "create", "delete", "list", "restore", "recover", "unwrapkey", "wrapkey", "encrypt", "decrypt", "sign", "verify"]
+        secret_permissions = ["Set", "Get", "List", "Delete", "Recover"]
+      }
+    }
+
+    // network = {
+    //   bypass         = "AzureServices"
+    //   default_action = "Deny"
+    //   ip_rules       = ["144.121.43.0/24"]
+    //   // subnets = {
+    //   //   subnet1 = {
+    //   //       lz_key                  = "caf_networking_vnets_vx1"
+    //   //       vnet_key                = "eus2_vnet_01"
+    //   //       subnet_key              = "eus2_vnet_01_snet_01"
+    //   //   }
+    //   //   subnet2 = {
+    //   //       lz_key                  = "caf_networking_vnets_vx1"
+    //   //       vnet_key                = "eus2_vnet_01"
+    //   //       subnet_key              = "eus2_vnet_01_snet_02"
+    //   //   }
+    //   // }
+    // }    
+  
+  }
+}
+
+
+keyvault_access_policies = {
+  # A maximum of 16 access policies per keyvault
+  eus2_storage_cmk_01 = {
+
+      diaglogs_region1_ss = {
+      diagnostic_storage_account_key = "diaglogs_region1_ss"
+      key_permissions     = ["get", "purge", "create", "delete", "list", "update", "restore", "recover", "unwrapkey", "wrapkey", "purge", "encrypt", "decrypt", "sign", "verify"]
+      secret_permissions  = ["Set", "Get", "List", "Delete", "Purge", "Recover"]
+    }
+  }
+
+  cus_storage_cmk_01 = {
+    
+      diaglogs_region2_ss = {
+      diagnostic_storage_account_key = "diaglogs_region2_ss"
+      key_permissions     = ["get", "purge", "create", "delete", "list", "update", "restore", "recover", "unwrapkey", "wrapkey", "purge", "encrypt", "decrypt", "sign", "verify"]
+      secret_permissions  = ["Set", "Get", "List", "Delete", "Purge", "Recover"]
+    }
+  }
+}
+
+
+keyvault_keys = {
+  eus2_diagnostic_storage_account_cmk = {
+    resource_group_key = "eus2_kv_rg_01"
+    name               = "{{configs.environment}}00ss0000astlogde2-cmk"        # change name to mgt{{configs.environment}}00ss0000astlogde2-cmk for actual deployments
+    keyvault_key       = "eus2_storage_cmk_01"
+    key_type           = "RSA"
+    key_size           = 2048
+    key_opts           = ["decrypt", "encrypt", "sign", "unwrapKey", "verify", "wrapKey"]
+  }
+  cus_diagnostic_storage_account_cmk = {
+    resource_group_key = "cus_kv_rg_01"
+    name               = "{{configs.environment}}00ss0000astlogdc1-cmk"        # change name to mgt{{configs.environment}}00ss0000astlogdc1-cmk for actual deployments
+    keyvault_key       = "cus_storage_cmk_01"
+    key_type           = "RSA"
+    key_size           = 2048
+    key_opts           = ["decrypt", "encrypt", "sign", "unwrapKey", "verify", "wrapKey"]
+  }
+}

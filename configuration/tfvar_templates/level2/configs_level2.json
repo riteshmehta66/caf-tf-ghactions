@@ -1,0 +1,41 @@
+{
+    "projects":
+    {
+        "vnet-hub-network":
+        {
+            "path" : "networking/vnet/hub-network",
+            "tfstate": "caf_level2_vnets_connectivity.tfstate",
+            "subscription_id": "{{configs.subscriptionid_platform_con1}}"
+        },
+        "vnet-bynlz":
+        {
+            "path" : "networking/vnet/bynlz",
+            "tfstate": "caf_level2_vnets_byn_lz.tfstate",
+            "subscription_id": "{{configs.subscriptionid_lz_byn1}}"
+        },
+        "vnet-identity":
+        {
+            "path" : "networking/vnet/identity",
+            "tfstate": "caf_level2_vnets_identity.tfstate",
+            "subscription_id": "{{configs.subscriptionid_platform_idm1}}"
+        },
+        "vnet-management":
+        {
+            "path" : "networking/vnet/management",
+            "tfstate": "caf_level2_vnets_management.tfstate",
+            "subscription_id": "{{configs.subscriptionid_platform_mgt1}}"
+        },
+        "vnet-peering":
+        {
+            "path" : "networking/peering",
+            "tfstate": "caf_level2_vnets_connectivity_networkpeering.tfstate",
+            "subscription_id": "{{configs.subscriptionid_platform_con1}}"
+        },
+        "pvt_dns":
+        {
+            "path" : "networking/pvt_dns",
+            "tfstate": "caf_level2_private_dns_connectivity.tfstate",
+            "subscription_id": "{{configs.subscriptionid_platform_con1}}"
+        }
+    }
+}

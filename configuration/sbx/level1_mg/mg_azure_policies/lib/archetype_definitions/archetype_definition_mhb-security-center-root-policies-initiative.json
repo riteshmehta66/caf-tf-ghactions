@@ -1,0 +1,42 @@
+{
+    "mhb-sbx-asc-root-pol": {
+        "policy_assignments": [
+            "email_notification_to_subscription_owner_high_severity_alerts_enabled",
+            "defender_for_kv_should_enabled",
+            "defender_for_st_should_enabled",
+            "defender_for_servers_should_enabled",
+            "subscriptions_should_have_contact_email_address_security_issues",
+            "ext_acc_with_write_permissions_should_removed_from_subscription",
+            "ext_acc_with_read_permissions_should_removed_from_subscription",
+            "spn_should_used_to_protect_subscriptions_instead_mgmt_certs",
+            "deprecated_acc_should_removed_from_subscription",
+            "email_notification_high_severity_alerts_should_enabled",
+            "mfa_should_enabled_acc_with_write_permissions_on_subscription",
+            "mfa_should_enabled_acc_with_owner_permissions_on_subscription",
+            "defender_for_rm_should_enabled",
+            "mfa_should_enabled_acc_with_read_permissions_on_subscription",
+            "maximum_3_owners_should_be_designated_for_your_subscription_hipaa",
+            "there_should_be_more_than_1_owner_assigned_to_subscription_hipaa",
+            "deprecated_acc_with_owner_permissions_should_removed_from_subscription_hipaa",
+            "ext_acc_with_owner_permissions_should_removed_from_subscription_hipaa",
+            "snet_should_be_associated_with_a_nsg_hipaa"
+        ],
+        "policy_definitions": [],
+        "policy_set_definitions": [],
+        "role_definitions": [],
+        "archetype_config": {
+            "parameters": {
+               "web_app_only_https": {
+                   "effect": "Disabled"
+               }
+            },
+            "access_control": {
+                "Virtual Machine Contributor": [                    
+                    "331ffa51-d7c2-4c25-9335-89ee061330bf",                    
+                    "2ea1c34b-dc6d-4bf8-9e03-30081b8f5ae2"                                       
+                ]
+            },
+            "_comment": "331ffa51-d7c2-4c25-9335-89ee061330bf = 331ffa51-d7c2-4c25-9335-89ee061330bf, 331ffa51-d7c2-4c25-9335-89ee061330bf = 331ffa51-d7c2-4c25-9335-89ee061330bf"
+        }
+    }
+}

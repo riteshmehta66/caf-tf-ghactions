@@ -1,0 +1,14 @@
+{
+    "platform-sbx-con-sbx": {
+        "policy_assignments": [
+        "mhb-sbx-fd-pol"
+        ],
+        "policy_definitions": [],
+        "policy_set_definitions": [],
+        "role_definitions": [],
+        "archetype_config": {
+            "parameters": {},
+            "access_control": {}
+        }
+    }
+}

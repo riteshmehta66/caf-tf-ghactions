@@ -1,0 +1,283 @@
+# this template is for developer deployments 
+# In this template change names to appropriate values for actual v/s dev deployments. 
+# For actual deployments, make sure you set passthrough=true in launchpad and replace with values given in comments.
+# For dev deployments, make sure you set passthrough=false in launchpad
+storage_accounts = {
+  level0 = {
+    name                     = "{{configs.environment}}cf0stdvopse2"          # change name to caf{{configs.environment}}cf0mhbastdvop00e2 for actual deployments
+    resource_group_key       = "level0"
+    account_kind             = "BlobStorage"
+    account_tier             = "Standard"
+    account_replication_type = "RAGRS"
+    
+    tags = {
+      ## Those tags must never be changed after being set as they are used by the rover to locate the launchpad and the tfstates.
+      # Only adjust the environment value at creation time
+      tfstate     = "level0"
+      // environment = "sandpit"
+      launchpad   = "launchpad"
+      ##      
+    }
+    containers = {
+      tfstate = {
+        name = "tfstate"
+      }
+    }
+
+    // network = {
+    //   bypass         = ["AzureServices","Logging","Metrics"]
+    //   default_action = "Deny"
+    //   ip_rules       = ["74.15.245.71"]
+    //   // subnets = {
+    //   //   subnet1 = {
+    //   //       lz_key                  = "caf_networking_vnets_vx1"
+    //   //       vnet_key                = "eus_vnet_01"
+    //   //       subnet_key              = "eus_vnet_01_snet_01"
+    //   //   }
+    //   //   subnet2 = {
+    //   //       lz_key                  = "caf_networking_vnets_vx1"
+    //   //       vnet_key                = "eus_vnet_01"
+    //   //       subnet_key              = "eus_vnet_01_snet_02"
+    //   //   }
+    //   // }
+    // }
+
+    enable_system_msi    = true
+    customer_managed_key = {
+      keyvault_key     = "storage_byok"
+      keyvault_key_key = "launchpad_level0"
+    }
+  }
+
+
+  level1 = {
+    name                     = "{{configs.environment}}cf1stdvopse2"          # change name to caf{{configs.environment}}cf1mhbastdvop00e2 for actual deployments
+    resource_group_key       = "level1"
+    account_kind             = "BlobStorage"
+    account_tier             = "Standard"
+    account_replication_type = "RAGRS"
+    tags = {
+      ##
+      # Those tags must never be changed while set as they are used by the rover to locate the launchpad and the tfstates.
+      tfstate     = "level1"
+      // environment = "sandpit"
+      launchpad   = "launchpad"
+      ##      
+    }
+
+    containers = {
+      tfstate = {
+        name = "tfstate"
+      }
+    }
+
+    enable_system_msi    = true
+    customer_managed_key = {
+      keyvault_key     = "storage_byok"
+      keyvault_key_key = "launchpad_level1"
+    }
+
+    // network = {
+    //   bypass         = ["AzureServices"]
+    //   default_action = "Deny"
+    //   ip_rules       = ["74.15.245.71"]
+    //   // subnets = {
+    //   //   subnet1 = {
+    //   //       lz_key                  = "caf_networking_vnets_vx1"
+    //   //       vnet_key                = "eus_vnet_01"
+    //   //       subnet_key              = "eus_vnet_01_snet_01"
+    //   //   }
+    //   //   subnet2 = {
+    //   //       lz_key                  = "caf_networking_vnets_vx1"
+    //   //       vnet_key                = "eus_vnet_01"
+    //   //       subnet_key              = "eus_vnet_01_snet_02"
+    //   //   }
+    //   // }
+    // }
+  }
+
+  level2 = {
+    name                     = "{{configs.environment}}cf2stdvopse2"          # change name to caf{{configs.environment}}cf2mhbastdvop00e2 for actual deployments
+    resource_group_key       = "level2"
+    account_kind             = "BlobStorage"
+    account_tier             = "Standard"
+    account_replication_type = "RAGRS"
+    tags = {
+      ##
+      # Those tags must never be changed while set as they are used by the rover to locate the launchpad and the tfstates.
+      tfstate     = "level2"
+      // environment = "sandpit"
+      launchpad   = "launchpad"
+      ##      
+    }
+
+    containers = {
+      tfstate = {
+        name = "tfstate"
+      }
+    }
+
+    enable_system_msi    = true
+    customer_managed_key = {
+      keyvault_key     = "storage_byok"
+      keyvault_key_key = "launchpad_level2"
+    }
+
+    // network = {
+    //   bypass         = ["AzureServices"]
+    //   default_action = "Deny"
+    //   ip_rules       = ["74.15.245.71"]
+    //   // subnets = {
+    //   //   subnet1 = {
+    //   //       lz_key                  = "caf_networking_vnets_vx1"
+    //   //       vnet_key                = "eus_vnet_01"
+    //   //       subnet_key              = "eus_vnet_01_snet_01"
+    //   //   }
+    //   //   subnet2 = {
+    //   //       lz_key                  = "caf_networking_vnets_vx1"
+    //   //       vnet_key                = "eus_vnet_01"
+    //   //       subnet_key              = "eus_vnet_01_snet_02"
+    //   //   }
+    //   // }
+    // }
+  }
+
+  level3 = {
+    name                     = "{{configs.environment}}cf3stdvopse2"          # change name to caf{{configs.environment}}cf3mhbastdvop00e2 for actual deployments          
+    resource_group_key       = "level3"
+    account_kind             = "BlobStorage"
+    account_tier             = "Standard"
+    account_replication_type = "RAGRS"
+    tags = {
+      ##
+      # Those tags must never be changed while set as they are used by the rover to locate the launchpad and the tfstates.
+      tfstate     = "level3"
+      // environment = "sandpit"
+      launchpad   = "launchpad"
+      ##      
+    }
+
+    containers = {
+      tfstate = {
+        name = "tfstate"
+      }
+    }
+
+    enable_system_msi    = true
+    customer_managed_key = {
+      keyvault_key     = "storage_byok"
+      keyvault_key_key = "launchpad_level3"
+    }
+
+    // network = {
+    //   bypass         = ["AzureServices"]
+    //   default_action = "Deny"
+    //   ip_rules       = ["74.15.245.71"]
+    //   // subnets = {
+    //   //   subnet1 = {
+    //   //       lz_key                  = "caf_networking_vnets_vx1"
+    //   //       vnet_key                = "eus_vnet_01"
+    //   //       subnet_key              = "eus_vnet_01_snet_01"
+    //   //   }
+    //   //   subnet2 = {
+    //   //       lz_key                  = "caf_networking_vnets_vx1"
+    //   //       vnet_key                = "eus_vnet_01"
+    //   //       subnet_key              = "eus_vnet_01_snet_02"
+    //   //   }
+    //   // }
+    // }
+  }
+
+  level4 = {
+    name                     = "{{configs.environment}}cf4stdvopse2"          # change name to caf{{configs.environment}}cf4mhbastdvop00e2 for actual deployments
+    resource_group_key       = "level4"
+    account_kind             = "BlobStorage"
+    account_tier             = "Standard"
+    account_replication_type = "RAGRS"
+    enable_https_traffic_only = true
+    allow_blob_public_access  = false
+
+    logging = {
+      delete                = true
+      read                  = true
+      write                 = true
+      version               = true
+      retention_policy_days = "30"
+    }
+
+    minute_metrics = {
+      enabled               = true
+      version               = true
+      include_apis          = true
+      retention_policy_days = "30"
+    }
+
+    hour_metrics = {
+      enabled               = true
+      version               = true
+      include_apis          = true
+      retention_policy_days = "30"
+    }
+
+    // blob_properties = {
+    //   delete_retention_policy = {
+    //     days  = "30"
+    //   }
+    //   container_delete_retention_policy = {
+    //     days  =   "30"
+    //   }
+    // }
+
+    // container_delete_retention_policy = {
+    //     days  =   "30"
+    //   }
+
+    
+
+    tags = {
+      ##
+      # Those tags must never be changed while set as they are used by the rover to locate the launchpad and the tfstates.
+      tfstate     = "level4"
+      // environment = "sandpit"
+      launchpad   = "launchpad"
+      ##      
+    }
+
+    containers = {
+      tfstate = {
+        name = "tfstate"
+        // container_delete_retention_policy = {
+        //   days  =   "30"
+        // }
+      }
+      // container_delete_retention_policy = {
+      //   days  =   "30"
+      // }
+
+    }
+
+    enable_system_msi    = true
+    customer_managed_key = {
+      keyvault_key     = "storage_byok"
+      keyvault_key_key = "launchpad_level4"
+    }
+
+    // network = {
+    //   bypass         = ["AzureServices"]
+    //   default_action = "Deny"
+    //   ip_rules       = ["74.15.245.71"]
+    //   // subnets = {
+    //   //   subnet1 = {
+    //   //       lz_key                  = "caf_networking_vnets_vx1"
+    //   //       vnet_key                = "eus_vnet_01"
+    //   //       subnet_key              = "eus_vnet_01_snet_01"
+    //   //   }
+    //   //   subnet2 = {
+    //   //       lz_key                  = "caf_networking_vnets_vx1"
+    //   //       vnet_key                = "eus_vnet_01"
+    //   //       subnet_key              = "eus_vnet_01_snet_02"
+    //   //   }
+    //   // }
+    // }
+  }
+}

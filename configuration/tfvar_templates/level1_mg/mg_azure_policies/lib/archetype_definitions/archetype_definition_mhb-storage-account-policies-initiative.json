@@ -1,0 +1,28 @@
+{
+    "mhb-{{configs.environment}}-st-pol": {
+        "policy_assignments": [
+            "st_should_restrict_network_access_effect",
+            "st_should_use_private_link_effect",
+            "secure_transfer_to_st_should_be_enabled_hipaa",
+            "st_should_restrict_network_access_hipaa",
+            "st_should_use_vnet_se_hipaa"
+        ],
+        "policy_definitions": [],
+        "policy_set_definitions": [],
+        "role_definitions": [],
+        "archetype_config": {
+            "parameters": {
+               "web_app_only_https": {
+                   "effect": "Disabled"
+               }
+            },
+            "access_control": {
+                "Virtual Machine Contributor": [                    
+                    "331ffa51-d7c2-4c25-9335-89ee061330bf",                    
+                    "2ea1c34b-dc6d-4bf8-9e03-30081b8f5ae2"                                       
+                ]
+            },
+            "_comment": "331ffa51-d7c2-4c25-9335-89ee061330bf = 331ffa51-d7c2-4c25-9335-89ee061330bf, 331ffa51-d7c2-4c25-9335-89ee061330bf = 331ffa51-d7c2-4c25-9335-89ee061330bf"
+        }
+    }
+}

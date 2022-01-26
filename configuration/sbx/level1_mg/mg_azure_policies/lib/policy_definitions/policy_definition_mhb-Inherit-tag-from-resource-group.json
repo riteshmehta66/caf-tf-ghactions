@@ -1,0 +1,181 @@
+{
+  "name": "mhb-sbx-inherit-tag-pol",
+  "type": "Microsoft.Authorization/policyDefinitions",
+  "apiVersion": "2021-06-01",
+  "scope": null,
+  "properties": {
+    "displayName": "mhb-sbx-inherit-a-tag-from-the-resource-group",
+    "policyType": "Custom",
+    "mode": "All",
+    "description": "Adds or replaces the specified tag and value from the parent resource group when any resource is created or updated. Existing resources can be remediated by triggering a remediation task",
+    "metadata": {
+      "version": "1.0.0",
+      "category": "Tags"
+    },
+    "parameters": {
+      "tagName": {
+        "type": "String",
+        "metadata": {
+          "displayName": "Tag Name",
+          "description": "Name of the application, service, or workload the resource is associated with. Added granularity, if the workload is subdivided across multiple applications or services."
+        },
+        "defaultValue": "ApplicationName"
+      },
+      "tagName2": {
+        "type": "String",
+        "metadata": {
+          "displayName": "Tag Name 2",
+          "description": "Hours for sbxelopment "
+        },
+        "defaultValue": "sbxHours"
+      },
+      "tagName3": {
+        "type": "String",
+        "metadata": {
+          "displayName": "Tag Name 3",
+          "description": "Top-level division of your company that owns the subscription or workload the resource belongs to. In smaller organizations, this may represent a single corporate or shared top-level organizational element"
+        },
+        "defaultValue": "BusinessUnit"
+      },
+      "tagName4": {
+        "type": "String",
+        "metadata": {
+          "displayName": "Tag Name 4",
+          "description": "Deployment environment of this application, workload, or service"
+        },
+        "defaultValue": "Env"
+      },
+      "tagName5": {
+        "type": "String",
+        "metadata": {
+          "displayName": "Tag Name 5",
+          "description": "Owner of the application, workload, or service"
+        },
+        "defaultValue": "Owner"
+      },
+      "tagName6": {
+        "type": "String",
+        "metadata": {
+          "displayName": "Tag Name 6",
+          "description": "Name of the Customer"
+        },
+        "defaultValue": "CustomerName"
+      },
+      "tagName7": {
+        "type": "String",
+        "metadata": {
+          "displayName": "Tag Name 7",
+          "description": "Customer contact email address (distribution list/email group preferred)"
+        },
+        "defaultValue": "CustomerContact"
+      }      
+    },
+    "policyRule": {
+      "if": {
+        "allOf": [
+          {
+            "field": "[concat('tags[', parameters('tagName'), ']')]",
+            "notEquals": "[resourceGroup().tags[parameters('tagName')]]"
+          },
+          {
+            "value": "[resourceGroup().tags[parameters('tagName')]]",
+            "notEquals": ""
+          },
+          {
+            "field": "[concat('tags[', parameters('tagName2'), ']')]",
+            "notEquals": "[resourceGroup().tags[parameters('tagName2')]]"
+          },
+          {
+            "value": "[resourceGroup().tags[parameters('tagName2')]]",
+            "notEquals": ""
+          },
+          {
+            "field": "[concat('tags[', parameters('tagName3'), ']')]",
+            "notEquals": "[resourceGroup().tags[parameters('tagName3')]]"
+          },
+          {
+            "value": "[resourceGroup().tags[parameters('tagName3')]]",
+            "notEquals": ""
+          },
+          {
+            "field": "[concat('tags[', parameters('tagName4'), ']')]",
+            "notEquals": "[resourceGroup().tags[parameters('tagName4')]]"
+          },
+          {
+            "value": "[resourceGroup().tags[parameters('tagName4')]]",
+            "notEquals": ""
+          },
+          {
+            "field": "[concat('tags[', parameters('tagName5'), ']')]",
+            "notEquals": "[resourceGroup().tags[parameters('tagName5')]]"
+          },
+          {
+            "value": "[resourceGroup().tags[parameters('tagName5')]]",
+            "notEquals": ""
+          },
+          {
+            "field": "[concat('tags[', parameters('tagName6'), ']')]",
+            "notEquals": "[resourceGroup().tags[parameters('tagName6')]]"
+          },
+          {
+            "value": "[resourceGroup().tags[parameters('tagName6')]]",
+            "notEquals": ""
+          },
+          {
+            "field": "[concat('tags[', parameters('tagName7'), ']')]",
+            "notEquals": "[resourceGroup().tags[parameters('tagName7')]]"
+          },
+          {
+            "value": "[resourceGroup().tags[parameters('tagName7')]]",
+            "notEquals": ""
+          }
+        ]         
+      },
+      "then": {
+        "effect": "modify",
+        "details": {
+          "roleDefinitionIds": [
+            "/providers/microsoft.authorization/roleDefinitions/b24988ac-6180-42a0-ab88-20f7382dd24c"
+          ],
+          "operations": [
+            {
+              "operation": "addOrReplace",
+              "field": "[concat('tags[', parameters('tagName'), ']')]",
+              "value": "[resourceGroup().tags[parameters('tagName')]]"
+            },
+            {
+              "operation": "addOrReplace",
+              "field": "[concat('tags[', parameters('tagName2'), ']')]",
+              "value": "[resourceGroup().tags[parameters('tagName2')]]"
+            },
+            {
+              "operation": "addOrReplace",
+              "field": "[concat('tags[', parameters('tagName3'), ']')]",
+              "value": "[resourceGroup().tags[parameters('tagName3')]]"
+            },
+            {
+              "operation": "addOrReplace",
+              "field": "[concat('tags[', parameters('tagName4'), ']')]",
+              "value": "[resourceGroup().tags[parameters('tagName4')]]"
+            },
+            {
+              "operation": "addOrReplace",
+              "field": "[concat('tags[', parameters('tagName5'), ']')]",
+              "value": "[resourceGroup().tags[parameters('tagName5')]]"
+            },
+            {
+              "operation": "addOrReplace",
+              "field": "[concat('tags[', parameters('tagName6'), ']')]",
+              "value": "[resourceGroup().tags[parameters('tagName6')]]"
+            },
+            {
+              "operation": "addOrReplace",
+              "field": "[concat('tags[', parameters('tagName7'), ']')]",
+              "value": "[resourceGroup().tags[parameters('tagName7')]]"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

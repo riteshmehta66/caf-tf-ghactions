@@ -1,0 +1,61 @@
+{
+  "name": "mhb-{{configs.environment}}-add-tag-pol",
+  "type": "Microsoft.Authorization/policyAssignments",
+  "apiVersion": "2019-09-01",
+  "properties": {
+    "description": "Adds the specified tag and value when any resource group missing this tag is created or updated. Existing resource groups can be remediated by triggering a remediation task. If the tag exists with a different value it will not be changed",
+    "displayName": "mhb-{{configs.environment}}-add-a-tag-to-resource-group",
+    "notScopes": [],
+    "parameters": {
+      "tagName": {
+        "value": "ApplicationName"
+      },
+      "tagValue": {
+        "value": "Hybrid App"
+      },
+      "tagName2": {
+        "value": "{{configs.environment}}Hours"
+      },
+      "tagValue2": {
+        "value": "8am-6pm EST WDs (Week Days)"
+      },
+      "tagName3": {
+      "value":"BusinessUnit"
+      },
+      "tagValue3": {
+        "value": "FINANCE"
+      },
+      "tagName4": {
+        "value":"Env"
+      },
+      "tagValue4": {
+        "value": "{{configs.environment}}"
+      },
+      "tagName5": {
+        "value": "Owner"
+      },
+      "tagValue5": {
+        "value": "anejavijay@gmail.com"
+      },
+      "tagName6": {
+       "value": "CustomerName"
+      },
+      "tagValue6": {
+        "value": "Test"
+      },
+      "tagName7": {
+        "value": "CustomerContact"
+      },
+      "tagValue7": {
+        "value": "anejavijay@gmail.com"
+      }
+    },
+    "policyDefinitionId": "${root_scope_resource_id}/providers/Microsoft.Authorization/policyDefinitions/mhb-{{configs.environment}}-add-tag-pol",
+    "scope": "${current_scope_resource_id}",
+    "enforcementMode": null
+    },
+  "location": "${default_location}",
+  "identity": {
+    "type": "SystemAssigned"
+  }
+}

@@ -1,0 +1,109 @@
+{
+  "name": "mhb-sbx-aks-pol",
+  "type": "Microsoft.Authorization/policySetDefinitions",
+  "apiVersion": "2021-06-01",
+  "scope": null,
+  "properties": {
+    "policyType": "Custom",
+    "displayName": "mhb-sbx-aks-policy-initiative",
+    "description": "Group of policies in Kubernetes category",
+    "metadata": {
+      "version": "1.0.0",
+      "category": "Kubernetes"
+    },
+    "parameters": {
+      "policy_add_on_aks_should_be_installed_enabled_on_clusters_effect": {
+        "metadata": {
+          "displayName": "Azure Policy Add-on for Kubernetes service (AKS) should be installed and enabled on your clusters",
+          "description": "Azure Policy Add-on for Kubernetes service (AKS) extends Gatekeeper v3, an admission controller webhook for Open Policy Agent (OPA), to apply at-scale enforcements and safeguards on your clusters in a centralized, consistent manner"
+        },
+        "type": "String",
+        "defaultValue": "Audit",
+        "allowedValues": [
+          "Audit",
+          "Disabled"
+        ]
+      },
+      "aks_pcls_should_be_enabled_effect": {
+        "metadata": {
+          "displayName": "Azure Kubernetes Service Private Clusters should be enabled",
+          "description": "Enable the private cluster feature for your Azure Kubernetes Service cluster to ensure network traffic between your API server and your node pools remains on the private network only. This is a common requirement in many regulatory and industry compliance standards"
+        },
+        "type": "String",
+        "defaultValue": "Audit",
+        "allowedValues": [
+          "Audit",
+          "Deny",
+          "Disabled"
+        ]
+      },
+      "temp_disks_cache_for_agent_node_pools_in_aks_cls_encrypted_host_effect": {
+        "type": "String",
+        "defaultValue": "Audit",
+        "allowedValues": [
+          "Audit",
+          "Disabled"
+        ],
+        "metadata": {
+          "displayName": "Temp disks and cache for agent node pools in Azure Kubernetes Service clusters should be encrypted at host",
+          "description": "To enhance data security, the data stored on the virtual machine (VM) host of your Azure Kubernetes Service nodes VMs should be encrypted at rest. This is a common requirement in many regulatory and industry compliance standards"
+        }
+      },
+      "os_data_disks_in_aks_cls_should_be_encrypted_customer-managed_keys_effect": {
+        "type": "String",
+        "defaultValue": "Audit",
+        "allowedValues": [
+          "Audit",
+          "Disabled"
+        ],
+        "metadata": {
+          "displayName": "Both operating systems and data disks in Azure Kubernetes Service clusters should be encrypted by customer-managed keys",
+          "description": "Encrypting OS and data disks using customer-managed keys provides more control and greater flexibility in key management. This is a common requirement in many regulatory and industry compliance standards"
+        }                            
+      }            
+    },
+    "policyDefinitions": [
+      {
+        "policyDefinitionReferenceId": "policy_add_on_aks_should_be_installed_enabled_on_clusters_effect",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/0a15ec92-a229-4763-bb14-0ea34a568f8d",
+        "parameters": {
+          "effect": {
+            "value": "[parameters('policy_add_on_aks_should_be_installed_enabled_on_clusters_effect')]"
+          }
+        },
+        "groupNames": []
+      },
+      {
+        "policyDefinitionReferenceId": "aks_pcls_should_be_enabled_effect",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/040732e8-d947-40b8-95d6-854c95024bf8",
+        "parameters": {
+          "effect": {
+            "value": "[parameters('aks_pcls_should_be_enabled_effect')]"
+          }
+        },
+        "groupNames": []
+      },
+      {
+        "policyDefinitionReferenceId": "temp_disks_cache_for_agent_node_pools_in_aks_cls_encrypted_host_effect",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/41425d9f-d1a5-499a-9932-f8ed8453932c",
+        "parameters": {
+          "effect": {
+            "value": "[parameters('temp_disks_cache_for_agent_node_pools_in_aks_cls_encrypted_host_effect')]"
+          }
+        },
+        "groupNames": []
+      },
+      {
+        "policyDefinitionReferenceId": "os_data_disks_in_aks_cls_should_be_encrypted_customer-managed_keys_effect",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/7d7be79c-23ba-4033-84dd-45e2a5ccdd67",
+        "parameters": {
+          "effect": {
+            "value": "[parameters('os_data_disks_in_aks_cls_should_be_encrypted_customer-managed_keys_effect')]"
+          }
+        },
+        "groupNames": []
+      }           
+    ],
+    "policyDefinitionGroups": null
+  }
+}

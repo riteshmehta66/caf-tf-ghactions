@@ -1,0 +1,504 @@
+{
+  "name": "mhb-{{configs.environment}}-asc-lz-pol",
+  "type": "Microsoft.Authorization/policySetDefinitions",
+  "apiVersion": "2021-06-01",
+  "scope": null,
+  "properties": {
+    "policyType": "Custom",
+    "displayName": "mhb-{{configs.environment}}-asc-lz-policy-initiative",
+    "description": "Group of policies in Azure Security Center category",
+    "metadata": {
+      "version": "1.0.0",
+      "category": "Security Center"
+    },
+    "parameters": {
+      "allowlist_rules_your_adaptive_app_control_policy_should_updated_effect": {
+        "metadata": {
+          "displayName": "Allowlist rules in your adaptive application control policy should be updated",
+          "description": "Monitor for changes in behavior on groups of machines configured for auditing by Azure Security Center's adaptive application controls. Security Center uses machine learning to analyze the running processes on your machines and suggest a list of known-safe applications. These are presented as recommended apps to allow in adaptive application control policies"
+        },
+        "type": "String",
+        "defaultValue": "AuditIfNotExists",
+        "allowedValues": [
+          "AuditIfNotExists",
+          "Disabled"
+        ]
+      },
+      "defender_for_ase_should_enabled_effect": {
+        "metadata": {
+          "displayName": "Azure Defender for App Service should be enabled",
+          "description": "Azure Defender for App Service leverages the scale of the cloud, and the visibility that Azure has as a cloud provider, to monitor for common web app attacks"
+        },
+        "type": "String",
+        "defaultValue": "AuditIfNotExists",
+        "allowedValues": [
+          "AuditIfNotExists",
+          "Disabled"
+        ]
+      },
+      "defender_for_aks_should_enabled_effect": {
+        "type": "String",
+        "defaultValue": "AuditIfNotExists",
+        "allowedValues": [
+          "AuditIfNotExists",
+          "Disabled"
+        ],
+        "metadata": {
+          "displayName": "Azure Defender for Kubernetes should be enabled",
+          "description": "Azure Defender for Kubernetes provides real-time threat protection for containerized environments and generates alerts for suspicious activities"
+        }
+      },
+      "vulnerabilities_cr_images_should_remediated_effect": {
+        "type": "String",
+        "defaultValue": "AuditIfNotExists",
+        "allowedValues": [
+          "AuditIfNotExists",
+          "Disabled"
+        ],
+        "metadata": {
+          "displayName": "Vulnerabilities in Azure Container Registry images should be remediated",
+          "description": "Container image vulnerability assessment scans your registry for security vulnerabilities on each pushed container image and exposes detailed findings for each image (powered by Qualys). Resolving the vulnerabilities can greatly improve your containers' security posture and protect them from attacks"
+        }
+      },
+      "log_agent_should_installed_on_vmss_asc_monitoring_effect": {
+        "type": "String",
+        "defaultValue": "AuditIfNotExists",
+        "allowedValues": [
+          "AuditIfNotExists",
+          "Disabled"
+        ],
+        "metadata": {
+          "displayName": "Log Analytics agent should be installed on your virtual machine scale sets for Azure Security Center monitoring",
+          "description": "Security Center collects data from your Azure virtual machines (VMs) to monitor for security vulnerabilities and threats"
+        }
+      },
+      "log_agent_should_installed_on_vm_asc_monitoring_effect": {
+        "type": "String",
+        "defaultValue": "AuditIfNotExists",
+        "allowedValues": [
+          "AuditIfNotExists",
+          "Disabled"
+        ],
+        "metadata": {
+          "displayName": "Log Analytics agent should be installed on your virtual machine for Azure Security Center monitoring",
+          "description": "This policy audits any Windows/Linux virtual machines (VMs) if the Log Analytics agent is not installed which Security Center uses to monitor for security vulnerabilities and threats"
+        }
+      },
+      "guest_config_extension_should_installed_on_machines_effect": {
+        "type": "String",
+        "defaultValue": "AuditIfNotExists",
+        "allowedValues": [
+          "AuditIfNotExists",
+          "Disabled"
+        ],
+        "metadata": {
+          "displayName": "Guest Configuration extension should be installed on your machines",
+          "description": "To ensure secure configurations of in-guest settings of your machine, install the Guest Configuration extension. In-guest settings that the extension monitors include the configuration of the operating system, application configuration or presence, and environment settings. Once installed, in-guest policies will be available such as 'Windows Exploit guard should be enabled'. Learn more at https://aka.ms/gcpol"
+        }      
+      },
+      "ip_forwarding_on_vm_should_be_disabled_effect": {
+        "type": "String",
+        "defaultValue": "AuditIfNotExists",
+        "allowedValues": [
+          "AuditIfNotExists",
+          "Disabled"
+        ],
+        "metadata": {
+          "displayName": "IP Forwarding on your virtual machine should be disabled",
+          "description": "Enabling IP forwarding on a virtual machine's NIC allows the machine to receive traffic addressed to other destinations. IP forwarding is rarely required (e.g., when using the VM as a network virtual appliance), and therefore, this should be reviewed by the network security team"
+        }    
+      },
+      "defender_for_cr_should_be_enabled_effect": {
+        "type": "String",
+        "defaultValue": "AuditIfNotExists",
+        "allowedValues": [
+          "AuditIfNotExists",
+          "Disabled"
+        ],
+        "metadata": {
+          "displayName": "Azure Defender for container registries should be enabled",
+          "description": "Azure Defender for container registries provides vulnerability scanning of any images pulled within the last 30 days, pushed to your registry, or imported, and exposes detailed findings per image"
+        }
+      },
+      "vm_guest_config_ext_should_be_deployed_with_system-assigned_managed_identity_effect": {
+        "type": "String",
+        "defaultValue": "AuditIfNotExists",
+        "allowedValues": [
+          "AuditIfNotExists",
+          "Disabled"
+        ],
+        "metadata": {
+          "displayName": "Virtual machines' Guest Configuration extension should be deployed with system-assigned managed identity",
+          "description": "The Guest Configuration extension requires a system assigned managed identity. Azure virtual machines in the scope of this policy will be non-compliant when they have the Guest Configuration extension installed but do not have a system assigned managed identity. Learn more at https://aka.ms/gcpo"
+        }
+      },
+      "log_agent_health_issues_should_be_resolved_on_machines_effect": {
+        "type": "String",
+        "defaultValue": "AuditIfNotExists",
+        "allowedValues": [
+          "AuditIfNotExists",
+          "Disabled"
+        ],
+        "metadata": {
+          "displayName": "Log Analytics agent health issues should be resolved on your machines",
+          "description": "Security Center uses the Log Analytics agent, formerly known as the Microsoft Monitoring Agent (MMA). To make sure your virtual machines are successfully monitored, you need to make sure the agent is installed on the virtual machines and properly collects security events to the configured workspace"
+        }
+      },
+      "adaptive_app_controls_for_defining_safe_app_should_be_enabled_on_vm_hipaa_effect": {
+        "type": "String",
+        "defaultValue": "AuditIfNotExists",
+        "allowedValues": [
+          "AuditIfNotExists",
+          "Disabled"
+        ],
+        "metadata": {
+          "displayName": "Adaptive application controls for defining safe applications should be enabled on your machines",
+          "description": "Enable application controls to define the list of known-safe applications running on your machines, and alert you when other applications run. This helps harden your machines against malware. To simplify the process of configuring and maintaining your rules, Security Center uses machine learning to analyze the applications running on each machine and suggest the list of known-safe applications"
+        }
+      },
+      "adaptive_network_hardening_recommendations_should_applied_internet_facing_vm_hipaa_effect": {
+        "type": "String",
+        "defaultValue": "AuditIfNotExists",
+        "allowedValues": [
+          "AuditIfNotExists",
+          "Disabled"
+        ],
+        "metadata": {
+          "displayName": "Adaptive network hardening recommendations should be applied on internet facing virtual machines",
+          "description": "Azure Security Center analyzes the traffic patterns of Internet facing virtual machines and provides Network Security Group rule recommendations that reduce the potential attack surface"
+        }
+      },
+      "all_network_ports_should_be_restricted_on_nsg_associated_vm_hipaa_effect": {
+        "type": "String",
+        "defaultValue": "AuditIfNotExists",
+        "allowedValues": [
+          "AuditIfNotExists",
+          "Disabled"
+        ],
+        "metadata": {
+          "displayName": "All network ports should be restricted on network security groups associated to your virtual machine",
+          "description": "Azure Security Center has identified some of your network security groups' inbound rules to be too permissive. Inbound rules should not allow access from 'Any' or 'Internet' ranges. This can potentially enable attackers to target your resources"
+        }
+      },
+      "vulnerabilities_in_cr_security_config_should_be_remediated_hipaa_effect": {
+        "type": "String",
+        "defaultValue": "AuditIfNotExists",
+        "allowedValues": [
+          "AuditIfNotExists",
+          "Disabled"
+        ],
+        "metadata": {
+          "displayName": "Vulnerabilities in container security configurations should be remediated",
+          "description": "Audit vulnerabilities in security configuration on machines with Docker installed and display as recommendations in Azure Security Center"
+        }
+      },
+      "vulnerability_assessment_solution_should_be_enabled_on_vm_hipaa_effect": {
+        "type": "String",
+        "defaultValue": "AuditIfNotExists",
+        "allowedValues": [
+          "AuditIfNotExists",
+          "Disabled"
+        ],
+        "metadata": {
+          "displayName": "A vulnerability assessment solution should be enabled on your virtual machines",
+          "description": "Audits virtual machines to detect whether they are running a supported vulnerability assessment solution. A core component of every cyber risk and security program is the identification and analysis of vulnerabilities. Azure Security Center's standard pricing tier includes vulnerability scanning for your virtual machines at no extra cost. Additionally, Security Center can automatically deploy this tool for you"
+        }
+      },
+      "mgmt_ports_of_vm_should_be_protected_with_just-in-time_network_access_control_hipaa_effect": {
+        "type": "String",
+        "defaultValue": "AuditIfNotExists",
+        "allowedValues": [
+          "AuditIfNotExists",
+          "Disabled"
+        ],
+        "metadata": {
+          "displayName": "Management ports of virtual machines should be protected with just-in-time network access control",
+          "description": "Possible network Just In Time (JIT) access will be monitored by Azure Security Center as recommendations"
+        }
+      },
+      "rbac_should_be_used_on_aks_hipaa_effect": {
+        "type": "String",
+        "defaultValue": "Audit",
+        "allowedValues": [
+          "Audit",
+          "Disabled"
+        ],
+        "metadata": {
+          "displayName": "Role-Based Access Control (RBAC) should be used on Kubernetes Services",
+          "description": "To provide granular filtering on the actions that users can perform, use Role-Based Access Control (RBAC) to manage permissions in Kubernetes Service Clusters and configure relevant authorization policies"
+        }
+      },
+      "internet-facing_vm_should_be_protected_with_nsg_hipaa_effect": {
+        "type": "String",
+        "defaultValue": "AuditIfNotExists",
+        "allowedValues": [
+          "AuditIfNotExists",
+          "Disabled"
+        ],
+        "metadata": {
+          "displayName": "Internet-facing virtual machines should be protected with network security groups",
+          "description": "Protect your virtual machines from potential threats by restricting access to them with network security groups (NSG). Learn more about controlling traffic with NSGs at https://aka.ms/nsg-doc"
+        }
+      },
+      "vm_should_encrypt_temp_disks_caches_data_flows_between_compute_Storage_resources_hipaa_effect": {
+        "type": "String",
+        "defaultValue": "AuditIfNotExists",
+        "allowedValues": [
+          "AuditIfNotExists",
+          "Disabled"
+        ],
+        "metadata": {
+          "displayName": "Virtual machines should encrypt temp disks, caches, and data flows between Compute and Storage resources",
+          "description": "Virtual machines without an enabled disk encryption will be monitored by Azure Security Center as recommendations"
+        }
+      },
+      "mgmt_ports_should_be_closed_on_your_vm_hipaa_effect": {
+        "type": "String",
+        "defaultValue": "AuditIfNotExists",
+        "allowedValues": [
+          "AuditIfNotExists",
+          "Disabled"
+        ],
+        "metadata": {
+          "displayName": "Management ports should be closed on your virtual machines",
+          "description": "Open remote management ports are exposing your VM to a high level of risk from Internet-based attacks. These attacks attempt to brute force credentials to gain admin access to the machine"
+        }
+      },
+      "vulnerabilities_in_security_config_on_your_vm_should_be_remediated_hipaa_effect": {
+        "type": "String",
+        "defaultValue": "AuditIfNotExists",
+        "allowedValues": [
+          "AuditIfNotExists",
+          "Disabled"
+        ],
+        "metadata": {
+          "displayName": "Vulnerabilities in security configuration on your machines should be remediated",
+          "description": "Servers which do not satisfy the configured baseline will be monitored by Azure Security Center as recommendations"
+        }
+      }            
+    },
+    "policyDefinitions": [
+      {
+        "policyDefinitionReferenceId": "allowlist_rules_your_adaptive_app_control_policy_should_updated_effect",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/123a3936-f020-408a-ba0c-47873faf1534",
+        "parameters": {
+          "effect": {
+            "value": "[parameters('allowlist_rules_your_adaptive_app_control_policy_should_updated_effect')]"
+          }
+        },
+        "groupNames": []
+      },
+      {
+        "policyDefinitionReferenceId": "defender_for_ase_should_enabled_effect",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/2913021d-f2fd-4f3d-b958-22354e2bdbcb",
+        "parameters": {
+          "effect": {
+            "value": "[parameters('defender_for_ase_should_enabled_effect')]"
+          }
+        },
+        "groupNames": []
+      },
+      {
+        "policyDefinitionReferenceId": "defender_for_aks_should_enabled_effect",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/523b5cd1-3e23-492f-a539-13118b6d1e3a",
+        "parameters": {
+          "effect": {
+            "value": "[parameters('defender_for_aks_should_enabled_effect')]"
+          }
+        },
+        "groupNames": []
+      },
+      {
+        "policyDefinitionReferenceId": "vulnerabilities_cr_images_should_remediated_effect",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/5f0f936f-2f01-4bf5-b6be-d423792fa562",
+        "parameters": {
+          "effect": {
+            "value": "[parameters('vulnerabilities_cr_images_should_remediated_effect')]"
+          }
+        },
+        "groupNames": []
+      },
+      {
+        "policyDefinitionReferenceId": "log_agent_should_installed_on_vmss_asc_monitoring_effect",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/a3a6ea0c-e018-4933-9ef0-5aaa1501449b",
+        "parameters": {
+          "effect": {
+            "value": "[parameters('log_agent_should_installed_on_vmss_asc_monitoring_effect')]"
+          }
+        },
+        "groupNames": []
+      },
+      {
+        "policyDefinitionReferenceId": "log_agent_should_installed_on_vm_asc_monitoring_effect",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/a4fe33eb-e377-4efb-ab31-0784311bc499",
+        "parameters": {
+          "effect": {
+            "value": "[parameters('log_agent_should_installed_on_vm_asc_monitoring_effect')]"
+          }
+        },
+        "groupNames": [] 
+      },
+      {
+        "policyDefinitionReferenceId": "guest_config_extension_should_installed_on_machines_effect",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/ae89ebca-1c92-4898-ac2c-9f63decb045c",
+        "parameters": {
+          "effect": {
+            "value": "[parameters('guest_config_extension_should_installed_on_machines_effect')]"
+          }
+        },
+        "groupNames": []  
+      },
+      {
+        "policyDefinitionReferenceId": "ip_forwarding_on_vm_should_be_disabled_effect",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/bd352bd5-2853-4985-bf0d-73806b4a5744",
+        "parameters": {
+          "effect": {
+            "value": "[parameters('ip_forwarding_on_vm_should_be_disabled_effect')]"
+          }
+        },
+        "groupNames": []
+      },
+      {
+        "policyDefinitionReferenceId": "defender_for_cr_should_be_enabled_effect",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/c25d9a16-bc35-4e15-a7e5-9db606bf9ed4",
+        "parameters": {
+          "effect": {
+            "value": "[parameters('defender_for_cr_should_be_enabled_effect')]"
+          }
+        },
+        "groupNames": []
+      },
+      {
+        "policyDefinitionReferenceId": "vm_guest_config_ext_should_be_deployed_with_system-assigned_managed_identity_effect",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/d26f7642-7545-4e18-9b75-8c9bbdee3a9a",
+        "parameters": {
+          "effect": {
+            "value": "[parameters('vm_guest_config_ext_should_be_deployed_with_system-assigned_managed_identity_effect')]"
+          }
+        },
+        "groupNames": []
+      },
+      {
+        "policyDefinitionReferenceId": "log_agent_health_issues_should_be_resolved_on_machines_effect",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/d62cfe2b-3ab0-4d41-980d-76803b58ca65",
+        "parameters": {
+          "effect": {
+            "value": "[parameters('log_agent_health_issues_should_be_resolved_on_machines_effect')]"
+          }
+        },
+        "groupNames": []
+      },
+      {
+        "policyDefinitionReferenceId": "adaptive_app_controls_for_defining_safe_app_should_be_enabled_on_vm_hipaa_effect",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/47a6b606-51aa-4496-8bb7-64b11cf66adc",
+        "parameters": {
+          "effect": {
+            "value": "[parameters('adaptive_app_controls_for_defining_safe_app_should_be_enabled_on_vm_hipaa_effect')]"
+          }
+        },
+        "groupNames": []
+      },
+      {
+        "policyDefinitionReferenceId": "adaptive_network_hardening_recommendations_should_applied_internet_facing_vm_hipaa_effect",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/08e6af2d-db70-460a-bfe9-d5bd474ba9d6",
+        "parameters": {
+          "effect": {
+            "value": "[parameters('adaptive_network_hardening_recommendations_should_applied_internet_facing_vm_hipaa_effect')]"
+          }
+        },
+        "groupNames": []
+      },
+      {
+        "policyDefinitionReferenceId": "all_network_ports_should_be_restricted_on_nsg_associated_vm_effect",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/9daedab3-fb2d-461e-b861-71790eead4f6",
+        "parameters": {
+          "effect": {
+            "value": "[parameters('all_network_ports_should_be_restricted_on_nsg_associated_vm_hipaa_effect')]"
+          }
+        },
+        "groupNames": []
+      },
+      {
+        "policyDefinitionReferenceId": "vulnerabilities_in_cr_security_config_should_be_remediated_hipaa_effect",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/e8cbc669-f12d-49eb-93e7-9273119e9933",
+        "parameters": {
+          "effect": {
+            "value": "[parameters('vulnerabilities_in_cr_security_config_should_be_remediated_hipaa_effect')]"
+          }
+        },
+        "groupNames": []
+      },
+      {
+        "policyDefinitionReferenceId": "vulnerability_assessment_solution_should_be_enabled_on_vm_hipaa_effect",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/501541f7-f7e7-4cd6-868c-4190fdad3ac9",
+        "parameters": {
+          "effect": {
+            "value": "[parameters('vulnerability_assessment_solution_should_be_enabled_on_vm_hipaa_effect')]"
+          }
+        },
+        "groupNames": []
+      },
+      {
+        "policyDefinitionReferenceId": "mgmt_ports_of_vm_should_be_protected_with_just-in-time_network_access_control_hipaa_effect",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/b0f33259-77d7-4c9e-aac6-3aabcfae693c",
+        "parameters": {
+          "effect": {
+            "value": "[parameters('mgmt_ports_of_vm_should_be_protected_with_just-in-time_network_access_control_hipaa_effect')]"
+          }
+        },
+        "groupNames": []
+      },
+      {
+        "policyDefinitionReferenceId": "rbac_should_be_used_on_aks_hipaa_effect",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/ac4a19c2-fa67-49b4-8ae5-0b2e78c49457",
+        "parameters": {
+          "effect": {
+            "value": "[parameters('rbac_should_be_used_on_aks_hipaa_effect')]"
+          }
+        },
+        "groupNames": []
+      },
+      {
+        "policyDefinitionReferenceId": "internet-facing_vm_should_be_protected_with_nsg_hipaa_effect",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/f6de0be7-9a8a-4b8a-b349-43cf02d22f7c",
+        "parameters": {
+          "effect": {
+            "value": "[parameters('internet-facing_vm_should_be_protected_with_nsg_hipaa_effect')]"
+          }
+        },
+        "groupNames": []
+      },
+      {
+        "policyDefinitionReferenceId": "vm_should_encrypt_temp_disks_caches_data_flows_between_compute_Storage_resources_hipaa_effect",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/0961003e-5a0a-4549-abde-af6a37f2724d",
+        "parameters": {
+          "effect": {
+            "value": "[parameters('vm_should_encrypt_temp_disks_caches_data_flows_between_compute_Storage_resources_hipaa_effect')]"
+          }
+        },
+        "groupNames": []
+      },
+      {
+        "policyDefinitionReferenceId": "mgmt_ports_should_be_closed_on_your_vm_hipaa_effect",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/22730e10-96f6-4aac-ad84-9383d35b5917",
+        "parameters": {
+          "effect": {
+            "value": "[parameters('mgmt_ports_should_be_closed_on_your_vm_hipaa_effect')]"
+          }
+        },
+        "groupNames": []
+      },
+      {
+        "policyDefinitionReferenceId": "vulnerabilities_in_security_config_on_your_vm_should_be_remediated_hipaa_effect",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/e1e5fd5d-3e4c-4ce1-8661-7d1873ae6b15",
+        "parameters": {
+          "effect": {
+            "value": "[parameters('vulnerabilities_in_security_config_on_your_vm_should_be_remediated_hipaa_effect')]"
+          }
+        },
+        "groupNames": []
+      }                   
+    ],
+    "policyDefinitionGroups": null
+  }
+}

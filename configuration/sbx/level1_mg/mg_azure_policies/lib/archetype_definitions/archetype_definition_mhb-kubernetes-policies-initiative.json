@@ -1,0 +1,27 @@
+{
+    "mhb-sbx-aks-pol": {
+        "policy_assignments": [
+            "policy_add_on_aks_should_be_installed_enabled_on_clusters",
+            "aks_pcls_should_be_enabled",
+            "temp_disks_cache_for_agent_node_pools_in_aks_cls_encrypted_host",
+            "os_data_disks_in_aks_cls_should_be_encrypted_customer-managed_keys"
+        ],
+        "policy_definitions": [],
+        "policy_set_definitions": [],
+        "role_definitions": [],
+        "archetype_config": {
+            "parameters": {
+               "web_app_only_https": {
+                   "effect": "Disabled"
+               }
+            },
+            "access_control": {
+                "Virtual Machine Contributor": [                    
+                    "331ffa51-d7c2-4c25-9335-89ee061330bf",                    
+                    "2ea1c34b-dc6d-4bf8-9e03-30081b8f5ae2"                                       
+                ]
+            },
+            "_comment": "331ffa51-d7c2-4c25-9335-89ee061330bf = 331ffa51-d7c2-4c25-9335-89ee061330bf, 331ffa51-d7c2-4c25-9335-89ee061330bf = 331ffa51-d7c2-4c25-9335-89ee061330bf"
+        }
+    }
+}

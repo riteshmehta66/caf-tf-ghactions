@@ -1,0 +1,48 @@
+{
+    "lz-{{configs.environment}}-byn-{{configs.environment}}": {
+        "policy_assignments": [
+            "mhb-{{configs.environment}}-app-pol",
+            "mhb-{{configs.environment}}-cr-pol",
+            "mhb-{{configs.environment}}-aks-pol",
+            "mhb-{{configs.environment}}-sb-pol",
+            "mhb-{{configs.environment}}-evh-pol",
+            "mhb-{{configs.environment}}-cache-pol",
+            "mhb-{{configs.environment}}-backup-vm-pol",
+            "mhb-{{configs.environment}}-logic-pol",
+            "mhb-{{configs.environment}}-asa-pol",
+            "mhb-{{configs.environment}}-search-pol",
+            "mhb-{{configs.environment}}-aks-pod-base-pol",
+            "mhb-{{configs.environment}}-aks-pod-sec-pol",
+            "mhb-{{configs.environment}}-aks-pod-add-pol",
+            "mhb-{{configs.environment}}-aks-pod-vol-pol",
+            "mhb-{{configs.environment}}-aks-vol-type-pol",
+            "mhb-{{configs.environment}}-aks-https-pol",
+            "mhb-{{configs.environment}}-aks-pri-esc-pol",
+            "mhb-{{configs.environment}}-aks-int-lb-pol",
+            "mhb-{{configs.environment}}-aks-id-ipc-pol",
+            "mhb-{{configs.environment}}-app-armor-pol",
+            "mhb-{{configs.environment}}-aks-port-pol",
+            "mhb-{{configs.environment}}-aks-pri-con-pol",
+            "mhb-{{configs.environment}}-aks-pri-esc-pol",
+            "mhb-{{configs.environment}}-aks-alow-cap-pol",
+            "mhb-{{configs.environment}}-aks-eip-pol",
+            "mhb-{{configs.environment}}-aks-root-pol",
+            "mhb-{{configs.environment}}-aks-app-id-pol",
+            "mhb-{{configs.environment}}-aks-flex-vol-pol",
+            "mhb-{{configs.environment}}-aks-pr-typ-pol",
+            "mhb-{{configs.environment}}-aks-pol-aon-pol",
+            "mhb-{{configs.environment}}-aks-pvt-clus-pol",
+            "mhb-{{configs.environment}}-aks-tem-dsk-pol",
+            "mhb-{{configs.environment}}-aks-auth-ip-pol"            
+        ],
+        "policy_definitions": [
+        ],
+        "policy_set_definitions": [],
+        "role_definitions": [],
+        "archetype_config": {
+            "parameters": {},
+            "access_control": {},
+            "_comment": "331ffa51-d7c2-4c25-9335-89ee061330bf = 331ffa51-d7c2-4c25-9335-89ee061330bf, 331ffa51-d7c2-4c25-9335-89ee061330bf = 331ffa51-d7c2-4c25-9335-89ee061330bf"
+        }
+    }
+}

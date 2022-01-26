@@ -1,0 +1,47 @@
+{
+    "mhb-{{configs.environment}}-app-pol": {
+        "policy_assignments": [
+            "ftps_only_in_func_app",
+            "ftps_reqd_in_webapp",
+            "ftps_reqd_in_apiapp",
+            "managed_id_in_func_app",
+            "web_app_only_https",
+            "ensure_python_is_latest_if_used_part_of_api_app",
+            "ensure_java_is_latest_if_part_of_api_app",
+            "ensure_java_is_latest_if_part_of_function_app",
+            "function_apps_incoming_client_cert_enabled",
+            "api_app_accessible_over_https_hipaa",
+            "cor_should_not_allow_every_res_access_api_app_hipaa",
+            "cor_should_not_allow_every_res_access_func_app_hipaa",
+            "cor_should_not_allow_every_res_access_web_app_hipaa",
+            "diagnostic_logs_app_src_should_enable_hipaa",
+            "ensure_web_app_incoming_client_cert_set_on_hipaa",
+            "function_app_only_access_over_https_hipaa",
+            "latest_tls_should_be_used_api_app_hipaa",
+            "latest_tls_should_be_used_api_func_hipaa",
+            "latest_tls_should_be_used_api_web_hipaa",
+            "remote_debug_turned_off_for_api_apps_hipaa",
+            "remote_debug_turned_off_for_api_func_hipaa",
+            "remote_debug_turned_off_for_api_web_hipaa",
+            "web_app_should_be_access_over_https_hipaa",
+            "ase_should_use_vnet_se_hipaa"
+        ],
+        "policy_definitions": [],
+        "policy_set_definitions": [],
+        "role_definitions": [],
+        "archetype_config": {
+            "parameters": {
+               "web_app_only_https": {
+                   "effect": "Disabled"
+               }
+            },
+            "access_control": {
+                "Virtual Machine Contributor": [                    
+                    "331ffa51-d7c2-4c25-9335-89ee061330bf",                    
+                    "2ea1c34b-dc6d-4bf8-9e03-30081b8f5ae2"                                       
+                ]
+            },
+            "_comment": "331ffa51-d7c2-4c25-9335-89ee061330bf = 331ffa51-d7c2-4c25-9335-89ee061330bf, 331ffa51-d7c2-4c25-9335-89ee061330bf = 331ffa51-d7c2-4c25-9335-89ee061330bf"
+        }
+    }
+}

@@ -1,0 +1,11 @@
+{
+    "projects":
+    {
+        "management":
+        {
+            "path" : "management",
+            "tfstate": "caf_level1_management.tfstate",
+            "subscription_id": "{{configs.subscriptionid_platform_mgt1}}"
+        }
+    }
+}

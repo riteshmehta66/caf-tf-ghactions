@@ -1,0 +1,11 @@
+{
+    "projects":
+    {
+        "management":
+        {
+            "path" : "management",
+            "tfstate": "caf_level1_management.tfstate",
+            "subscription_id": "62d86ea5-6f86-4157-be46-57282363ba93"
+        }
+    }
+}

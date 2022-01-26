@@ -1,0 +1,64 @@
+{
+  "name": "mhb-sbx-monitoring-pol",
+  "type": "Microsoft.Authorization/policySetDefinitions",
+  "apiVersion": "2021-06-01",
+  "scope": null,
+  "properties": {
+    "policyType": "Custom",
+    "displayName": "mhb-sbx-monitoring-policy-initiative",
+    "description": "Group of policies in monitoring category",
+    "metadata": {
+      "version": "1.0.0",
+      "category": "Monitoring"
+    },
+    "parameters": {
+      "azure_monitor_should_collect_activity_logs_from_all_regions_hipaa_effect": {
+        "type": "String",
+        "defaultValue": "AuditIfNotExists",
+        "allowedValues": [
+          "AuditIfNotExists",
+          "Disabled"
+        ],
+        "metadata": {
+          "displayName": "Azure Monitor should collect activity logs from all regions",
+          "description": "This policy audits the Azure Monitor log profile which does not export activities from all Azure supported regions including global"
+        }
+      },
+      "azure_monitor_log_profile_collect_logs_categories_write_delete_action_hipaa_effect": {
+        "type": "String",
+        "defaultValue": "AuditIfNotExists",
+        "allowedValues": [
+          "AuditIfNotExists",
+          "Disabled"
+        ],
+        "metadata": {
+          "displayName": "Azure Monitor log profile should collect logs for categories 'write,' 'delete,' and 'action'",
+          "description": "This policy ensures that a log profile collects logs for categories 'write,' 'delete,' and 'action'"
+        }
+      }
+    },
+    "policyDefinitions": [
+      {
+        "policyDefinitionReferenceId": "azure_monitor_should_collect_activity_logs_from_all_regions_hipaa_effect",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/41388f1c-2db0-4c25-95b2-35d7f5ccbfa9",
+        "parameters": {
+          "effect": {
+            "value": "[parameters('azure_monitor_should_collect_activity_logs_from_all_regions_hipaa_effect')]"
+          }
+        },
+        "groupNames": []
+      },
+      {
+        "policyDefinitionReferenceId": "azure_monitor_log_profile_collect_logs_categories_write_delete_action_hipaa_effect",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/1a4e592a-6a6e-44a5-9814-e36264ca96e7",
+        "parameters": {
+          "effect": {
+           "value": "[parameters('azure_monitor_log_profile_collect_logs_categories_write_delete_action_hipaa_effect')]"
+          }
+        },
+        "groupNames": []
+      }                
+    ],
+    "policyDefinitionGroups": null
+  }
+}

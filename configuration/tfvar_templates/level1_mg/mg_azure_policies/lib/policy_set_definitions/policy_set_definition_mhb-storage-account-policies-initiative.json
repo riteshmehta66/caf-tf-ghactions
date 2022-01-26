@@ -1,0 +1,130 @@
+{
+  "name": "mhb-{{configs.environment}}-st-pol",
+  "type": "Microsoft.Authorization/policySetDefinitions",
+  "apiVersion": "2021-06-01",
+  "scope": null,
+  "properties": {
+    "policyType": "Custom",
+    "displayName": "mhb-{{configs.environment}}-storage-account-policy-initiative",
+    "description": "Group of policies in storage account category",
+    "metadata": {
+      "version": "1.0.0",
+      "category": "Storage"
+    },
+    "parameters": {
+      "st_should_restrict_network_access_effect": {
+        "type": "String",
+        "defaultValue": "Audit",
+        "allowedValues": [
+          "Audit",
+          "Disabled"
+        ],
+        "metadata": {
+          "displayName": "Storage accounts should restrict network access using virtual network rules",
+          "description": "Protect your storage accounts from potential threats using virtual network rules as a preferred method instead of IP-based filtering. Disabling IP-based filtering prevents public IPs from accessing your storage accounts"
+        }
+      },
+      "st_should_use_private_link_effect": {
+        "type": "String",
+        "defaultValue": "AuditIfNotExists",
+        "allowedValues": [
+          "AuditIfNotExists",
+          "Disabled"
+        ],
+        "metadata": {
+          "displayName": "Storage accounts should use private link",
+          "description": "Azure Private Link lets you connect your virtual network to Azure services without a public IP address at the source or destination. The Private Link platform handles the connectivity between the consumer and services over the Azure backbone network. By mapping private endpoints to your storage account, data leakage risks are reduced. Learn more about private links at - https://aka.ms/azureprivatelinkoverview"
+        }
+      },
+      "secure_transfer_to_st_should_be_enabled_hipaa_effect": {
+        "type": "String",
+        "defaultValue": "Audit",
+        "allowedValues": [
+          "Audit",
+          "Disabled"
+        ],
+        "metadata": {
+          "displayName": "Secure transfer to storage accounts should be enabled",
+          "description": "Audit requirement of Secure transfer in your storage account. Secure transfer is an option that forces your storage account to accept requests only from secure connections (HTTPS). Use of HTTPS ensures authentication between the server and the service and protects data in transit from network layer attacks such as man-in-the-middle, eavesdropping, and session-hijacking"
+        }
+      },
+      "st_should_restrict_network_access_hipaa_effect": {
+        "type": "String",
+        "defaultValue": "Audit",
+        "allowedValues": [
+          "Audit",
+          "Disabled"
+        ],
+        "metadata": {
+          "displayName": "Storage accounts should restrict network access",
+          "description": "Network access to storage accounts should be restricted. Configure network rules so only applications from allowed networks can access the storage account. To allow connections from specific internet or on-premises clients, access can be granted to traffic from specific Azure virtual networks or to public internet IP address ranges"
+        }
+      },
+      "st_should_use_vnet_se_hipaa_effect": {
+        "type": "String",
+        "defaultValue": "Audit",
+        "allowedValues": [
+          "Audit",
+          "Disabled"
+        ],
+        "metadata": {
+          "displayName": "Storage Accounts should use a virtual network service endpoint",
+          "description": "This policy audits any Storage Account not configured to use a virtual network service endpoint"
+        }
+      }
+    },
+    "policyDefinitions": [
+      {
+        "policyDefinitionReferenceId": "st_should_restrict_network_access_effect",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/2a1a9cdf-e04d-429a-8416-3bfb72a1b26f",
+        "parameters": {
+          "effect": {
+           "value": "[parameters('st_should_restrict_network_access_effect')]"
+          }
+        },
+        "groupNames": []
+      },
+      {
+        "policyDefinitionReferenceId": "st_should_use_private_link_effect",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/6edd7eda-6dd8-40f7-810d-67160c639cd9",
+        "parameters": {
+          "effect": {
+            "value": "[parameters('st_should_use_private_link_effect')]"
+          }
+        },
+        "groupNames": []
+      },
+      {
+        "policyDefinitionReferenceId": "secure_transfer_to_st_should_be_enabled_hipaa_effect",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/404c3081-a854-4457-ae30-26a93ef643f9",
+        "parameters": {
+          "effect": {
+            "value": "[parameters('secure_transfer_to_st_should_be_enabled_hipaa_effect')]"
+          }
+        },
+        "groupNames": []
+      },
+      {
+        "policyDefinitionReferenceId": "st_should_restrict_network_access_hipaa_effect",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/34c877ad-507e-4c82-993e-3452a6e0ad3c",
+        "parameters": {
+          "effect": {
+            "value": "[parameters('st_should_restrict_network_access_hipaa_effect')]"
+          }
+        },
+        "groupNames": []
+      },
+    {
+      "policyDefinitionReferenceId": "st_should_use_vnet_se_hipaa_effect",
+      "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/60d21c4f-21a3-4d94-85f4-b924e6aeeda4",
+      "parameters": {
+        "effect": {
+          "value": "[parameters('st_should_use_vnet_se_hipaa_effect')]"
+        }
+      },
+      "groupNames": []
+    }                    
+    ],
+    "policyDefinitionGroups": null
+  }
+}

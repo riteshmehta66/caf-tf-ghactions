@@ -1,0 +1,213 @@
+{
+  "name": "mhb-{{configs.environment}}-add-tag-pol",
+  "type": "Microsoft.Authorization/policyDefinitions",
+  "apiVersion": "2021-06-01",
+  "scope": null,
+  "properties": {
+    "displayName": "mhb-{{configs.environment}}-add-a-tag-to-resource-group",
+    "policyType": "Custom",
+    "mode": "All",
+    "description": "Adds the specified tag and value when any resource group missing this tag is created or updated. Existing resource groups can be remediated by triggering a remediation task. If the tag exists with a different value it will not be changed.",
+    "metadata": {
+      "version": "1.0.0",
+      "category": "Tags"
+    },
+    "parameters": {
+      "tagName": {
+        "type": "String",
+        "metadata": {
+          "displayName": "Tag Name",
+          "description": "Name of the application, service, or workload the resource is associated with. Added granularity, if the workload is subdivided across multiple applications or services."
+        },
+        "defaultValue": "ApplicationName"
+      },
+      "tagValue": {
+        "type": "String",
+        "metadata": {
+          "displayName": "Tag Value",
+          "description": "Name of the application, service, or workload the resource is associated with. Added granularity, if the workload is subdivided across multiple applications or services"
+        },
+        "defaultValue": "{app name}"
+      },
+      "tagName2": {
+        "type": "String",
+        "metadata": {
+          "displayName": "Tag Name 2",
+          "description": "Hours for {{configs.environment}}elopment "
+        },
+        "defaultValue": "{{configs.environment}}Hours"
+      },
+      "tagValue2": {
+        "type": "String",
+        "metadata": {
+          "displayName": "Tag Value 2",
+          "description": "Hours for {{configs.environment}}elopment"
+        },
+        "defaultValue": "8am-6pm EST WDs (Week Days), 8am-6pm EST WEs (Week Ends)"
+      },
+      "tagName3": {
+        "type": "String",
+        "metadata": {
+          "displayName": "Tag Name 3",
+          "description": "Top-level division of your company that owns the subscription or workload the resource belongs to. In smaller organizations, this may represent a single corporate or shared top-level organizational element"
+        },
+        "defaultValue": "BusinessUnit"
+      },
+      "tagValue3": {
+        "type": "String",
+        "metadata": {
+          "displayName": "Tag Value 3",
+          "description": "Top-level division of your company that owns the subscription or workload the resource belongs to. In smaller organizations, this may represent a single corporate or shared top-level organizational element"
+        },
+        "defaultValue": "FINANCE, MARKETING,{Product Name},CORP,SHARED"
+      },
+      "tagName4": {
+        "type": "String",
+        "metadata": {
+          "displayName": "Tag Name 4",
+          "description": "Deployment environment of this application, workload, or service"
+        },
+        "defaultValue": "Env"
+      },
+      "tagValue4": {
+        "type": "String",
+        "metadata": {
+          "displayName": "Tag Value 4",
+          "description": "Deployment environment of this application, workload, or service"
+        },
+        "defaultValue": "Prod, Dev, QA, Staging, Sanbox"
+      },
+      "tagName5": {
+        "type": "String",
+        "metadata": {
+          "displayName": "Tag Name 5",
+          "description": "Owner of the application, workload, or service"
+        },
+        "defaultValue": "Owner"
+      },
+      "tagValue5": {
+        "type": "String",
+        "metadata": {
+          "displayName": "Tag Value 5",
+          "description": "Owner of the application, workload, or service"
+        },
+        "defaultValue": "{email}"
+      },
+      "tagName6": {
+        "type": "String",
+        "metadata": {
+          "displayName": "Tag Name 6",
+          "description": "Name of the Customer"
+        },
+        "defaultValue": "CustomerName"
+      },
+      "tagValue6": {
+        "type": "String",
+        "metadata": {
+          "displayName": "Tag Value 6",
+          "description": "Name of the Customer"
+        },
+        "defaultValue": "hca, nyp, beu, mhb, 00"
+      },
+      "tagName7": {
+        "type": "String",
+        "metadata": {
+          "displayName": "Tag Name 7",
+          "description": "Customer contact email address (distribution list/email group preferred)"
+        },
+        "defaultValue": "CustomerContact"
+      },
+      "tagValue7": {
+        "type": "String",
+        "metadata": {
+          "displayName": "Tag Value 7",
+          "description": "Customer contact email address (distribution list/email group preferred)"
+        },
+        "defaultValue": "{email}"
+      }
+    },
+    "policyRule": {
+      "if": {
+        "allOf": [
+          {
+            "field": "type",
+            "equals": "Microsoft.Resources/subscriptions/resourceGroups"
+          },
+          {
+            "field": "[concat('tags[', parameters('tagName'), ']')]",
+            "exists": "false"
+          },
+          {
+            "field": "[concat('tags[', parameters('tagName2'), ']')]",
+            "exists": "false"
+          },
+          {
+            "field": "[concat('tags[', parameters('tagName3'), ']')]",
+            "exists": "false"
+          },
+          {
+            "field": "[concat('tags[', parameters('tagName4'), ']')]",
+            "exists": "false"
+          },
+          {
+            "field": "[concat('tags[', parameters('tagName5'), ']')]",
+            "exists": "false"
+          },
+          {
+            "field": "[concat('tags[', parameters('tagName6'), ']')]",
+            "exists": "false"
+          },
+          {
+            "field": "[concat('tags[', parameters('tagName7'), ']')]",
+            "exists": "false"
+          }
+        ]
+      },
+      "then": {
+        "effect": "modify",
+        "details": {
+          "roleDefinitionIds": [
+            "/providers/microsoft.authorization/roleDefinitions/b24988ac-6180-42a0-ab88-20f7382dd24c"
+          ],
+          "operations": [
+            {
+              "operation": "add",
+              "field": "[concat('tags[', parameters('tagName'), ']')]",    
+              "value": "[parameters('tagValue')]"
+            },
+            {
+              "operation": "add",
+              "field": "[concat('tags[', parameters('tagName2'), ']')]",
+              "value": "[parameters('tagValue2')]"
+            },
+            {
+              "operation": "add",
+              "field": "[concat('tags[', parameters('tagName3'), ']')]",
+              "value": "[parameters('tagValue3')]"
+            },
+            {
+              "operation": "add",
+              "field": "[concat('tags[', parameters('tagName4'), ']')]",
+              "value": "[parameters('tagValue4')]"
+            },
+            {
+              "operation": "add",
+              "field": "[concat('tags[', parameters('tagName5'), ']')]",
+              "value": "[parameters('tagValue5')]"
+            },
+            {
+              "operation": "add",
+              "field": "[concat('tags[', parameters('tagName6'), ']')]",
+              "value": "[parameters('tagValue6')]"
+            },
+            {
+              "operation": "add",
+              "field": "[concat('tags[', parameters('tagName7'), ']')]",
+              "value": "[parameters('tagValue7')]"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

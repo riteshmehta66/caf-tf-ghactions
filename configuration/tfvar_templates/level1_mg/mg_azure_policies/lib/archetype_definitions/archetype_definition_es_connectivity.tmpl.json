@@ -1,0 +1,14 @@
+{
+    "platform-{{configs.environment}}-con-{{configs.environment}}": {
+        "policy_assignments": [
+        "mhb-{{configs.environment}}-fd-pol"
+        ],
+        "policy_definitions": [],
+        "policy_set_definitions": [],
+        "role_definitions": [],
+        "archetype_config": {
+            "parameters": {},
+            "access_control": {}
+        }
+    }
+}

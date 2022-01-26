@@ -1,0 +1,64 @@
+{
+  "name": "mhb-sbx-fd-pol",
+  "type": "Microsoft.Authorization/policySetDefinitions",
+  "apiVersion": "2021-06-01",
+  "scope": null,
+  "properties": {
+    "policyType": "Custom",
+    "displayName": "mhb-sbx-front-door-policy-initiative",
+    "description": "Group of policies in front door category",
+    "metadata": {
+      "version": "1.0.0",
+      "category": "Network"
+    },
+    "parameters": {
+      "web_app_waf_should_use_sp_mode_for_fd_effect": {
+        "type": "String",
+        "defaultValue": "Audit",
+        "allowedValues": [
+          "Audit",
+          "Disabled"
+        ],
+        "metadata": {
+          "displayName": "Web Application Firewall (WAF) should use the specified mode for Azure Front Door Service",
+          "description": "Mandates the use of 'Detection' or 'Prevention' mode to be active on all Web Application Firewall policies for Azure Front Door Service"
+        }
+      },
+      "waf_should_be_enabled_for_fd_entry_points_effect": {
+        "type": "String",
+        "defaultValue": "Audit",
+        "allowedValues": [
+          "Audit",
+          "Disabled"
+        ],
+        "metadata": {
+          "displayName": "Azure Web Application Firewall should be enabled for Azure Front Door entry-points",
+          "description": "Deploy Azure Web Application Firewall (WAF) in front of public facing web applications for additional inspection of incoming traffic. Web Application Firewall (WAF) provides centralized protection of your web applications from common exploits and vulnerabilities such as SQL injections, Cross-Site Scripting, local and remote file executions. You can also restrict access to your web applications by countries, IP address ranges, and other http(s) parameters via custom rules"
+        }
+      }
+    },
+    "policyDefinitions": [
+      {
+        "policyDefinitionReferenceId": "web_app_waf_should_use_sp_mode_for_fd_effect",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/425bea59-a659-4cbb-8d31-34499bd030b8",
+        "parameters": {
+          "effect": {
+            "value": "[parameters('web_app_waf_should_use_sp_mode_for_fd_effect')]"
+          }
+        },
+        "groupNames": []
+      },
+      {
+        "policyDefinitionReferenceId": "waf_should_be_enabled_for_fd_entry_points_effect",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/055aa869-bc98-4af8-bafc-23f1ab6ffe2c",
+        "parameters": {
+          "effect": {
+           "value": "[parameters('waf_should_be_enabled_for_fd_entry_points_effect')]"
+          }
+        },
+        "groupNames": []
+      }        
+    ],
+    "policyDefinitionGroups": null
+  }
+}

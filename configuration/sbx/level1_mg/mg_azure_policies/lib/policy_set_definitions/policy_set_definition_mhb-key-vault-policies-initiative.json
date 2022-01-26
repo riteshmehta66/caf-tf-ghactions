@@ -1,0 +1,196 @@
+{
+  "name": "mhb-sbx-kv-pol",
+  "type": "Microsoft.Authorization/policySetDefinitions",
+  "apiVersion": "2021-06-01",
+  "scope": null,
+  "properties": {
+    "policyType": "Custom",
+    "displayName": "mhb-sbx-key-vault-policy-initiative",
+    "description": "Group of policies in key-vault category",
+    "metadata": {
+      "version": "1.0.0",
+      "category": "Key Vault"
+    },
+    "parameters": {
+      "kv_secrets_should_have_exp_date_effect": {
+        "type": "String",
+        "defaultValue": "Audit",
+        "allowedValues": [
+          "Audit",
+          "Disabled"
+        ],
+        "metadata": {
+          "displayName": "Key Vault secrets should have an expiration date",
+          "description": "Secrets should have a defined expiration date and not be permanent. Secrets that are valid forever provide a potential attacker with more time to compromise them. It is a recommended security practice to set expiration dates on secrets"
+        }
+      },
+      "kv_keys_should_have_exp_date_effect": {
+        "type": "String",
+        "defaultValue": "Audit",
+        "allowedValues": [
+          "Audit",
+          "Disabled"
+        ],
+        "metadata": {
+          "displayName": "Key Vault keys should have an expiration date",
+          "description": "Cryptographic keys should have a defined expiration date and not be permanent. Keys that are valid forever provide a potential attacker with more time to compromise the key. It is a recommended security practice to set expiration dates on cryptographic keys"
+        }
+      },
+      "kv_should_have_soft_delete_enabled_effect": {
+        "type": "String",
+        "defaultValue": "Audit",
+        "allowedValues": [
+          "Audit",
+          "Disabled"
+        ],
+        "metadata": {
+          "displayName": "Key vaults should have soft delete enabled",
+          "description": "Deleting a key vault without soft delete enabled permanently deletes all secrets, keys, and certificates stored in the key vault. Accidental deletion of a key vault can lead to permanent data loss. Soft delete allows you to recover an accidentally deleted key vault for a configurable retention period"
+        }
+      },
+      "kv_managed_hsm_purge_protect_enabled_hipaa_effect": {
+        "type": "String",
+        "defaultValue": "Audit",
+        "allowedValues": [
+          "Audit",
+          "Disabled"
+        ],
+        "metadata": {
+          "displayName": "Azure Key Vault Managed HSM should have purge protection enabled",
+          "description": "Malicious deletion of an Azure Key Vault Managed HSM can lead to permanent data loss. A malicious insider in your organization can potentially delete and purge Azure Key Vault Managed HSM. Purge protection protects you from insider attacks by enforcing a mandatory retention period for soft deleted Azure Key Vault Managed HSM. No one inside your organization or Microsoft will be able to purge your Azure Key Vault Managed HSM during the soft delete retention period"
+        }
+      },
+      "kv_purge_protect_enabled_hipaa_effect": {
+        "type": "String",
+        "defaultValue": "Audit",
+        "allowedValues": [
+          "Audit",
+          "Disabled"
+        ],
+        "metadata": {
+          "displayName": "Key vaults should have purge protection enabled",
+          "description": "Malicious deletion of an Azure Key Vault Managed HSM can lead to permanent data loss. A malicious insider in your organization can potentially delete and purge Azure Key Vault Managed HSM. Purge protection protects you from insider attacks by enforcing a mandatory retention period for soft deleted Azure Key Vault Managed HSM. No one inside your organization or Microsoft will be able to purge your Azure Key Vault Managed HSM during the soft delete retention period"
+        }
+      },
+      "resource_logs_in_kv_mgm_hsm_enabled_hipaa_effect": {
+        "type": "String",
+        "defaultValue": "AuditIfNotExists",
+        "allowedValues": [
+          "AuditIfNotExists",
+          "Disabled"
+        ],
+        "metadata": {
+          "displayName": "Azure Key Vault Managed HSM should have purge protection enabled",
+          "description": "To recreate activity trails for investigation purposes when a security incident occurs or when your network is compromised, you may want to audit by enabling resource logs on Managed HSMs. Please follow the instructions here: https://docs.microsoft.com/azure/key-vault/managed-hsm/logging"
+        }
+      },
+      "resource_logs_in_KV_enabled_hipaa_effect": {
+        "type": "String",
+        "defaultValue": "AuditIfNotExists",
+        "allowedValues": [
+          "AuditIfNotExists",
+          "Disabled"
+        ],
+        "metadata": {
+          "displayName": "Resource logs in Key Vault should be enabled",
+          "description": "Audit enabling of resource logs. This enables you to recreate activity trails to use for investigation purposes when a security incident occurs or when your network is compromised"
+        }
+      },
+      "kv_should_use_vnet_se_hipaa_effect": {
+        "type": "String",
+        "defaultValue": "Audit",
+        "allowedValues": [
+          "Audit",
+          "Disabled"
+        ],
+        "metadata": {
+          "displayName": "Key Vault should use a virtual network service endpoint",
+          "description": "This policy audits any Key Vault not configured to use a virtual network service endpoint"
+        }
+      }
+    },
+    "policyDefinitions": [
+      {
+        "policyDefinitionReferenceId": "kv_secrets_should_have_exp_date_effect",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/98728c90-32c7-4049-8429-847dc0f4fe37",
+        "parameters": {
+          "effect": {
+            "value": "[parameters('kv_secrets_should_have_exp_date_effect')]"
+          }
+        },
+        "groupNames": []
+      },
+      {
+        "policyDefinitionReferenceId": "kv_keys_should_have_exp_date_effect",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/152b15f7-8e1f-4c1f-ab71-8c010ba5dbc0",
+        "parameters": {
+          "effect": {
+           "value": "[parameters('kv_keys_should_have_exp_date_effect')]"
+          }
+        },
+        "groupNames": []
+      },
+      {
+        "policyDefinitionReferenceId": "kv_should_have_soft_delete_enabled_effect",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/1e66c121-a66a-4b1f-9b83-0fd99bf0fc2d",
+        "parameters": {
+          "effect": {
+            "value": "[parameters('kv_should_have_soft_delete_enabled_effect')]"
+          }
+        },
+        "groupNames": []
+      },
+      {
+        "policyDefinitionReferenceId": "kv_managed_hsm_purge_protect_enabled_hipaa_effect",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/c39ba22d-4428-4149-b981-70acb31fc383",
+        "parameters": {
+          "effect": {
+            "value": "[parameters('kv_managed_hsm_purge_protect_enabled_hipaa_effect')]"
+          }
+        },
+        "groupNames": []
+        },
+        {
+          "policyDefinitionReferenceId": "kv_purge_protect_enabled_hipaa_effect",
+          "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/0b60c0b2-2dc2-4e1c-b5c9-abbed971de53",
+          "parameters": {
+            "effect": {
+              "value": "[parameters('kv_purge_protect_enabled_hipaa_effect')]"
+            }
+          },
+          "groupNames": [] 
+        },
+        {
+          "policyDefinitionReferenceId": "resource_logs_in_kv_mgm_hsm_enabled_hipaa_effect",
+          "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/a2a5b911-5617-447e-a49e-59dbe0e0434b",
+          "parameters": {
+            "effect": {
+              "value": "[parameters('resource_logs_in_kv_mgm_hsm_enabled_hipaa_effect')]"
+            }
+          },
+          "groupNames": []  
+        },
+        {
+         "policyDefinitionReferenceId": "resource_logs_in_KV_enabled_hipaa_effect",
+         "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/cf820ca0-f99e-4f3e-84fb-66e913812d21",
+         "parameters": {
+           "effect": {
+             "value": "[parameters('resource_logs_in_KV_enabled_hipaa_effect')]"
+          }
+        },
+        "groupNames": []
+      },
+      {
+        "policyDefinitionReferenceId": "kv_should_use_vnet_se_hipaa_effect",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/ea4d6841-2173-4317-9747-ff522a45120f",
+        "parameters": {
+          "effect": {
+            "value": "[parameters('kv_should_use_vnet_se_hipaa_effect')]"
+         }
+       },
+       "groupNames": []
+     }                    
+    ],
+    "policyDefinitionGroups": null
+  }
+}

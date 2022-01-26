@@ -1,0 +1,48 @@
+{
+    "lz-sbx-byn-sbx": {
+        "policy_assignments": [
+            "mhb-sbx-app-pol",
+            "mhb-sbx-cr-pol",
+            "mhb-sbx-aks-pol",
+            "mhb-sbx-sb-pol",
+            "mhb-sbx-evh-pol",
+            "mhb-sbx-cache-pol",
+            "mhb-sbx-backup-vm-pol",
+            "mhb-sbx-logic-pol",
+            "mhb-sbx-asa-pol",
+            "mhb-sbx-search-pol",
+            "mhb-sbx-aks-pod-base-pol",
+            "mhb-sbx-aks-pod-sec-pol",
+            "mhb-sbx-aks-pod-add-pol",
+            "mhb-sbx-aks-pod-vol-pol",
+            "mhb-sbx-aks-vol-type-pol",
+            "mhb-sbx-aks-https-pol",
+            "mhb-sbx-aks-pri-esc-pol",
+            "mhb-sbx-aks-int-lb-pol",
+            "mhb-sbx-aks-id-ipc-pol",
+            "mhb-sbx-app-armor-pol",
+            "mhb-sbx-aks-port-pol",
+            "mhb-sbx-aks-pri-con-pol",
+            "mhb-sbx-aks-pri-esc-pol",
+            "mhb-sbx-aks-alow-cap-pol",
+            "mhb-sbx-aks-eip-pol",
+            "mhb-sbx-aks-root-pol",
+            "mhb-sbx-aks-app-id-pol",
+            "mhb-sbx-aks-flex-vol-pol",
+            "mhb-sbx-aks-pr-typ-pol",
+            "mhb-sbx-aks-pol-aon-pol",
+            "mhb-sbx-aks-pvt-clus-pol",
+            "mhb-sbx-aks-tem-dsk-pol",
+            "mhb-sbx-aks-auth-ip-pol"            
+        ],
+        "policy_definitions": [
+        ],
+        "policy_set_definitions": [],
+        "role_definitions": [],
+        "archetype_config": {
+            "parameters": {},
+            "access_control": {},
+            "_comment": "331ffa51-d7c2-4c25-9335-89ee061330bf = 331ffa51-d7c2-4c25-9335-89ee061330bf, 331ffa51-d7c2-4c25-9335-89ee061330bf = 331ffa51-d7c2-4c25-9335-89ee061330bf"
+        }
+    }
+}

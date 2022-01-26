@@ -1,0 +1,45 @@
+{
+    "mhb-{{configs.environment}}-asc-lz-pol": {
+        "policy_assignments": [
+            "allowlist_rules_your_adaptive_app_control_policy_should_updated",
+            "defender_for_ase_should_enabled",
+            "defender_for_aks_should_enabled",
+            "vulnerabilities_cr_images_should_remediated",
+            "log_agent_should_installed_on_vmss_ase_monitoring",
+            "log_agent_should_installed_on_vm_ase_monitoring",
+            "guest_config_extension_should_installed_on_machines",
+            "ip_forwarding_on_vm_should_be_disabled",
+            "defender_for_cr_should_be_enabled",
+            "vm_guest_config_ext_should_be_deployed_with_system-assigned_managed_identity",
+            "log_agent_health_issues_should_be_resolved_on_machines",
+            "adaptive_app_controls_for_defining_safe_app_should_be_enabled_on_vm_hipaa",
+            "adaptive_network_hardening_recommendations_should_applied_internet_facing_vm_hipaa",
+            "all_network_ports_should_be_restricted_on_nsg_associated_vm_hipaa",
+            "vulnerabilities_in_cr_security_config_should_be_remediated_hipaa",
+            "vulnerability_assessment_solution_should_be_enabled_on_vm_hipaa",
+            "mgmt_ports_of_vm_should_be_protected_with_just-in-time_network_access_control_hipaa",
+            "rbac_should_be_used_on_aks_hipaa",
+            "internet-facing_vm_should_be_protected_with_nsg_hipaa",
+            "vm_should_encrypt_temp_disks_caches_data_flows_between_compute_Storage_resources_hipaa",
+            "mgmt_ports_should_be_closed_on_your_vm_hipaa",
+            "vulnerabilities_in_security_config_on_your_vm_should_be_remediated_hipaa"
+        ],
+        "policy_definitions": [],
+        "policy_set_definitions": [],
+        "role_definitions": [],
+        "archetype_config": {
+            "parameters": {
+               "web_app_only_https": {
+                   "effect": "Disabled"
+               }
+            },
+            "access_control": {
+                "Virtual Machine Contributor": [                    
+                    "331ffa51-d7c2-4c25-9335-89ee061330bf",                    
+                    "2ea1c34b-dc6d-4bf8-9e03-30081b8f5ae2"                                       
+                ]
+            },
+            "_comment": "331ffa51-d7c2-4c25-9335-89ee061330bf = 331ffa51-d7c2-4c25-9335-89ee061330bf, 331ffa51-d7c2-4c25-9335-89ee061330bf = 331ffa51-d7c2-4c25-9335-89ee061330bf"
+        }
+    }
+}

@@ -1,0 +1,40 @@
+{
+  "mhb-{{configs.environment}}-rt": {
+    "policy_assignments": [
+      "mhb-{{configs.environment}}-kv-pol",
+      "mhb-{{configs.environment}}-st-pol",
+      "mhb-{{configs.environment}}-vm-pol",
+      "mhb-{{configs.environment}}-general-pol",
+      "mhb-{{configs.environment}}-automation-pol",
+      "mhb-{{configs.environment}}-asc-root-pol",
+      "mhb-{{configs.environment}}-network-pol",
+      "mhb-{{configs.environment}}-monitoring-pol",
+      "mhb-{{configs.environment}}-allow-loc-pol",
+      "mhb-{{configs.environment}}-allow-loc-rg-pol"
+     ],
+    "policy_definitions": [
+      "mhb-{{configs.environment}}-add-tag-pol",
+      "mhb-{{configs.environment}}-inherit-tag-pol"
+    ],
+    "policy_set_definitions": [
+      "mhb-{{configs.environment}}-app-pol",
+      "mhb-{{configs.environment}}-kv-pol",
+      "mhb-{{configs.environment}}-st-pol",
+      "mhb-{{configs.environment}}-fd-pol",
+      "mhb-{{configs.environment}}-cr-pol",
+      "mhb-{{configs.environment}}-vm-pol",
+      "mhb-{{configs.environment}}-aks-pol",
+      "mhb-{{configs.environment}}-general-pol",
+      "mhb-{{configs.environment}}-automation-pol",
+      "mhb-{{configs.environment}}-asc-root-pol",
+      "mhb-{{configs.environment}}-asc-lz-pol",
+      "mhb-{{configs.environment}}-network-pol",
+      "mhb-{{configs.environment}}-monitoring-pol"
+      ],
+    "role_definitions": [],
+    "archetype_config": {
+      "parameters": {},
+      "access_control": {}
+    }
+  }
+}

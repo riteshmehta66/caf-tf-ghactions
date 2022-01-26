@@ -1,0 +1,548 @@
+{
+  "name": "mhb-sbx-app-pol",
+  "type": "Microsoft.Authorization/policySetDefinitions",
+  "apiVersion": "2021-06-01",
+  "scope": null,
+  "properties": {
+    "policyType": "Custom",
+    "displayName": "mhb-sbx-app-policy-initiative",
+    "description": "Group of policies in app-service category",
+    "metadata": {
+      "version": "1.0.0",
+      "category": "App Service"
+    },
+    "parameters": {
+      "ftps_only_in_func_app_effect": {
+        "metadata": {
+          "displayName": "FTPS only should be required in your Function App",
+          "description": "Enable FTPS enforcement for enhanced security"
+        },
+        "type": "String",
+        "defaultValue": "AuditIfNotExists",
+        "allowedValues": [
+          "AuditIfNotExists",
+          "Disabled"
+        ]
+      },
+      "ftps_required_in_web_app_effect": {
+        "metadata": {
+          "displayName": "FTPS should be required in your Web App",
+          "description": "Enable FTPS enforcement for enhanced security"
+        },
+        "type": "String",
+        "defaultValue": "AuditIfNotExists",
+        "allowedValues": [
+          "AuditIfNotExists",
+          "Disabled"
+        ]
+      },
+      "ftps_only_in_api_app_effect": {
+        "type": "String",
+        "defaultValue": "AuditIfNotExists",
+        "allowedValues": [
+          "AuditIfNotExists",
+          "Disabled"
+        ],
+        "metadata": {
+          "displayName": "FTPS only should be required in your API App",
+          "description": "Enable FTPS enforcement for enhanced security"
+        }
+      },
+      "web_app_access_over_https_effect": {
+        "type": "String",
+        "defaultValue": "Audit",
+        "allowedValues": [
+          "Audit",
+          "Disabled"
+        ],
+        "metadata": {
+          "displayName": "Web Application should only be accessible over HTTPS",
+          "description": "Use of HTTPS ensures server/service authentication and protects data in transit from network layer eavesdropping attacks"
+        }
+      },
+      "ensure_java_is_latest_if_part_of_api_app_effect": {
+        "type": "String",
+        "defaultValue": "AuditIfNotExists",
+        "allowedValues": [
+          "AuditIfNotExists",
+          "Disabled"
+        ],
+        "metadata": {
+          "displayName": "Ensure that 'Java version' is the latest, if used as a part of the API app",
+          "description": "Periodically, newer versions are released for Java either due to security flaws or to include additional functionality. Using the latest Python version for API apps is recommended in order to take advantage of security fixes, if any, and/or new functionalities of the latest version. Currently, this policy only applies to Linux web apps"
+        }
+      },
+      "ensure_java_is_latest_if_part_of_function_app_effect": {
+        "type": "String",
+        "defaultValue": "AuditIfNotExists",
+        "allowedValues": [
+          "AuditIfNotExists",
+          "Disabled"
+        ],
+        "metadata": {
+          "displayName": "Ensure that 'Java version' is the latest, if used as a part of the Function app",
+          "description": "Periodically, newer versions are released for Java software either due to security flaws or to include additional functionality. Using the latest Java version for Function apps is recommended in order to take advantage of security fixes, if any, and/or new functionalities of the latest version. Currently, this policy only applies to Linux web apps"
+        }
+      },
+      "function_apps_incoming_client_cert_enabled_effect": {
+        "type": "String",
+        "defaultValue": "Audit",
+        "allowedValues": [
+          "Audit",
+          "Disabled"
+        ],
+        "metadata": {
+          "displayName": "Function apps should have 'Client Certificates (Incoming client certificates)' enabled",
+          "description": "Client certificates allow for the app to request a certificate for incoming requests. Only clients with valid certificates will be able to reach the app."
+        }      
+      },
+      "ensure_python_is_latest_if_used_part_of_api_app_effect": {
+        "type": "String",
+        "defaultValue": "AuditIfNotExists",
+        "allowedValues": [
+          "AuditIfNotExists",
+          "Disabled"
+        ],
+        "metadata": {
+          "displayName": "Ensure that 'Python version' is the latest, if used as a part of the API app",
+          "description": "Periodically, newer versions are released for Python software either due to security flaws or to include additional functionality. Using the latest Python version for API apps is recommended in order to take advantage of security fixes, if any, and/or new functionalities of the latest version. Currently, this policy only applies to Linux web apps"
+        }    
+      },
+      "managed_id_only_in_func_app_effect": {
+        "type": "String",
+        "defaultValue": "AuditIfNotExists",
+        "allowedValues": [
+          "AuditIfNotExists",
+          "Disabled"
+        ],
+        "metadata": {
+          "displayName": "FTPS only should be required in your API App",
+          "description": "Enable FTPS enforcement for enhanced security"
+        }
+      },
+      "api_app_accessible_over_https_hipaa_effect": {
+        "type": "String",
+        "defaultValue": "Audit",
+        "allowedValues": [
+          "Audit",
+          "Disabled"
+        ],
+        "metadata": {
+          "displayName": "API App should only be accessible over HTTPS",
+          "description": "Use of HTTPS ensures server/service authentication and protects data in transit from network layer eavesdropping attacks"
+        }
+      },
+      "cor_should_not_allow_every_res_access_api_app_hipaa_effect": {
+        "type": "String",
+        "defaultValue": "AuditIfNotExists",
+        "allowedValues": [
+          "AuditIfNotExists",
+          "Disabled"
+        ],
+        "metadata": {
+          "displayName": "CORS should not allow every resource to access your API App",
+          "description": "Cross-Origin Resource Sharing (CORS) should not allow all domains to access your API app. Allow only required domains to interact with your API app"
+        }
+      },
+      "cor_should_not_allow_every_res_access_func_app_hipaa_effect": {
+        "type": "String",
+        "defaultValue": "AuditIfNotExists",
+        "allowedValues": [
+          "AuditIfNotExists",
+          "Disabled"
+        ],
+        "metadata": {
+          "displayName": "CORS should not allow every resource to access your Function Apps",
+          "description": "Cross-Origin Resource Sharing (CORS) should not allow all domains to access your Function app. Allow only required domains to interact with your Function app"
+        }
+      },
+      "cor_should_not_allow_every_res_access_web_app_hipaa_effect": {
+        "type": "String",
+        "defaultValue": "AuditIfNotExists",
+        "allowedValues": [
+          "AuditIfNotExists",
+          "Disabled"
+        ],
+        "metadata": {
+          "displayName": "CORS should not allow every resource to access your Web Applications",
+          "description": "Cross-Origin Resource Sharing (CORS) should not allow all domains to access your web application. Allow only required domains to interact with your web app"
+        }
+      },
+      "diagnostic_logs_app_src_should_enable_hipaa_effect": {
+        "type": "String",
+        "defaultValue": "AuditIfNotExists",
+        "allowedValues": [
+          "AuditIfNotExists",
+          "Disabled"
+        ],
+        "metadata": {
+          "displayName": "Diagnostic logs in App Services should be enabled",
+          "description": "Audit enabling of diagnostic logs on the app. This enables you to recreate activity trails for investigation purposes if a security incident occurs or your network is compromised"
+        }
+      },
+      "ensure_web_app_incoming_client_cert_set_on_hipaa_effect": {
+        "type": "String",
+        "defaultValue": "Audit",
+        "allowedValues": [
+          "Audit",
+          "Disabled"
+        ],
+        "metadata": {
+          "displayName": "Ensure WEB app has 'Client Certificates (Incoming client certificates)' set to 'On'",
+          "description": "Client certificates allow for the app to request a certificate for incoming requests. Only clients that have a valid certificate will be able to reach the app"
+        }
+      },
+      "function_app_only_access_over_https_hipaa_effect": {
+        "type": "String",
+        "defaultValue": "Audit",
+        "allowedValues": [
+          "Audit",
+          "Disabled"
+        ],
+        "metadata": {
+          "displayName": "Function App should only be accessible over HTTPS",
+          "description": "Use of HTTPS ensures server/service authentication and protects data in transit from network layer eavesdropping attacks"
+        }
+      },
+      "latest_tls_should_be_used_api_app_hippa_effect": {
+        "type": "String",
+        "defaultValue": "AuditIfNotExists",
+        "allowedValues": [
+          "AuditIfNotExists",
+          "Disabled"
+        ],
+        "metadata": {
+          "displayName": "Latest TLS version should be used in your API App",
+          "description": "Upgrade to the latest TLS version"
+        }
+      },
+      "latest_tls_should_be_used_api_func_hipaa_effect": {
+        "type": "String",
+        "defaultValue": "AuditIfNotExists",
+        "allowedValues": [
+          "AuditIfNotExists",
+          "Disabled"
+        ],
+        "metadata": {
+          "displayName": "Latest TLS version should be used in your Function App",
+          "description": "Upgrade to the latest TLS version"
+        }
+      },
+      "latest_tls_should_be_used_api_web_hipaa_effect": {
+        "type": "String",
+        "defaultValue": "AuditIfNotExists",
+        "allowedValues": [
+          "AuditIfNotExists",
+          "Disabled"
+        ],
+        "metadata": {
+          "displayName": "Latest TLS version should be used in your Web App",
+          "description": "Upgrade to the latest TLS version"
+        }
+      },
+      "remote_debug_turned_off_for_api_apps_hipaa_effect": {
+        "type": "String",
+        "defaultValue": "AuditIfNotExists",
+        "allowedValues": [
+          "AuditIfNotExists",
+          "Disabled"
+        ],
+        "metadata": {
+          "displayName": "Remote debugging should be turned off for API Apps",
+          "description": "Remote debugging requires inbound ports to be opened on API apps. Remote debugging should be turned off."
+        }
+      },
+      "remote_debug_turned_off_for_api_func_hipaa_effect": {
+        "type": "String",
+        "defaultValue": "AuditIfNotExists",
+        "allowedValues": [
+          "AuditIfNotExists",
+          "Disabled"
+        ],
+        "metadata": {
+          "displayName": "Remote debugging should be turned off for Function Apps",
+          "description": "Remote debugging requires inbound ports to be opened on function apps. Remote debugging should be turned off"
+        }
+      },
+      "remote_debug_turned_off_for_api_web_hipaa_effect": {
+        "type": "String",
+        "defaultValue": "AuditIfNotExists",
+        "allowedValues": [
+          "AuditIfNotExists",
+          "Disabled"
+        ],
+        "metadata": {
+          "displayName": "Remote debugging should be turned off for Web Applications",
+          "description": "Remote debugging requires inbound ports to be opened on a web application. Remote debugging should be turned off"
+        }
+      },
+      "web_app_should_be_access_over_https_hipaa_effect": {
+        "type": "String",
+        "defaultValue": "Audit",
+        "allowedValues": [
+          "Audit",
+          "Disabled"
+        ],
+        "metadata": {
+          "displayName": "Web Application should only be accessible over HTTPS",
+          "description": "Use of HTTPS ensures server/service authentication and protects data in transit from network layer eavesdropping attacks"
+        }
+      },
+      "ase_should_use_vnet_se_hipaa_effect": {
+        "type": "String",
+        "defaultValue": "AuditIfNotExists",
+        "allowedValues": [
+          "AuditIfNotExists",
+          "Disabled"
+        ],
+        "metadata": {
+          "displayName": "App Service should use a virtual network service endpoint",
+          "description": "This policy audits any App Service not configured to use a virtual network service endpoint"
+        }                                      
+      }            
+    },
+    "policyDefinitions": [
+      {
+        "policyDefinitionReferenceId": "ftps_only_in_func_app_effect",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/399b2637-a50f-4f95-96f8-3a145476eb15",
+        "parameters": {
+          "effect": {
+            "value": "[parameters('ftps_only_in_func_app_effect')]"
+          }
+        },
+        "groupNames": []
+      },
+      {
+        "policyDefinitionReferenceId": "ftps_required_in_web_app_effect",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/4d24b6d4-5e53-4a4f-a7f4-618fa573ee4b",
+        "parameters": {
+          "effect": {
+            "value": "[parameters('ftps_required_in_web_app_effect')]"
+          }
+        },
+        "groupNames": []
+      },
+      {
+        "policyDefinitionReferenceId": "ftps_only_in_api_app_effect",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/9a1b8c48-453a-4044-86c3-d8bfd823e4f5",
+        "parameters": {
+          "effect": {
+            "value": "[parameters('ftps_only_in_api_app_effect')]"
+          }
+        },
+        "groupNames": []
+      },
+      {
+        "policyDefinitionReferenceId": "web_app_access_over_https_effect",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/a4af4a39-4135-47fb-b175-47fbdf85311d",
+        "parameters": {
+          "effect": {
+            "value": "[parameters('web_app_access_over_https_effect')]"
+          }
+        },
+        "groupNames": []
+      },
+      {
+        "policyDefinitionReferenceId": "ensure_java_is_latest_if_part_of_api_app_effect",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/88999f4c-376a-45c8-bcb3-4058f713cf39",
+        "parameters": {
+          "effect": {
+            "value": "[parameters('ensure_java_is_latest_if_part_of_api_app_effect')]"
+          }
+        },
+        "groupNames": []
+      },
+      {
+        "policyDefinitionReferenceId": "ensure_java_is_latest_if_part_of_function_app_effect",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/9d0b6ea4-93e2-4578-bf2f-6bb17d22b4bc",
+        "parameters": {
+          "effect": {
+            "value": "[parameters('ensure_java_is_latest_if_part_of_function_app_effect')]"
+          }
+        },
+        "groupNames": []
+      },
+      {
+        "policyDefinitionReferenceId": "function_apps_incoming_client_cert_enabled_effect",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/eaebaea7-8013-4ceb-9d14-7eb32271373c",
+        "parameters": {
+          "effect": {
+            "value": "[parameters('function_apps_incoming_client_cert_enabled_effect')]"
+          }
+        },
+        "groupNames": [] 
+      },
+      {
+        "policyDefinitionReferenceId": "ensure_python_is_latest_if_used_part_of_api_app_effect",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/74c3584d-afae-46f7-a20a-6f8adba71a16",
+        "parameters": {
+          "effect": {
+            "value": "[parameters('ensure_python_is_latest_if_used_part_of_api_app_effect')]"
+          }
+        },
+        "groupNames": []  
+      },
+      {
+        "policyDefinitionReferenceId": "managed_id_only_in_func_app_effect",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/0da106f2-4ca3-48e8-bc85-c638fe6aea8f",
+        "parameters": {
+          "effect": {
+            "value": "[parameters('managed_id_only_in_func_app_effect')]"
+          }
+        },
+        "groupNames": []
+      },
+      {
+        "policyDefinitionReferenceId": "api_app_accessible_over_https_hipaa_effect",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/b7ddfbdc-1260-477d-91fd-98bd9be789a6",
+        "parameters": {
+          "effect": {
+            "value": "[parameters('api_app_accessible_over_https_hipaa_effect')]"
+          }
+        },
+        "groupNames": []
+      },
+      {
+        "policyDefinitionReferenceId": "cor_should_not_allow_every_res_access_api_app_hipaa_effect",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/358c20a6-3f9e-4f0e-97ff-c6ce485e2aac",
+        "parameters": {
+          "effect": {
+            "value": "[parameters('cor_should_not_allow_every_res_access_api_app_hipaa_effect')]"
+          }
+        },
+        "groupNames": []
+      },
+      {
+        "policyDefinitionReferenceId": "cor_should_not_allow_every_res_access_func_app_hipaa_effect",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/0820b7b9-23aa-4725-a1ce-ae4558f718e5",
+        "parameters": {
+          "effect": {
+            "value": "[parameters('cor_should_not_allow_every_res_access_func_app_hipaa_effect')]"
+          }
+        },
+        "groupNames": []
+      },
+      {
+        "policyDefinitionReferenceId": "cor_should_not_allow_every_res_access_web_app_hipaa_effect",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/5744710e-cc2f-4ee8-8809-3b11e89f4bc9",
+        "parameters": {
+          "effect": {
+            "value": "[parameters('cor_should_not_allow_every_res_access_web_app_hipaa_effect')]"
+          }
+        },
+        "groupNames": []
+      },
+      {
+        "policyDefinitionReferenceId": "diagnostic_logs_app_src_should_enable_hipaa_effect",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/b607c5de-e7d9-4eee-9e5c-83f1bcee4fa0",
+        "parameters": {
+          "effect": {
+            "value": "[parameters('diagnostic_logs_app_src_should_enable_hipaa_effect')]"
+          }
+        },
+        "groupNames": []
+      },
+      {
+        "policyDefinitionReferenceId": "ensure_web_app_incoming_client_cert_set_on_hipaa_effect",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/5bb220d9-2698-4ee4-8404-b9c30c9df609",
+        "parameters": {
+          "effect": {
+            "value": "[parameters('ensure_web_app_incoming_client_cert_set_on_hipaa_effect')]"
+          }
+        },
+        "groupNames": []
+      },
+      {
+        "policyDefinitionReferenceId": "function_app_only_access_over_https_hipaa_effect",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/6d555dd1-86f2-4f1c-8ed7-5abae7c6cbab",
+        "parameters": {
+          "effect": {
+            "value": "[parameters('function_app_only_access_over_https_hipaa_effect')]"
+          }
+        },
+        "groupNames": []
+      },
+      {
+        "policyDefinitionReferenceId": "latest_tls_should_be_used_api_app_hippa_effect",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/8cb6aa8b-9e41-4f4e-aa25-089a7ac2581e",
+        "parameters": {
+          "effect": {
+            "value": "[parameters('latest_tls_should_be_used_api_app_hippa_effect')]"
+          }
+        },
+        "groupNames": []
+      },
+      {
+        "policyDefinitionReferenceId": "latest_tls_should_be_used_api_func_hipaa_effect",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/f9d614c5-c173-4d56-95a7-b4437057d193",
+        "parameters": {
+          "effect": {
+            "value": "[parameters('latest_tls_should_be_used_api_func_hipaa_effect')]"
+          }
+        },
+        "groupNames": []
+      },
+      {
+        "policyDefinitionReferenceId": "latest_tls_should_be_used_api_web_hipaa_effect",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/f0e6e85b-9b9f-4a4b-b67b-f730d42f1b0b",
+        "parameters": {
+          "effect": {
+            "value": "[parameters('latest_tls_should_be_used_api_web_hipaa_effect')]"
+          }
+        },
+        "groupNames": []
+      },
+      {
+        "policyDefinitionReferenceId": "remote_debug_turned_off_for_api_apps_hipaa_effect",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/e9c8d085-d9cc-4b17-9cdc-059f1f01f19e",
+        "parameters": {
+          "effect": {
+            "value": "[parameters('remote_debug_turned_off_for_api_apps_hipaa_effect')]"
+          }
+        },
+        "groupNames": []
+      },
+      {
+        "policyDefinitionReferenceId": "remote_debug_turned_off_for_api_func_hipaa_effect",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/0e60b895-3786-45da-8377-9c6b4b6ac5f9",
+        "parameters": {
+          "effect": {
+            "value": "[parameters('remote_debug_turned_off_for_api_func_hipaa_effect')]"
+          }
+        },
+        "groupNames": []
+      },
+      {
+        "policyDefinitionReferenceId": "remote_debug_turned_off_for_api_web_hipaa_effect",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/cb510bfd-1cba-4d9f-a230-cb0976f4bb71",
+        "parameters": {
+          "effect": {
+            "value": "[parameters('remote_debug_turned_off_for_api_web_hipaa_effect')]"
+          }
+        },
+        "groupNames": []
+      },
+      {
+        "policyDefinitionReferenceId": "web_app_should_be_access_over_https_hipaa_effect",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/a4af4a39-4135-47fb-b175-47fbdf85311d",
+        "parameters": {
+          "effect": {
+            "value": "[parameters('web_app_should_be_access_over_https_hipaa_effect')]"
+          }
+        },
+        "groupNames": []
+      },
+    {
+      "policyDefinitionReferenceId": "ase_should_use_vnet_se_hipaa_effect",
+      "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/2d21331d-a4c2-4def-a9ad-ee4e1e023beb",
+      "parameters": {
+        "effect": {
+          "value": "[parameters('ase_should_use_vnet_se_hipaa_effect')]"
+        }
+      },
+      "groupNames": []
+    }                      
+    ],
+    "policyDefinitionGroups": null
+  }
+}

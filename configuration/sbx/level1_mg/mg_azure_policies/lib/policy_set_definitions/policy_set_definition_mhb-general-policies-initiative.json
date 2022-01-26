@@ -1,0 +1,64 @@
+{
+  "name": "mhb-sbx-general-pol",
+  "type": "Microsoft.Authorization/policySetDefinitions",
+  "apiVersion": "2021-06-01",
+  "scope": null,
+  "properties": {
+    "policyType": "Custom",
+    "displayName": "mhb-sbx-general-policy-initiative",
+    "description": "Group of policies in general category",
+    "metadata": {
+      "version": "1.0.0",
+      "category": "General"
+    },
+    "parameters": {
+      "custom_subs_owner_roles_should_not_exist_hipaa_effect": {
+        "type": "String",
+        "defaultValue": "Audit",
+        "allowedValues": [
+          "Audit",
+          "Disabled"
+        ],
+        "metadata": {
+          "displayName": "Custom subscription owner roles should not exist",
+          "description": "This policy ensures that no custom subscription owner roles exist"
+        }
+      },
+      "audit_usage_of_custom_rbac_rules_hipaa_effect": {
+        "type": "String",
+        "defaultValue": "Audit",
+        "allowedValues": [
+          "Audit",
+          "Disabled"
+        ],
+        "metadata": {
+          "displayName": "Audit usage of custom RBAC rules",
+          "description": "Audit built-in roles such as 'Owner, Contributer, Reader' instead of custom RBAC roles, which are error prone. Using custom roles is treated as an exception and requires a rigorous review and threat modeling"
+        }
+      }
+    },
+    "policyDefinitions": [
+      {
+        "policyDefinitionReferenceId": "custom_subs_owner_roles_should_not_exist_hipaa_effect",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/10ee2ea2-fb4d-45b8-a7e9-a2e770044cd9",
+        "parameters": {
+          "effect": {
+            "value": "[parameters('custom_subs_owner_roles_should_not_exist_hipaa_effect')]"
+          }
+        },
+        "groupNames": []
+      },
+      {
+        "policyDefinitionReferenceId": "audit_usage_of_custom_rbac_rules_hipaa_effect",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/a451c1ef-c6ca-483d-87ed-f49761e3ffb5",
+        "parameters": {
+          "effect": {
+           "value": "[parameters('audit_usage_of_custom_rbac_rules_hipaa_effect')]"
+          }
+        },
+        "groupNames": []
+      }        
+    ],
+    "policyDefinitionGroups": null
+    }
+  }

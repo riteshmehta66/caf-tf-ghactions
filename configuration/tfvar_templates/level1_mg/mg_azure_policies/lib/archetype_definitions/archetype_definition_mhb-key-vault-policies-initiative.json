@@ -1,0 +1,31 @@
+{
+    "mhb-{{configs.environment}}-kv-pol": {
+        "policy_assignments": [
+            "kv_secrets_should_have_exp_date",
+            "kv_keys_should_have_exp_date",
+            "kv_should_have_soft_delete_enabled",
+            "kv_managed_hsm_purge_protect_enabled_hipaa",
+            "kv_purge_protect_enabled_hipaa",
+            "resource_logs_in_kv_mgm_hsm_enabled_hipaa",
+            "resource_logs_in_KV_enabled_hipaa",
+            "kv_should_use_vnet_se_hipaa"
+        ],
+        "policy_definitions": [],
+        "policy_set_definitions": [],
+        "role_definitions": [],
+        "archetype_config": {
+            "parameters": {
+               "web_app_only_https": {
+                   "effect": "Disabled"
+               }
+            },
+            "access_control": {
+                "Virtual Machine Contributor": [                    
+                    "331ffa51-d7c2-4c25-9335-89ee061330bf",                    
+                    "2ea1c34b-dc6d-4bf8-9e03-30081b8f5ae2"                                       
+                ]
+            },
+            "_comment": "331ffa51-d7c2-4c25-9335-89ee061330bf = 331ffa51-d7c2-4c25-9335-89ee061330bf, 331ffa51-d7c2-4c25-9335-89ee061330bf = 331ffa51-d7c2-4c25-9335-89ee061330bf"
+        }
+    }
+}

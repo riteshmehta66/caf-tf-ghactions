@@ -1,0 +1,43 @@
+{
+  "name": "mhb-{{configs.environment}}-automation-pol",
+  "type": "Microsoft.Authorization/policySetDefinitions",
+  "apiVersion": "2021-06-01",
+  "scope": null,
+  "properties": {
+    "policyType": "Custom",
+    "displayName": "mhb-{{configs.environment}}-automation-policy-initiative",
+    "description": "Group of policies in automation category",
+    "metadata": {
+      "version": "1.0.0",
+      "category": "Automation"
+    },
+    "parameters": {
+      "automation_account_variables_should_be_encrypted_effect": {
+        "type": "String",
+        "defaultValue": "Audit",
+        "allowedValues": [
+          "Audit",
+          "Deny",
+          "Disabled"
+        ],
+        "metadata": {
+          "displayName": "Automation account variables should be encrypted",
+          "description": "It is important to enable encryption of Automation account variable assets when storing sensitive data"
+        }
+      }
+    },
+    "policyDefinitions": [
+      {
+        "policyDefinitionReferenceId": "automation_account_variables_should_be_encrypted_effect",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/3657f5a0-770e-44a3-b44e-9431ba1e9735",
+        "parameters": {
+          "effect": {
+            "value": "[parameters('automation_account_variables_should_be_encrypted_effect')]"
+          }
+        },
+        "groupNames": []
+      }      
+    ],
+    "policyDefinitionGroups": null
+    }
+  }

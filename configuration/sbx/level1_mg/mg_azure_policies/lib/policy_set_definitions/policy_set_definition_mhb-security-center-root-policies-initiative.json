@@ -1,0 +1,438 @@
+{
+  "name": "mhb-sbx-asc-root-pol",
+  "type": "Microsoft.Authorization/policySetDefinitions",
+  "apiVersion": "2021-06-01",
+  "scope": null,
+  "properties": {
+    "policyType": "Custom",
+    "displayName": "mhb-sbx-asc-root-policy-initiative",
+    "description": "Group of policies in Azure Security Center category",
+    "metadata": {
+      "version": "1.0.0",
+      "category": "Security Center"
+    },
+    "parameters": {
+      "email_notification_to_subscription_owner_high_severity_alerts_enabled_effect": {
+        "metadata": {
+          "displayName": "Email notification to subscription owner for high severity alerts should be enabled",
+          "description": "To ensure your subscription owners are notified when there is a potential security breach in their subscription, set email notifications to subscription owners for high severity alerts in Security Center"
+        },
+        "type": "String",
+        "defaultValue": "AuditIfNotExists",
+        "allowedValues": [
+          "AuditIfNotExists",
+          "Disabled"
+        ]
+      },
+      "defender_for_kv_should_enabled_effect": {
+        "metadata": {
+          "displayName": "Azure Defender for Key Vault should be enabled",
+          "description": "Azure Defender for Key Vault provides an additional layer of protection and security intelligence by detecting unusual and potentially harmful attempts to access or exploit key vault accounts"
+        },
+        "type": "String",
+        "defaultValue": "AuditIfNotExists",
+        "allowedValues": [
+          "AuditIfNotExists",
+          "Disabled"
+        ]
+      },
+      "defender_for_st_should_enabled_effect": {
+        "type": "String",
+        "defaultValue": "AuditIfNotExists",
+        "allowedValues": [
+          "AuditIfNotExists",
+          "Disabled"
+        ],
+        "metadata": {
+          "displayName": "Azure Defender for Storage should be enabled",
+          "description": "Azure Defender for Storage provides detections of unusual and potentially harmful attempts to access or exploit storage accounts"
+        }
+      },
+      "defender_for_servers_should_enabled_effect": {
+        "type": "String",
+        "defaultValue": "AuditIfNotExists",
+        "allowedValues": [
+          "AuditIfNotExists",
+          "Disabled"
+        ],
+        "metadata": {
+          "displayName": "Azure Defender for servers should be enabled",
+          "description": "Azure Defender for servers provides real-time threat protection for server workloads and generates hardening recommendations as well as alerts about suspicious activities"
+        }
+      },
+      "subscriptions_should_have_contact_email_address_security_issues_effect": {
+        "type": "String",
+        "defaultValue": "AuditIfNotExists",
+        "allowedValues": [
+          "AuditIfNotExists",
+          "Disabled"
+        ],
+        "metadata": {
+          "displayName": "Subscriptions should have a contact email address for security issues",
+          "description": "To ensure the relevant people in your organization are notified when there is a potential security breach in one of your subscriptions, set a security contact to receive email notifications from Security Center"
+        }
+      },
+      "ext_acc_with_write_permissions_should_removed_from_subscription_effect": {
+        "type": "String",
+        "defaultValue": "AuditIfNotExists",
+        "allowedValues": [
+          "AuditIfNotExists",
+          "Disabled"
+        ],
+        "metadata": {
+          "displayName": "External accounts with write permissions should be removed from your subscription",
+          "description": "External accounts with write privileges should be removed from your subscription in order to prevent unmonitored access."
+        }
+      },
+      "ext_acc_with_read_permissions_should_removed_from_subscription_effect": {
+        "type": "String",
+        "defaultValue": "AuditIfNotExists",
+        "allowedValues": [
+          "AuditIfNotExists",
+          "Disabled"
+        ],
+        "metadata": {
+          "displayName": "External accounts with read permissions should be removed from your subscription",
+          "description": "External accounts with read privileges should be removed from your subscription in order to prevent unmonitored access"
+        }      
+      },
+      "spn_should_used_to_protect_subscriptions_instead_mgmt_certs_effect": {
+        "type": "String",
+        "defaultValue": "AuditIfNotExists",
+        "allowedValues": [
+          "AuditIfNotExists",
+          "Disabled"
+        ],
+        "metadata": {
+          "displayName": "Service principals should be used to protect your subscriptions instead of management certificates",
+          "description": "Management certificates allow anyone who authenticates with them to manage the subscription(s) they are associated with. To manage subscriptions more securely, use of service principals with Resource Manager is recommended to limit the impact of a certificate compromise"
+        }    
+      },
+      "deprecated_acc_should_removed_from_subscription_effect": {
+        "type": "String",
+        "defaultValue": "AuditIfNotExists",
+        "allowedValues": [
+          "AuditIfNotExists",
+          "Disabled"
+        ],
+        "metadata": {
+          "displayName": "Deprecated accounts should be removed from your subscription",
+          "description": "Deprecated accounts should be removed from your subscriptions. Deprecated accounts are accounts that have been blocked from signing in"
+        }
+      },
+      "email_notification_high_severity_alerts_should_enabled_effect": {
+        "type": "String",
+        "defaultValue": "AuditIfNotExists",
+        "allowedValues": [
+          "AuditIfNotExists",
+          "Disabled"
+        ],
+        "metadata": {
+          "displayName": "Email notification for high severity alerts should be enabled",
+          "description": "To ensure the relevant people in your organization are notified when there is a potential security breach in one of your subscriptions, enable email notifications for high severity alerts in Security Center"
+        }
+      },
+      "mfa_should_enabled_acc_with_write_permissions_on_subscription_effect": {
+        "type": "String",
+        "defaultValue": "AuditIfNotExists",
+        "allowedValues": [
+          "AuditIfNotExists",
+          "Disabled"
+        ],
+        "metadata": {
+          "displayName": "MFA should be enabled accounts with write permissions on your subscription",
+          "description": "Multi-Factor Authentication (MFA) should be enabled for all subscription accounts with write privileges to prevent a breach of accounts or resources"
+        }
+      },
+      "mfa_should_enabled_acc_with_owner_permissions_on_subscription_effect": {
+        "type": "String",
+        "defaultValue": "AuditIfNotExists",
+        "allowedValues": [
+          "AuditIfNotExists",
+          "Disabled"
+        ],
+        "metadata": {
+          "displayName": "MFA should be enabled on accounts with owner permissions on your subscription",
+          "description": "Multi-Factor Authentication (MFA) should be enabled for all subscription accounts with owner permissions to prevent a breach of accounts or resources"
+        }
+      },
+      "defender_for_rm_should_enabled_effect": {
+        "type": "String",
+        "defaultValue": "AuditIfNotExists",
+        "allowedValues": [
+          "AuditIfNotExists",
+          "Disabled"
+        ],
+        "metadata": {
+          "displayName": "Azure Defender for Resource Manager should be enabled",
+          "description": "Azure Defender for Resource Manager automatically monitors the resource management operations in your organization. Azure Defender detects threats and alerts you about suspicious activity. Learn more about the capabilities of Azure Defender for Resource Manager at https://aka.ms/defender-for-resource-manager . Enabling this Azure Defender plan results in charges. Learn about the pricing details per region on Security Center's pricing page: https://aka.ms/pricing-security-center"
+        }
+      },
+      "mfa_should_enabled_acc_with_read_permissions_on_subscription_effect": {
+        "type": "String",
+        "defaultValue": "AuditIfNotExists",
+        "allowedValues": [
+          "AuditIfNotExists",
+          "Disabled"
+        ],
+        "metadata": {
+          "displayName": "MFA should be enabled on accounts with read permissions on your subscription",
+          "description": "Multi-Factor Authentication (MFA) should be enabled for all subscription accounts with read privileges to prevent a breach of accounts or resources"
+        }
+      },
+      "maximum_3_owners_should_be_designated_for_your_subscription_hipaa_effect": {
+        "type": "String",
+        "defaultValue": "AuditIfNotExists",
+        "allowedValues": [
+          "AuditIfNotExists",
+          "Disabled"
+        ],
+        "metadata": {
+          "displayName": "A maximum of 3 owners should be designated for your subscription",
+          "description": "It is recommended to designate up to 3 subscription owners in order to reduce the potential for breach by a compromised owner"
+        }
+      },
+      "there_should_be_more_than_1_owner_assigned_to_subscription_hipaa_effect": {
+        "type": "String",
+        "defaultValue": "AuditIfNotExists",
+        "allowedValues": [
+          "AuditIfNotExists",
+          "Disabled"
+        ],
+        "metadata": {
+          "displayName": "There should be more than one owner assigned to your subscription",
+          "description": "It is recommended to designate more than one subscription owner in order to have administrator access redundancy"
+        }
+      },
+      "deprecated_acc_with_owner_permissions_should_removed_from_subscription_hipaa_effect": {
+        "type": "String",
+        "defaultValue": "AuditIfNotExists",
+        "allowedValues": [
+          "AuditIfNotExists",
+          "Disabled"
+        ],
+        "metadata": {
+          "displayName": "Deprecated accounts with owner permissions should be removed from your subscription",
+          "description": "Deprecated accounts with owner permissions should be removed from your subscription. Deprecated accounts are accounts that have been blocked from signing in"
+        }
+      },
+      "ext_acc_with_owner_permissions_should_removed_from_subscription_hipaa_effect": {
+        "type": "String",
+        "defaultValue": "AuditIfNotExists",
+        "allowedValues": [
+          "AuditIfNotExists",
+          "Disabled"
+        ],
+        "metadata": {
+          "displayName": "External accounts with owner permissions should be removed from your subscription",
+          "description": "External accounts with owner permissions should be removed from your subscription in order to prevent unmonitored access"
+        }
+      },
+      "snet_should_be_associated_with_a_nsg_hipaa_effect": {
+        "type": "String",
+        "defaultValue": "AuditIfNotExists",
+        "allowedValues": [
+          "AuditIfNotExists",
+          "Disabled"
+        ],
+        "metadata": {
+          "displayName": "Subnets should be associated with a Network Security Group",
+          "description": "Protect your subnet from potential threats by restricting access to it with a Network Security Group (NSG). NSGs contain a list of Access Control List (ACL) rules that allow or deny network traffic to your subnet"
+        }
+      }            
+    },
+    "policyDefinitions": [
+      {
+        "policyDefinitionReferenceId": "email_notification_to_subscription_owner_high_severity_alerts_enabled_effect",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/0b15565f-aa9e-48ba-8619-45960f2c314d",
+        "parameters": {
+          "effect": {
+            "value": "[parameters('email_notification_to_subscription_owner_high_severity_alerts_enabled_effect')]"
+          }
+        },
+        "groupNames": []
+      },
+      {
+        "policyDefinitionReferenceId": "defender_for_kv_should_enabled_effect",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/0e6763cc-5078-4e64-889d-ff4d9a839047",
+        "parameters": {
+          "effect": {
+            "value": "[parameters('defender_for_kv_should_enabled_effect')]"
+          }
+        },
+        "groupNames": []
+      },
+      {
+        "policyDefinitionReferenceId": "defender_for_st_should_enabled_effect",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/308fbb08-4ab8-4e67-9b29-592e93fb94fa",
+        "parameters": {
+          "effect": {
+            "value": "[parameters('defender_for_st_should_enabled_effect')]"
+          }
+        },
+        "groupNames": []
+      },
+      {
+        "policyDefinitionReferenceId": "defender_for_servers_should_enabled_effect",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/4da35fc9-c9e7-4960-aec9-797fe7d9051d",
+        "parameters": {
+          "effect": {
+            "value": "[parameters('defender_for_servers_should_enabled_effect')]"
+          }
+        },
+        "groupNames": []
+      },
+      {
+        "policyDefinitionReferenceId": "subscriptions_should_have_contact_email_address_security_issues_effect",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/4f4f78b8-e367-4b10-a341-d9a4ad5cf1c7",
+        "parameters": {
+          "effect": {
+            "value": "[parameters('subscriptions_should_have_contact_email_address_security_issues_effect')]"
+          }
+        },
+        "groupNames": []
+      },
+      {
+        "policyDefinitionReferenceId": "ext_acc_with_write_permissions_should_removed_from_subscription_effect",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/5c607a2e-c700-4744-8254-d77e7c9eb5e4",
+        "parameters": {
+          "effect": {
+            "value": "[parameters('ext_acc_with_write_permissions_should_removed_from_subscription_effect')]"
+          }
+        },
+        "groupNames": []
+      },
+      {
+        "policyDefinitionReferenceId": "ext_acc_with_read_permissions_should_removed_from_subscription_effect",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/5f76cf89-fbf2-47fd-a3f4-b891fa780b60",
+        "parameters": {
+          "effect": {
+            "value": "[parameters('ext_acc_with_read_permissions_should_removed_from_subscription_effect')]"
+          }
+        },
+        "groupNames": [] 
+      },
+      {
+        "policyDefinitionReferenceId": "spn_should_used_to_protect_subscriptions_instead_mgmt_certs_effect",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/6646a0bd-e110-40ca-bb97-84fcee63c414",
+        "parameters": {
+          "effect": {
+            "value": "[parameters('spn_should_used_to_protect_subscriptions_instead_mgmt_certs_effect')]"
+          }
+        },
+        "groupNames": []  
+      },
+      {
+        "policyDefinitionReferenceId": "deprecated_acc_should_removed_from_subscription_effect",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/6b1cbf55-e8b6-442f-ba4c-7246b6381474",
+        "parameters": {
+          "effect": {
+            "value": "[parameters('deprecated_acc_should_removed_from_subscription_effect')]"
+          }
+        },
+        "groupNames": []
+      },
+      {
+        "policyDefinitionReferenceId": "email_notification_high_severity_alerts_should_enabled_effect",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/6e2593d9-add6-4083-9c9b-4b7d2188c899",
+        "parameters": {
+          "effect": {
+            "value": "[parameters('email_notification_high_severity_alerts_should_enabled_effect')]"
+          }
+        },
+        "groupNames": []
+      },
+      {
+        "policyDefinitionReferenceId": "mfa_should_enabled_acc_with_write_permissions_on_subscription_effect",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/9297c21d-2ed6-4474-b48f-163f75654ce3",
+        "parameters": {
+          "effect": {
+            "value": "[parameters('mfa_should_enabled_acc_with_write_permissions_on_subscription_effect')]"
+          }
+        },
+        "groupNames": []
+      },
+      {
+        "policyDefinitionReferenceId": "mfa_should_enabled_acc_with_owner_permissions_on_subscription_effect",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/aa633080-8b72-40c4-a2d7-d00c03e80bed",
+        "parameters": {
+          "effect": {
+            "value": "[parameters('mfa_should_enabled_acc_with_owner_permissions_on_subscription_effect')]"
+          }
+        },
+        "groupNames": []
+      },
+      {
+        "policyDefinitionReferenceId": "defender_for_rm_should_enabled_effect",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/c3d20c29-b36d-48fe-808b-99a87530ad99",
+        "parameters": {
+          "effect": {
+            "value": "[parameters('defender_for_rm_should_enabled_effect')]"
+          }
+        },
+        "groupNames": []
+      },
+      {
+        "policyDefinitionReferenceId": "mfa_should_enabled_acc_with_read_permissions_on_subscription_effect",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/e3576e28-8b17-4677-84c3-db2990658d64",
+        "parameters": {
+          "effect": {
+            "value": "[parameters('mfa_should_enabled_acc_with_read_permissions_on_subscription_effect')]"
+          }
+        },
+        "groupNames": []
+      },
+    {
+      "policyDefinitionReferenceId": "maximum_3_owners_should_be_designated_for_your_subscription_hipaa_effect",
+      "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/4f11b553-d42e-4e3a-89be-32ca364cad4c",
+      "parameters": {
+        "effect": {
+          "value": "[parameters('maximum_3_owners_should_be_designated_for_your_subscription_hipaa_effect')]"
+        }
+      },
+      "groupNames": []
+    },
+    {
+      "policyDefinitionReferenceId": "there_should_be_more_than_1_owner_assigned_to_subscription_hipaa_effect",
+      "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/09024ccc-0c5f-475e-9457-b7c0d9ed487b",
+      "parameters": {
+        "effect": {
+          "value": "[parameters('there_should_be_more_than_1_owner_assigned_to_subscription_hipaa_effect')]"
+        }
+      },
+      "groupNames": []
+    },
+    {
+    "policyDefinitionReferenceId": "deprecated_acc_with_owner_permissions_should_removed_from_subscription_hipaa_effect",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/ebb62a0c-3560-49e1-89ed-27e074e9f8ad",
+    "parameters": {
+      "effect": {
+        "value": "[parameters('deprecated_acc_with_owner_permissions_should_removed_from_subscription_hipaa_effect')]"
+      }
+    },
+    "groupNames": []
+    },
+    {
+    "policyDefinitionReferenceId": "ext_acc_with_owner_permissions_should_removed_from_subscription_hipaa_effect",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/f8456c1c-aa66-4dfb-861a-25d127b775c9",
+    "parameters": {
+      "effect": {
+        "value": "[parameters('ext_acc_with_owner_permissions_should_removed_from_subscription_hipaa_effect')]"
+      }
+    },
+    "groupNames": []
+    },
+    {
+    "policyDefinitionReferenceId": "snet_should_be_associated_with_a_nsg_hipaa_effect",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/e71308d3-144b-4262-b144-efdc3cc90517",
+    "parameters": {
+      "effect": {
+        "value": "[parameters('snet_should_be_associated_with_a_nsg_hipaa_effect')]"
+      }
+    },
+    "groupNames": []
+    }                    
+    ],
+    "policyDefinitionGroups": null
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "name": "mhb-{{configs.environment}}-aks-pod-sec-pol",
+  "type": "Microsoft.Authorization/policyAssignments",
+  "apiVersion": "2019-09-01",
+  "properties": {
+    "description": "This initiative includes the policies for the Kubernetes cluster pod security restricted standards. This policy is generally available for Kubernetes Service (AKS), and preview for AKS Engine and Azure Arc enabled Kubernetes. For instructions on using this policy, visit https://aka.ms/kubepolicydoc",
+    "displayName": "mhb-{{configs.environment}}-kubernetes-cluster-pod-security-restricted-standards-for-Linux-based-workloads",
+    "notScopes": [],
+    "parameters": {
+    },
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policySetDefinitions/42b8ef37-b724-4e24-bbc8-7a7708edfe00",
+    "scope": "${current_scope_resource_id}",
+    "enforcementMode": null
+  },
+  "location": "${default_location}",
+  "identity": {
+    "type": "SystemAssigned"
+  }
+}

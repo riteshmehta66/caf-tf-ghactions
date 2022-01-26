@@ -1,0 +1,19 @@
+{
+  "name": "mhb-sbx-aks-tem-dsk-pol",
+  "type": "Microsoft.Authorization/policyAssignments",
+  "apiVersion": "2019-09-01",
+  "properties": {
+    "description": "To enhance data security, the data stored on the virtual machine (VM) host of your Azure Kubernetes Service nodes VMs should be encrypted at rest. This is a common requirement in many regulatory and industry compliance standards",
+    "displayName": "mhb-sbx-temp-disks-and-cache-for-agent-node-pools-in-azure-kubernetes-service-clusters-should-be-encrypted-at-host",
+    "notScopes": [],
+    "parameters": {
+    },
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/41425d9f-d1a5-499a-9932-f8ed8453932c",
+    "scope": "${current_scope_resource_id}",
+    "enforcementMode": null
+  },
+  "location": "${default_location}",
+  "identity": {
+    "type": "SystemAssigned"
+  }
+}

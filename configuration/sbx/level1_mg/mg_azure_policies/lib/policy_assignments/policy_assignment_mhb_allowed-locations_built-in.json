@@ -1,10 +1,10 @@
 {
-  "name": "mhb-sbx-allow-loc-pol",
+  "name": "pqr-sbx-allow-loc-pol",
   "type": "Microsoft.Authorization/policyAssignments",
   "apiVersion": "2019-09-01",
   "properties": {
     "description": "This policy enables you to restrict the locations your organization can specify when deploying resources. Use to enforce your geo-compliance requirements. Excludes resource groups, Microsoft.AzureActiveDirectory/b2cDirectories, and resources that use the 'global' region",
-    "displayName": "mhb-sbx-allowed-locations",
+    "displayName": "pqr-sbx-allowed-locations",
     "notScopes": [],
     "parameters": {
       "listOfAllowedLocations": { 

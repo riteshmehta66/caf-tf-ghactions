@@ -42,7 +42,7 @@ keyvault_certificate_requests = {
 
       x509_certificate_properties = {
         // subject            = "CN=sales-application"
-        subject            = "CN=randommhb-FrontDoor.azurefd.net"
+        subject            = "CN=randompqr-FrontDoor.azurefd.net"
         validity_in_months = 1
         key_usage          = ["keyCertSign"]
         subject_alternative_names = {

@@ -1,11 +1,11 @@
 {
-  "name": "mhb-{{configs.environment}}-network-pol",
+  "name": "pqr-{{configs.environment}}-network-pol",
   "type": "Microsoft.Authorization/policySetDefinitions",
   "apiVersion": "2021-06-01",
   "scope": null,
   "properties": {
     "policyType": "Custom",
-    "displayName": "mhb-{{configs.environment}}-network-policy-initiative",
+    "displayName": "pqr-{{configs.environment}}-network-policy-initiative",
     "description": "Group of policies in network category",
     "metadata": {
       "version": "1.0.0",

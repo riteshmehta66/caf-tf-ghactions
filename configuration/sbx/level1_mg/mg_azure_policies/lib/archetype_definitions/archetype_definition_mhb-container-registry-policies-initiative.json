@@ -1,5 +1,5 @@
 {
-    "mhb-sbx-cr-pol": {
+    "pqr-sbx-cr-pol": {
         "policy_assignments": [
             "cr_should_use_private_link",
             "cr_should_not_allow_unrestricted_network_access",

@@ -1,11 +1,11 @@
 {
-  "name": "mhb-sbx-st-pol",
+  "name": "pqr-sbx-st-pol",
   "type": "Microsoft.Authorization/policySetDefinitions",
   "apiVersion": "2021-06-01",
   "scope": null,
   "properties": {
     "policyType": "Custom",
-    "displayName": "mhb-sbx-storage-account-policy-initiative",
+    "displayName": "pqr-sbx-storage-account-policy-initiative",
     "description": "Group of policies in storage account category",
     "metadata": {
       "version": "1.0.0",

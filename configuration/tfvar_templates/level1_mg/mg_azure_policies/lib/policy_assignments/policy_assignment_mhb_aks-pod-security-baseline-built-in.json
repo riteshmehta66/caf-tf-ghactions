@@ -1,10 +1,10 @@
 {
-  "name": "mhb-{{configs.environment}}-aks-pod-base-pol",
+  "name": "pqr-{{configs.environment}}-aks-pod-base-pol",
   "type": "Microsoft.Authorization/policyAssignments",
   "apiVersion": "2019-09-01",
   "properties": {
     "description": "This initiative includes the policies for the Kubernetes cluster pod security baseline standards. This policy is generally available for Kubernetes Service (AKS), and preview for AKS Engine and Azure Arc enabled Kubernetes. For instructions on using this policy, visit https://aka.ms/kubepolicydoc",
-    "displayName": "mhb-{{configs.environment}}-kubernetes-cluster-pod-security-baseline-standards-for-linux-based-workloads",
+    "displayName": "pqr-{{configs.environment}}-kubernetes-cluster-pod-security-baseline-standards-for-linux-based-workloads",
     "notScopes": [],
     "parameters": {
     },

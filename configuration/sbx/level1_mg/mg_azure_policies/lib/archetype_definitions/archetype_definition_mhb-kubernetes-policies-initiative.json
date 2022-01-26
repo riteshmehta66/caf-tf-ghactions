@@ -1,5 +1,5 @@
 {
-    "mhb-sbx-aks-pol": {
+    "pqr-sbx-aks-pol": {
         "policy_assignments": [
             "policy_add_on_aks_should_be_installed_enabled_on_clusters",
             "aks_pcls_should_be_enabled",

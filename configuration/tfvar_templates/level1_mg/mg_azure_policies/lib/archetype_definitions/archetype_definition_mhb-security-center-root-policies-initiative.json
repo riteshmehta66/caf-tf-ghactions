@@ -1,5 +1,5 @@
 {
-    "mhb-{{configs.environment}}-asc-root-pol": {
+    "pqr-{{configs.environment}}-asc-root-pol": {
         "policy_assignments": [
             "email_notification_to_subscription_owner_high_severity_alerts_enabled",
             "defender_for_kv_should_enabled",

@@ -1,13 +1,13 @@
 {
-  "name": "mhb-sbx-automation-pol",
+  "name": "pqr-sbx-automation-pol",
   "type": "Microsoft.Authorization/policyAssignments",
   "apiVersion": "2019-09-01",
   "properties": {
-    "description": "Automation policies for MHB",
-    "displayName": "mhb-sbx-automation-policy-initiative",
+    "description": "Automation policies for pqr",
+    "displayName": "pqr-sbx-automation-policy-initiative",
     "notScopes": [],
     "parameters": {},
-    "policyDefinitionId": "${root_scope_resource_id}/providers/Microsoft.Authorization/policySetDefinitions/mhb-sbx-automation-pol",
+    "policyDefinitionId": "${root_scope_resource_id}/providers/Microsoft.Authorization/policySetDefinitions/pqr-sbx-automation-pol",
     "scope": "${current_scope_resource_id}",
     "enforcementMode": null
   },

@@ -1,5 +1,5 @@
 {
-    "mhb-sbx-app-pol": {
+    "pqr-sbx-app-pol": {
         "policy_assignments": [
             "ftps_only_in_func_app",
             "ftps_reqd_in_webapp",

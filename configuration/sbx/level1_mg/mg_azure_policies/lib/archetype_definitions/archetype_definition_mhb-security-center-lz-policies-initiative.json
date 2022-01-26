@@ -1,5 +1,5 @@
 {
-    "mhb-sbx-asc-lz-pol": {
+    "pqr-sbx-asc-lz-pol": {
         "policy_assignments": [
             "allowlist_rules_your_adaptive_app_control_policy_should_updated",
             "defender_for_ase_should_enabled",

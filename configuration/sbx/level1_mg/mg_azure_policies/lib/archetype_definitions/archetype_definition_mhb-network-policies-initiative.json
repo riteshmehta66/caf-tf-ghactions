@@ -1,5 +1,5 @@
 {
-    "mhb-sbx-network-pol": {
+    "pqr-sbx-network-pol": {
         "policy_assignments": [
             "vpng_should_not_use_basic_sku_effect",
             "non-internet-facing_vm_should_protected_with_nsg",

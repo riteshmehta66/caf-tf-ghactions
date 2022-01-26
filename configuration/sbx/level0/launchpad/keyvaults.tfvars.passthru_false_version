@@ -4,7 +4,7 @@
 # For dev deployments, make sure you set passthrough=false in launchpad
 keyvaults = {
   level0 = {
-    name                = "{{configs.environment}}cf0kv02dvopse2"    # change name to caf{{configs.environment}}cf0mhbakvdvop00e2 for actual deployments
+    name                = "{{configs.environment}}cf0kv02dvopse2"    # change name to caf{{configs.environment}}cf0pqrakvdvop00e2 for actual deployments
     resource_group_key  = "level0"
     sku_name            = "standard"
     soft_delete_enabled = true
@@ -33,7 +33,7 @@ keyvaults = {
   }
 
   level1 = {
-    name                = "{{configs.environment}}cf1kv02dvopse2"           # change name to caf{{configs.environment}}cf1mhbakvdvop00e2 for actual deployments
+    name                = "{{configs.environment}}cf1kv02dvopse2"           # change name to caf{{configs.environment}}cf1pqrakvdvop00e2 for actual deployments
     resource_group_key  = "level1"
     sku_name            = "standard"
     soft_delete_enabled = true
@@ -62,7 +62,7 @@ keyvaults = {
   }
 
   level2 = {
-    name                = "{{configs.environment}}cf2kv02dvopse2"           # change name to caf{{configs.environment}}cf2mhbakvdvop00e2 for actual deployments
+    name                = "{{configs.environment}}cf2kv02dvopse2"           # change name to caf{{configs.environment}}cf2pqrakvdvop00e2 for actual deployments
     resource_group_key  = "level2"
     sku_name            = "standard"
     soft_delete_enabled = true
@@ -91,7 +91,7 @@ keyvaults = {
   }
 
   level3 = {
-    name                = "{{configs.environment}}cf3kv02dvopse2"           # change name to caf{{configs.environment}}cf3mhbakvdvop00e2 for actual deployments
+    name                = "{{configs.environment}}cf3kv02dvopse2"           # change name to caf{{configs.environment}}cf3pqrakvdvop00e2 for actual deployments
     resource_group_key  = "level3"
     sku_name            = "standard"
     soft_delete_enabled = true
@@ -120,7 +120,7 @@ keyvaults = {
   }
 
   level4 = {
-    name                = "{{configs.environment}}cf4kv02dvopse2"         # change name to caf{{configs.environment}}cf4mhbakvdvop00e2 for actual deployments
+    name                = "{{configs.environment}}cf4kv02dvopse2"         # change name to caf{{configs.environment}}cf4pqrakvdvop00e2 for actual deployments
     resource_group_key  = "level4"
     sku_name            = "standard"
     soft_delete_enabled = true

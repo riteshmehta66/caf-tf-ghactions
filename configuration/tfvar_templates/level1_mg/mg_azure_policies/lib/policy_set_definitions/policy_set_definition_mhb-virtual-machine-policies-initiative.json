@@ -1,11 +1,11 @@
 {
-  "name": "mhb-{{configs.environment}}-vm-pol",
+  "name": "pqr-{{configs.environment}}-vm-pol",
   "type": "Microsoft.Authorization/policySetDefinitions",
   "apiVersion": "2021-06-01",
   "scope": null,
   "properties": {
     "policyType": "Custom",
-    "displayName": "mhb-{{configs.environment}}-virtual-machine-policy-initiative",
+    "displayName": "pqr-{{configs.environment}}-virtual-machine-policy-initiative",
     "description": "Group of policies in virtual machine category",
     "metadata": {
       "version": "1.0.0",

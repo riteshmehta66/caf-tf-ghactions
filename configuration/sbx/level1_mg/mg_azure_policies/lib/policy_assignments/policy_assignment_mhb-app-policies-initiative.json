@@ -1,13 +1,13 @@
 {
-  "name": "mhb-sbx-app-pol",
+  "name": "pqr-sbx-app-pol",
   "type": "Microsoft.Authorization/policyAssignments",
   "apiVersion": "2019-09-01",
   "properties": {
-    "description": "app service policies for MHB",
-    "displayName": "mhb-sbx-app-policy-initiative",
+    "description": "app service policies for pqr",
+    "displayName": "pqr-sbx-app-policy-initiative",
     "notScopes": [],
     "parameters": {},
-    "policyDefinitionId": "${root_scope_resource_id}/providers/Microsoft.Authorization/policySetDefinitions/mhb-sbx-app-pol",
+    "policyDefinitionId": "${root_scope_resource_id}/providers/Microsoft.Authorization/policySetDefinitions/pqr-sbx-app-pol",
     "scope": "${current_scope_resource_id}",
     "enforcementMode": null
   },

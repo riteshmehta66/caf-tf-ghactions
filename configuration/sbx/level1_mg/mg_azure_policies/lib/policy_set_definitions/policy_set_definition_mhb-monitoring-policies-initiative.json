@@ -1,11 +1,11 @@
 {
-  "name": "mhb-sbx-monitoring-pol",
+  "name": "pqr-sbx-monitoring-pol",
   "type": "Microsoft.Authorization/policySetDefinitions",
   "apiVersion": "2021-06-01",
   "scope": null,
   "properties": {
     "policyType": "Custom",
-    "displayName": "mhb-sbx-monitoring-policy-initiative",
+    "displayName": "pqr-sbx-monitoring-policy-initiative",
     "description": "Group of policies in monitoring category",
     "metadata": {
       "version": "1.0.0",

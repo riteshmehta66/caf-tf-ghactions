@@ -1,11 +1,11 @@
 {
-  "name": "mhb-sbx-fd-pol",
+  "name": "pqr-sbx-fd-pol",
   "type": "Microsoft.Authorization/policySetDefinitions",
   "apiVersion": "2021-06-01",
   "scope": null,
   "properties": {
     "policyType": "Custom",
-    "displayName": "mhb-sbx-front-door-policy-initiative",
+    "displayName": "pqr-sbx-front-door-policy-initiative",
     "description": "Group of policies in front door category",
     "metadata": {
       "version": "1.0.0",

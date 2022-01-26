@@ -14,7 +14,7 @@ resource_groups = {
       "environment type" =  "sbx"
       "operations team" =  "tech services"
       "owner name" = "thomas.stokkeland@mobileheartbeat.com "
-      "customer name"  =  "mhb"
+      "customer name"  =  "pqr"
       "customer contact"  =  "chris.sego@mobileheartbeat.com"
       "data classification"  =  "confidential"
     }
@@ -31,7 +31,7 @@ resource_groups = {
       "environment type" =  "sbx"
       "operations team" =  "tech services"
       "owner name" = "thomas.stokkeland@mobileheartbeat.com "
-      "customer name"  =  "mhb"
+      "customer name"  =  "pqr"
       "customer contact"  =  "chris.sego@mobileheartbeat.com"
       "data classification"  =  "confidential"
     }
@@ -40,33 +40,33 @@ resource_groups = {
 # Resource Groups for NSG's
 
   // eus2_nsg_rg_01 = {
-  //   name   = "mhb-az-vx1-sbx-nss-nsg-rg001"
+  //   name   = "pqr-az-vx1-sbx-nss-nsg-rg001"
   //   region = "region1"
   //   tags   = {
   //     # "application_id"    = "<sysid>"
   //     "application_id"    = "nss"
   //     "environment"       = "sbx"
   //     "termination_date"  = "NONE"
-  //     "created_by"        = "NetworkCloudEngineering@mhb.com"
+  //     "created_by"        = "NetworkCloudEngineering@pqr.com"
   //     "stack_name"        = "terraform"
   //     "data_class"        = "yellow"
-  //     "name"              = "mhb-az-vx1-sbx-nss-nsg-rg001"
+  //     "name"              = "pqr-az-vx1-sbx-nss-nsg-rg001"
   //     "description"       = "resource group for network security group"
   //   }
   // }
 
   // cus_nsg_rg_01 = {
-  //   name   = "mhb-az-vx1-sbx-nss-nsg-rg002"
+  //   name   = "pqr-az-vx1-sbx-nss-nsg-rg002"
   //   region = "region2"
   //   tags   = {
   //     # "application_id"    = "<sysid>"
   //     "application_id"    = "nss"
   //     "environment"       = "sbx"
   //     "termination_date"  = "NONE"
-  //     "created_by"        = "NetworkCloudEngineering@mhb.com"
+  //     "created_by"        = "NetworkCloudEngineering@pqr.com"
   //     "stack_name"        = "terraform"
   //     "data_class"        = "yellow"
-  //     "name"              = "mhb-az-vx1-sbx-nss-nsg-rg002"
+  //     "name"              = "pqr-az-vx1-sbx-nss-nsg-rg002"
   //     "description"       = "resource group for network security group"
   //   }
   // }

@@ -1,10 +1,10 @@
 {
-  "name": "mhb-{{configs.environment}}-aks-pod-add-pol",
+  "name": "pqr-{{configs.environment}}-aks-pod-add-pol",
   "type": "Microsoft.Authorization/policyAssignments",
   "apiVersion": "2019-09-01",
   "properties": {
     "description": "Use Azure Policy Add-on to manage and report on the compliance state of your Azure Kubernetes Service (AKS) clusters. For more information, see https://aka.ms/akspolicydoc",
-    "displayName": "mhb-{{configs.environment}}-deploy-azure-policy-add-on-to-Azure-kubernetes-service-clusters",
+    "displayName": "pqr-{{configs.environment}}-deploy-azure-policy-add-on-to-Azure-kubernetes-service-clusters",
     "notScopes": [],
     "parameters": {
     },

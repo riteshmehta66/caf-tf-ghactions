@@ -1,5 +1,5 @@
 {
-    "mhb-{{configs.environment}}-kv-pol": {
+    "pqr-{{configs.environment}}-kv-pol": {
         "policy_assignments": [
             "kv_secrets_should_have_exp_date",
             "kv_keys_should_have_exp_date",

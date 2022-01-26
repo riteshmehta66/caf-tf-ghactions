@@ -11,7 +11,7 @@ resource_groups = {
       "environment type" =  "{{configs.environment}}"
       "operations team" =  "tech services"
       "owner name" = "thomas.stokkeland@mobileheartbeat.com "
-      "customer name"  =  "mhb"
+      "customer name"  =  "pqr"
       "customer contact"  =  "chris.sego@mobileheartbeat.com"
       "data classification"  =  "confidential"
     }
@@ -28,7 +28,7 @@ resource_groups = {
       "environment type" =  "{{configs.environment}}"
       "operations team" =  "tech services"
       "owner name" = "thomas.stokkeland@mobileheartbeat.com "
-      "customer name"  =  "mhb"
+      "customer name"  =  "pqr"
       "customer contact"  =  "chris.sego@mobileheartbeat.com"
       "data classification"  =  "confidential"
     }
@@ -37,12 +37,12 @@ resource_groups = {
 # Resource Groups for NSG's
 
   // eus2_nsg_rg_01 = {
-  //   name   = "mhb-az-nt-{{configs.environment}}-nss-nsg-rg-001"
+  //   name   = "pqr-az-nt-{{configs.environment}}-nss-nsg-rg-001"
   //   region = "region1" 
   // }
 
   // cus_nsg_rg_01 = {
-  //   name   = "mhb-az-nt-{{configs.environment}}-nss-nsg-rg-002"
+  //   name   = "pqr-az-nt-{{configs.environment}}-nss-nsg-rg-002"
   //   region = "region2"  
   // }
 }

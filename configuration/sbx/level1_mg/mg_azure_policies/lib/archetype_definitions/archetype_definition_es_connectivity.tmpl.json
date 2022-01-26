@@ -1,7 +1,7 @@
 {
     "platform-sbx-con-sbx": {
         "policy_assignments": [
-        "mhb-sbx-fd-pol"
+        "pqr-sbx-fd-pol"
         ],
         "policy_definitions": [],
         "policy_set_definitions": [],

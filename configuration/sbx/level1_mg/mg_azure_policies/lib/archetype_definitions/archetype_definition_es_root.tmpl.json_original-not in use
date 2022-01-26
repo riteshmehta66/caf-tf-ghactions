@@ -133,7 +133,7 @@
       "Deploy-Sql-Security",
       "Enforce-Encryption-CMK",
       "Enforce-EncryptTransit",
-      "mhb-app-service-policies"
+      "pqr-app-service-policies"
     ],
     "role_definitions": [
       "Network-Subnet-Contributor"

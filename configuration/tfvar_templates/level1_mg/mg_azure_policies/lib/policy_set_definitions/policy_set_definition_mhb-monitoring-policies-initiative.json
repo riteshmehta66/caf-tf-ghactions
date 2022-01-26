@@ -1,11 +1,11 @@
 {
-  "name": "mhb-{{configs.environment}}-monitoring-pol",
+  "name": "pqr-{{configs.environment}}-monitoring-pol",
   "type": "Microsoft.Authorization/policySetDefinitions",
   "apiVersion": "2021-06-01",
   "scope": null,
   "properties": {
     "policyType": "Custom",
-    "displayName": "mhb-{{configs.environment}}-monitoring-policy-initiative",
+    "displayName": "pqr-{{configs.environment}}-monitoring-policy-initiative",
     "description": "Group of policies in monitoring category",
     "metadata": {
       "version": "1.0.0",

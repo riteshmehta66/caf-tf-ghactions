@@ -1,5 +1,5 @@
 {
-    "mhb-sbx-vm-pol": {
+    "pqr-sbx-vm-pol": {
         "policy_assignments": [
             "all_network_ports_should_restricted_nsg_associated_to_vm"
         ],

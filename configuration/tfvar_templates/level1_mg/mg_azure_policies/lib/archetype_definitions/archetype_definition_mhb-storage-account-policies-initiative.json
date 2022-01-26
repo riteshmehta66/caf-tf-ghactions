@@ -1,5 +1,5 @@
 {
-    "mhb-{{configs.environment}}-st-pol": {
+    "pqr-{{configs.environment}}-st-pol": {
         "policy_assignments": [
             "st_should_restrict_network_access_effect",
             "st_should_use_private_link_effect",

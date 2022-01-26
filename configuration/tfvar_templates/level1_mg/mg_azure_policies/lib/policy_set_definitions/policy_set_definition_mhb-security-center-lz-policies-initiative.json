@@ -1,11 +1,11 @@
 {
-  "name": "mhb-{{configs.environment}}-asc-lz-pol",
+  "name": "pqr-{{configs.environment}}-asc-lz-pol",
   "type": "Microsoft.Authorization/policySetDefinitions",
   "apiVersion": "2021-06-01",
   "scope": null,
   "properties": {
     "policyType": "Custom",
-    "displayName": "mhb-{{configs.environment}}-asc-lz-policy-initiative",
+    "displayName": "pqr-{{configs.environment}}-asc-lz-policy-initiative",
     "description": "Group of policies in Azure Security Center category",
     "metadata": {
       "version": "1.0.0",

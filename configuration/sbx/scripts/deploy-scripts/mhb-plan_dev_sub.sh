@@ -3,9 +3,9 @@
 
 # rover login -tenant microsoft.onmicrosoft.com -s "a066a93c-26fc-4c50-9457-1791f6209b3e"
 TF_VAR_tfstate_subscription_id="62d86ea5-6f86-4157-be46-57282363ba93"
-caf_environment="mhb-sandpit"
+caf_environment="pqr-sandpit"
 
-# TF_VAR_tfstate_subscription_id="e011a57c-df98-4a4a-b07d-fbe0b6f482db"      # MHB Dev Subcription
+# TF_VAR_tfstate_subscription_id="e011a57c-df98-4a4a-b07d-fbe0b6f482db"      # pqr Dev Subcription
 
 
 # rover login -tenant riteshmehta66hotmail.onmicrosoft.com -s "85f466ae-558f-471c-b9e8-5be40e40910d"
@@ -24,7 +24,7 @@ caf_environment="mhb-sandpit"
 # /tf/rover/rover.sh -lz /tf/caf/landingzones/caf_launchpad \
 #   -tfstate_subscription_id ${TF_VAR_tfstate_subscription_id} \
 #   -target_subscription "MS-Sandbox" \
-#   -var-folder /tf/caf/mhb-iac-platform/configuration/level0/launchpad \
+#   -var-folder /tf/caf/pqr-iac-platform/configuration/level0/launchpad \
 #   -parallelism 30 \
 #   -level level0 \
 #   -launchpad \
@@ -47,8 +47,8 @@ caf_environment="mhb-sandpit"
 # /tf/rover/rover.sh -lz /tf/caf/landingzones/caf_solution \
 #   -tfstate_subscription_id ${TF_VAR_tfstate_subscription_id} \
 #   -target_subscription "MS-Sandbox" \
-#   -var-folder /tf/caf/mhb-iac-platform/configuration/level1/management \
-#   -var-file /tf/caf/mhb-iac-platform/configuration/level1/diagnostics_definition.tfvars \
+#   -var-folder /tf/caf/pqr-iac-platform/configuration/level1/management \
+#   -var-file /tf/caf/pqr-iac-platform/configuration/level1/diagnostics_definition.tfvars \
 #   -parallelism 30 \
 #   -tfstate caf_level1_management.tfstate \
 #   -level level1 \
@@ -62,8 +62,8 @@ caf_environment="mhb-sandpit"
   # /tf/rover/rover.sh -lz /tf/caf/landingzones/caf_solution \
   # -tfstate_subscription_id ${TF_VAR_tfstate_subscription_id} \
   # -target_subscription "MS-Sandbox" \
-  # -var-folder /tf/caf/mhb-iac-platform/configuration/level1/identity \
-  # -var-file /tf/caf/mhb-iac-platform/configuration/level1/diagnostics_definition.tfvars \
+  # -var-folder /tf/caf/pqr-iac-platform/configuration/level1/identity \
+  # -var-file /tf/caf/pqr-iac-platform/configuration/level1/diagnostics_definition.tfvars \
   # -parallelism 30 \
   # -tfstate caf_level1_identity.tfstate \
   # -level level1 \
@@ -75,8 +75,8 @@ caf_environment="mhb-sandpit"
   # /tf/rover/rover.sh -lz /tf/caf/landingzones/caf_solution \
   # -tfstate_subscription_id ${TF_VAR_tfstate_subscription_id} \
   # -target_subscription "MS-Sandbox" \
-  # -var-folder /tf/caf/mhb-iac-platform/configuration/level1/connectivity \
-  # -var-file /tf/caf/mhb-iac-platform/configuration/level1/diagnostics_definition.tfvars \
+  # -var-folder /tf/caf/pqr-iac-platform/configuration/level1/connectivity \
+  # -var-file /tf/caf/pqr-iac-platform/configuration/level1/diagnostics_definition.tfvars \
   # -parallelism 30 \
   # -tfstate caf_level1_connectivity.tfstate \
   # -level level1 \
@@ -88,8 +88,8 @@ caf_environment="mhb-sandpit"
 #   /tf/rover/rover.sh -lz /tf/caf/landingzones/caf_solution \
 #   -tfstate_subscription_id ${TF_VAR_tfstate_subscription_id} \
 #   -target_subscription "MS-Sandbox" \
-#   -var-folder /tf/caf/mhb-iac-platform/configuration/level1/lz1dev \
-#   -var-file /tf/caf/mhb-iac-platform/configuration/level1/diagnostics_definition.tfvars \
+#   -var-folder /tf/caf/pqr-iac-platform/configuration/level1/lz1dev \
+#   -var-file /tf/caf/pqr-iac-platform/configuration/level1/diagnostics_definition.tfvars \
 #   -parallelism 30 \
 #   -tfstate caf_level1_lz1dev.tfstate \
 #   -level level1 \
@@ -101,8 +101,8 @@ caf_environment="mhb-sandpit"
 # /tf/rover/rover.sh -lz /tf/caf/landingzones/caf_solution \
 #   -tfstate_subscription_id ${TF_VAR_tfstate_subscription_id} \
 #   -target_subscription "MS-Sandbox" \
-#   -var-folder /tf/caf/mhb-iac-platform/configuration/level1/lz1prd \
-#   -var-file /tf/caf/mhb-iac-platform/configuration/level1/diagnostics_definition.tfvars \
+#   -var-folder /tf/caf/pqr-iac-platform/configuration/level1/lz1prd \
+#   -var-file /tf/caf/pqr-iac-platform/configuration/level1/diagnostics_definition.tfvars \
 #   -parallelism 30 \
 #   -tfstate caf_level1_lz1prd.tfstate \
 #   -level level1 \
@@ -123,7 +123,7 @@ caf_environment="mhb-sandpit"
   -tfstate_subscription_id ${TF_VAR_tfstate_subscription_id}  \
   -target_subscription "MS-Sandbox"  \
   -tfstate caf_level2_vnets_connectivity.tfstate  \
-  -var-folder /tf/caf/mhb-iac-platform/configuration/level2/networking/vnet/hub-network   \
+  -var-folder /tf/caf/pqr-iac-platform/configuration/level2/networking/vnet/hub-network   \
   -parallelism 30   \
   -level level2   \
   -env ${caf_environment}   \
@@ -134,7 +134,7 @@ caf_environment="mhb-sandpit"
   -tfstate_subscription_id ${TF_VAR_tfstate_subscription_id} \
   -target_subscription "MS-Sandbox" \
   -tfstate caf_level2_vnets_identity.tfstate \
-  -var-folder /tf/caf/mhb-iac-platform/configuration/level2/networking/vnet/identity \
+  -var-folder /tf/caf/pqr-iac-platform/configuration/level2/networking/vnet/identity \
   -parallelism 30 \
   -level level2 \
   -env ${caf_environment} \
@@ -147,7 +147,7 @@ caf_environment="mhb-sandpit"
   -tfstate_subscription_id ${TF_VAR_tfstate_subscription_id} \
   -target_subscription "MS-Sandbox" \
   -tfstate caf_level2_vnets_management.tfstate \
-  -var-folder /tf/caf/mhb-iac-platform/configuration/level2/networking/vnet/management \
+  -var-folder /tf/caf/pqr-iac-platform/configuration/level2/networking/vnet/management \
   -parallelism 30 \
   -level level2 \
   -env ${caf_environment} \
@@ -159,7 +159,7 @@ caf_environment="mhb-sandpit"
 #   -tfstate_subscription_id ${TF_VAR_tfstate_subscription_id} \
 #   -target_subscription "MS-Sandbox" \
 #   -tfstate caf_level2_vnets_lz1dev.tfstate \
-#   -var-folder /tf/caf/mhb-iac-platform/configuration/level2/networking/vnet/lz1dev \
+#   -var-folder /tf/caf/pqr-iac-platform/configuration/level2/networking/vnet/lz1dev \
 #   -parallelism 30 \
 #   -level level2 \
 #   -env ${caf_environment} \
@@ -170,7 +170,7 @@ caf_environment="mhb-sandpit"
 #   -tfstate_subscription_id ${TF_VAR_tfstate_subscription_id} \
 #   -target_subscription "MS-Sandbox" \
 #   -tfstate caf_level2_vnets_lz1prd.tfstate \
-#   -var-folder /tf/caf/mhb-iac-platform/configuration/level2/networking/vnet/lz1prd \
+#   -var-folder /tf/caf/pqr-iac-platform/configuration/level2/networking/vnet/lz1prd \
 #   -parallelism 30 \
 #   -level level2 \
 #   -env ${caf_environment} \
@@ -189,7 +189,7 @@ caf_environment="mhb-sandpit"
   -tfstate_subscription_id ${TF_VAR_tfstate_subscription_id} \
   -target_subscription "MS-Sandbox" \
   -tfstate caf_level2_vnets_network_networkpeering.tfstate \
-  -var-folder /tf/caf/mhb-iac-platform/configuration/level2/networking/peering \
+  -var-folder /tf/caf/pqr-iac-platform/configuration/level2/networking/peering \
   -parallelism 30 \
   -level level2 \
   -env ${caf_environment} \
@@ -205,7 +205,7 @@ caf_environment="mhb-sandpit"
   -tfstate_subscription_id ${TF_VAR_tfstate_subscription_id} \
   -target_subscription "MS-Sandbox" \
   -tfstate caf_level2_kv_for_vm_identity.tfstate \
-  -var-folder /tf/caf/mhb-iac-platform/configuration/level2/vm/identity/kv_vm_secrets \
+  -var-folder /tf/caf/pqr-iac-platform/configuration/level2/vm/identity/kv_vm_secrets \
   -parallelism 30 \
   -level level2 \
   -env ${caf_environment} \
@@ -216,7 +216,7 @@ caf_environment="mhb-sandpit"
   -tfstate_subscription_id ${TF_VAR_tfstate_subscription_id} \
   -target_subscription "MS-Sandbox" \
   -tfstate caf_level2_testvm_identity.tfstate \
-  -var-folder /tf/caf/mhb-iac-platform/configuration/level2/vm/identity/test_vm_id \
+  -var-folder /tf/caf/pqr-iac-platform/configuration/level2/vm/identity/test_vm_id \
   -parallelism 30 \
   -level level2 \
   -env ${caf_environment} \
@@ -228,7 +228,7 @@ caf_environment="mhb-sandpit"
   -tfstate_subscription_id ${TF_VAR_tfstate_subscription_id} \
   -target_subscription "MS-Sandbox" \
   -tfstate caf_level2_testvm_management.tfstate \
-  -var-folder /tf/caf/mhb-iac-platform/configuration/level2/vm/management/test_vm_mgmt \
+  -var-folder /tf/caf/pqr-iac-platform/configuration/level2/vm/management/test_vm_mgmt \
   -parallelism 30 \
   -level level2 \
   -env ${caf_environment} \
@@ -240,7 +240,7 @@ caf_environment="mhb-sandpit"
   -tfstate_subscription_id ${TF_VAR_tfstate_subscription_id} \
   -target_subscription "MS-Sandbox" \
   -tfstate caf_level2_testvm_connectivity.tfstate \
-  -var-folder /tf/caf/mhb-iac-platform/configuration/level2/vm/connectivity/test_vm_conn \
+  -var-folder /tf/caf/pqr-iac-platform/configuration/level2/vm/connectivity/test_vm_conn \
   -parallelism 30 \
   -level level2 \
   -env ${caf_environment} \

@@ -120,7 +120,7 @@ front_doors = {
         # custom_https_configuration = {
         #   certificate_source = "AzureKeyVault"
         #   #If certificate source is AzureKeyVault the below are required:
-        #   azure_key_vault_certificate_vault_id       = "/subscriptions/62d86ea5-6f86-4157-be46-57282363ba93/resourceGroups/con-sbx-fd-ntw-00-00-a-rg-fdkv-00-e2/providers/Microsoft.KeyVault/vaults/consbxfdmhbakvfd002tste2"
+        #   azure_key_vault_certificate_vault_id       = "/subscriptions/62d86ea5-6f86-4157-be46-57282363ba93/resourceGroups/con-sbx-fd-ntw-00-00-a-rg-fdkv-00-e2/providers/Microsoft.KeyVault/vaults/consbxfdpqrakvfd002tste2"
         #   azure_key_vault_certificate_secret_name    = "cert-password"
         #   azure_key_vault_certificate_secret_version = "ced56a6f62dd4c72a87d67bde9a02e34"
         #   #

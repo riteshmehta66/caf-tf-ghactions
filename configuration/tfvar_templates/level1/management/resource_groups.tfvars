@@ -16,7 +16,7 @@ resource_groups = {
       "environment type" =  "{{configs.environment}}"
       "operations team" =  "tech services"
       "owner name" = "thomas.stokkeland@mobileheartbeat.com "
-      "customer name"  =  "mhb"
+      "customer name"  =  "pqr"
       "customer contact"  =  "chris.sego@mobileheartbeat.com"
       "data classification"  =  "confidential"
     }
@@ -39,7 +39,7 @@ resource_groups = {
       "environment type" =  "{{configs.environment}}"
       "operations team" =  "tech services"
       "owner name" = "thomas.stokkeland@mobileheartbeat.com "
-      "customer name"  =  "mhb"
+      "customer name"  =  "pqr"
       "customer contact"  =  "chris.sego@mobileheartbeat.com"
       "data classification"  =  "confidential"
     }
@@ -62,7 +62,7 @@ resource_groups = {
       "environment type" =  "{{configs.environment}}"
       "operations team" =  "tech services"
       "owner name" = "thomas.stokkeland@mobileheartbeat.com "
-      "customer name"  =  "mhb"
+      "customer name"  =  "pqr"
       "customer contact"  =  "chris.sego@mobileheartbeat.com"
       "data classification"  =  "confidential"
     }
@@ -80,7 +80,7 @@ resource_groups = {
       "environment type" =  "{{configs.environment}}"
       "operations team" =  "tech services"
       "owner name" = "thomas.stokkeland@mobileheartbeat.com "
-      "customer name"  =  "mhb"
+      "customer name"  =  "pqr"
       "customer contact"  =  "chris.sego@mobileheartbeat.com"
       "data classification"  =  "confidential"
     }
@@ -102,7 +102,7 @@ resource_groups = {
   //     "environment type" =  "{{configs.environment}}"
   //     "operations team" =  "tech services"
   //     "owner name" = "thomas.stokkeland@mobileheartbeat.com "
-  //     "customer name"  =  "mhb"
+  //     "customer name"  =  "pqr"
   //     "customer contact"  =  "chris.sego@mobileheartbeat.com"
   //     "data classification"  =  "confidential"
   //   }
@@ -119,7 +119,7 @@ resource_groups = {
   //     "environment type" =  "{{configs.environment}}"
   //     "operations team" =  "tech services"
   //     "owner name" = "thomas.stokkeland@mobileheartbeat.com "
-  //     "customer name"  =  "mhb"
+  //     "customer name"  =  "pqr"
   //     "customer contact"  =  "chris.sego@mobileheartbeat.com"
   //     "data classification"  =  "confidential"
   //   }
@@ -132,34 +132,34 @@ resource_groups = {
 
 
   // eus2_evh_rg_01 = {
-  //   name   = "mhb-az-ss-{{configs.environment}}-spk-evh-rg001"
+  //   name   = "pqr-az-ss-{{configs.environment}}-spk-evh-rg001"
   //   region = "region1"
   //   tags   = {
   //     # "application_id"    =  "<sysid>"
   //     "application_id"    =  "spk"
   //     "environment"       = "{{configs.environment}}"
   //     "termination_date"  = "NONE"
-  //     "created_by"        = "splunkage@mhb.com"
+  //     "created_by"        = "splunkage@pqr.com"
   //     "stack_name"        = "terraform"
   //     "data_class"        = "yellow"
-  //     "name"              = "mhb-az-ss-{{configs.environment}}-spk-evh-rg001"
+  //     "name"              = "pqr-az-ss-{{configs.environment}}-spk-evh-rg001"
   //     "description"       = "resource group for monitoring"
   //   }
   // }
 
 
   // cus_evh_rg_01 = {
-  //   name   = "mhb-az-ss-{{configs.environment}}-spk-evh-rg002"
+  //   name   = "pqr-az-ss-{{configs.environment}}-spk-evh-rg002"
   //   region = "region2"
   //   tags   = {
   //     # "application_id"  =  "<sysid>"
   //     "application_id"    =  "spk"
   //     "environment"       = "{{configs.environment}}"
   //     "termination_date"  = "NONE"
-  //     "created_by"        = "splunkage@mhb.com"
+  //     "created_by"        = "splunkage@pqr.com"
   //     "stack_name"        = "terraform"
   //     "data_class"        = "yellow"
-  //     "name"              = "mhb-az-ss-{{configs.environment}}-spk-evh-rg002"
+  //     "name"              = "pqr-az-ss-{{configs.environment}}-spk-evh-rg002"
   //     "description"       = "resource group for monitoring"
   //   }
   // }  

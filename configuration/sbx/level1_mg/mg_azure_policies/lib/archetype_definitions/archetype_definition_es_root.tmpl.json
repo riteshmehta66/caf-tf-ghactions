@@ -1,35 +1,35 @@
 {
-  "mhb-sbx-rt": {
+  "pqr-sbx-rt": {
     "policy_assignments": [
-      "mhb-sbx-kv-pol",
-      "mhb-sbx-st-pol",
-      "mhb-sbx-vm-pol",
-      "mhb-sbx-general-pol",
-      "mhb-sbx-automation-pol",
-      "mhb-sbx-asc-root-pol",
-      "mhb-sbx-network-pol",
-      "mhb-sbx-monitoring-pol",
-      "mhb-sbx-allow-loc-pol",
-      "mhb-sbx-allow-loc-rg-pol"
+      "pqr-sbx-kv-pol",
+      "pqr-sbx-st-pol",
+      "pqr-sbx-vm-pol",
+      "pqr-sbx-general-pol",
+      "pqr-sbx-automation-pol",
+      "pqr-sbx-asc-root-pol",
+      "pqr-sbx-network-pol",
+      "pqr-sbx-monitoring-pol",
+      "pqr-sbx-allow-loc-pol",
+      "pqr-sbx-allow-loc-rg-pol"
      ],
     "policy_definitions": [
-      "mhb-sbx-add-tag-pol",
-      "mhb-sbx-inherit-tag-pol"
+      "pqr-sbx-add-tag-pol",
+      "pqr-sbx-inherit-tag-pol"
     ],
     "policy_set_definitions": [
-      "mhb-sbx-app-pol",
-      "mhb-sbx-kv-pol",
-      "mhb-sbx-st-pol",
-      "mhb-sbx-fd-pol",
-      "mhb-sbx-cr-pol",
-      "mhb-sbx-vm-pol",
-      "mhb-sbx-aks-pol",
-      "mhb-sbx-general-pol",
-      "mhb-sbx-automation-pol",
-      "mhb-sbx-asc-root-pol",
-      "mhb-sbx-asc-lz-pol",
-      "mhb-sbx-network-pol",
-      "mhb-sbx-monitoring-pol"
+      "pqr-sbx-app-pol",
+      "pqr-sbx-kv-pol",
+      "pqr-sbx-st-pol",
+      "pqr-sbx-fd-pol",
+      "pqr-sbx-cr-pol",
+      "pqr-sbx-vm-pol",
+      "pqr-sbx-aks-pol",
+      "pqr-sbx-general-pol",
+      "pqr-sbx-automation-pol",
+      "pqr-sbx-asc-root-pol",
+      "pqr-sbx-asc-lz-pol",
+      "pqr-sbx-network-pol",
+      "pqr-sbx-monitoring-pol"
       ],
     "role_definitions": [],
     "archetype_config": {

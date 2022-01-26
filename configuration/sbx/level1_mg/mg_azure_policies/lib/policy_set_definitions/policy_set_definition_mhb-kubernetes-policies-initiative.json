@@ -1,11 +1,11 @@
 {
-  "name": "mhb-sbx-aks-pol",
+  "name": "pqr-sbx-aks-pol",
   "type": "Microsoft.Authorization/policySetDefinitions",
   "apiVersion": "2021-06-01",
   "scope": null,
   "properties": {
     "policyType": "Custom",
-    "displayName": "mhb-sbx-aks-policy-initiative",
+    "displayName": "pqr-sbx-aks-policy-initiative",
     "description": "Group of policies in Kubernetes category",
     "metadata": {
       "version": "1.0.0",

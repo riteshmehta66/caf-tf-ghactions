@@ -1,6 +1,6 @@
 # removed following policy assignments from archetype_definition_banyan_app_dev.json 
-#     "mhb-{{configs.environment}}-add-tag-pol",
-#     "mhb-{{configs.environment}}-inherit-tag-pol"
+#     "pqr-{{configs.environment}}-add-tag-pol",
+#     "pqr-{{configs.environment}}-inherit-tag-pol"
 
 
 
@@ -46,11 +46,11 @@ module "enterprise_scale" {
   custom_landing_zones = {
 
     "${local.root_id}" = {
-      display_name               = "mhb-{{configs.environment}}-mg"
+      display_name               = "pqr-{{configs.environment}}-mg"
       parent_management_group_id = ""
       subscription_ids           = []
       archetype_config = {
-        archetype_id   = "mhb-{{configs.environment}}-rt"
+        archetype_id   = "pqr-{{configs.environment}}-rt"
         parameters     = {}
         access_control = {
           "Owner": [
@@ -61,7 +61,7 @@ module "enterprise_scale" {
       }
     }
     "${local.root_id}-platform-{{configs.environment}}" = {
-      display_name               = "mhb-{{configs.environment}}-platform-mg"
+      display_name               = "pqr-{{configs.environment}}-platform-mg"
       parent_management_group_id = "${local.root_id}"
       subscription_ids           = []
       archetype_config = {
@@ -71,7 +71,7 @@ module "enterprise_scale" {
       }
     }
     "${local.root_id}-platform-{{configs.environment}}-con-{{configs.environment}}" = {
-      display_name               = "mhb-{{configs.environment}}-platform-con-mg"
+      display_name               = "pqr-{{configs.environment}}-platform-con-mg"
       parent_management_group_id = "${local.root_id}-platform-{{configs.environment}}"
       subscription_ids           = ["{{configs.subscriptionid_platform_con1}}"]
       archetype_config = {
@@ -85,7 +85,7 @@ module "enterprise_scale" {
       }
     }
     "${local.root_id}-platform-{{configs.environment}}-mgmt-{{configs.environment}}" = {
-      display_name               = "mhb-{{configs.environment}}-platform-mgt-mg"
+      display_name               = "pqr-{{configs.environment}}-platform-mgt-mg"
       parent_management_group_id = "${local.root_id}-platform-{{configs.environment}}"
       subscription_ids           = ["{{configs.subscriptionid_platform_mgt1}}"]
       archetype_config = {
@@ -100,7 +100,7 @@ module "enterprise_scale" {
       }
     }
     "${local.root_id}-platform-{{configs.environment}}-idm-{{configs.environment}}" = {
-      display_name               = "mhb-{{configs.environment}}-platform-idm-mg"
+      display_name               = "pqr-{{configs.environment}}-platform-idm-mg"
       parent_management_group_id = "${local.root_id}-platform-{{configs.environment}}"
       subscription_ids           = ["{{configs.subscriptionid_platform_idm1}}"]
       archetype_config = {
@@ -114,7 +114,7 @@ module "enterprise_scale" {
       }
     }
     "${local.root_id}-platform-{{configs.environment}}-devops-{{configs.environment}}" = {
-      display_name               = "mhb-{{configs.environment}}-platform-devops-mg"
+      display_name               = "pqr-{{configs.environment}}-platform-devops-mg"
       parent_management_group_id = "${local.root_id}-platform-{{configs.environment}}"
       subscription_ids           = ["{{configs.subscriptionid_platform_cafdvops1}}"]
       archetype_config = {
@@ -128,7 +128,7 @@ module "enterprise_scale" {
       }
     }
     "${local.root_id}-lz-{{configs.environment}}" = {
-      display_name               = "mhb-{{configs.environment}}-lz-mg"
+      display_name               = "pqr-{{configs.environment}}-lz-mg"
       parent_management_group_id = "${local.root_id}"
       subscription_ids           = []
       archetype_config = {
@@ -138,7 +138,7 @@ module "enterprise_scale" {
       }
     }
     "${local.root_id}-lz-{{configs.environment}}-byn-{{configs.environment}}" = {
-      display_name               = "mhb-{{configs.environment}}-lz-byn-{{configs.environment}}-mg"
+      display_name               = "pqr-{{configs.environment}}-lz-byn-{{configs.environment}}-mg"
       parent_management_group_id = "${local.root_id}-lz-{{configs.environment}}"
       subscription_ids           = ["{{configs.subscriptionid_lz_byn1}}"]
       archetype_config = {
@@ -154,7 +154,7 @@ module "enterprise_scale" {
       }
     }
     "${local.root_id}-lz-{{configs.environment}}-byn-dvl" = {
-      display_name               = "mhb-{{configs.environment}}-lz-byn-dvl-mg"
+      display_name               = "pqr-{{configs.environment}}-lz-byn-dvl-mg"
       parent_management_group_id = "${local.root_id}-lz-{{configs.environment}}"
       subscription_ids           = []
       archetype_config = {
@@ -164,7 +164,7 @@ module "enterprise_scale" {
       }
     }
     "${local.root_id}-sbx-{{configs.environment}}" = {
-      display_name               = "mhb-{{configs.environment}}-sbx-mg"
+      display_name               = "pqr-{{configs.environment}}-sbx-mg"
       parent_management_group_id = "${local.root_id}"
       subscription_ids           = []
       archetype_config = {
@@ -174,7 +174,7 @@ module "enterprise_scale" {
       }
     }
     "${local.root_id}-decom-{{configs.environment}}" = {
-      display_name               = "mhb-{{configs.environment}}-decom-mg"
+      display_name               = "pqr-{{configs.environment}}-decom-mg"
       parent_management_group_id = "${local.root_id}"
       subscription_ids           = []
       archetype_config = {

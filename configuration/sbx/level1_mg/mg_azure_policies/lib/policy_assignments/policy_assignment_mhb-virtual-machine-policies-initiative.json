@@ -1,13 +1,13 @@
 {
-  "name": "mhb-sbx-vm-pol",
+  "name": "pqr-sbx-vm-pol",
   "type": "Microsoft.Authorization/policyAssignments",
   "apiVersion": "2019-09-01",
   "properties": {
-    "description": "virtual machine policies for MHB",
-    "displayName": "mhb-sbx-virtual-machine-policy-initiative",
+    "description": "virtual machine policies for pqr",
+    "displayName": "pqr-sbx-virtual-machine-policy-initiative",
     "notScopes": [],
     "parameters": {},
-    "policyDefinitionId": "${root_scope_resource_id}/providers/Microsoft.Authorization/policySetDefinitions/mhb-sbx-vm-pol",
+    "policyDefinitionId": "${root_scope_resource_id}/providers/Microsoft.Authorization/policySetDefinitions/pqr-sbx-vm-pol",
     "scope": "${current_scope_resource_id}",
     "enforcementMode": null
   },

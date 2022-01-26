@@ -1,5 +1,5 @@
 {
-    "mhb-sbx-automation-pol": {
+    "pqr-sbx-automation-pol": {
         "policy_assignments": [
             "automation_account_variables_should_be_encrypted"
         ],

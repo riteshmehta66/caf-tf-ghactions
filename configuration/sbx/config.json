@@ -1,11 +1,11 @@
 {
-  "mhbdvl": {
+  "pqrdvl": {
     "environment": "dvl"   
            
     
   },
 
-  "mhbsbx": {
+  "pqrsbx": {
     "environment": "sbx",
     "diag_sa_encryption_kv_access_policy_group1_oid": "0eb00271-50f7-4a43-a915-a83d8f837603",
     "launchpad_sa_encryption_kv_access_policy_group1_oid": "70a6b34e-8fe2-4909-8e02-1cdfab529912",
@@ -83,7 +83,7 @@
     "subscriptionid_lz_byn1":"62d86ea5-6f86-4157-be46-57282363ba93"
   },
 
-  "mhbdev": {
+  "pqrdev": {
     "environment": "dev",
     "diag_sa_encryption_kv_access_policy_group1_oid": "0bab73ce-a4bc-44bd-9ccd-919a9346638d",
     "launchpad_sa_encryption_kv_access_policy_group1_oid": "d003c72d-da37-4ded-a245-be61176f3c73",
@@ -160,7 +160,7 @@
     "subscriptionid_platform_idm1":"1c127026-56a3-4d58-a85a-137c5af14e30",
     "subscriptionid_lz_byn1":"db81a9f5-5c06-4240-b59f-2c687ccf7c76"
   },
-  "mhbqa": {
+  "pqrqa": {
     "environment": "qa",
     "diag_sa_encryption_kv_access_policy_group1_oid": "e5c67dfa-fc53-4702-a73f-545b35505ade",
     "launchpad_sa_encryption_kv_access_policy_group1_oid": "b4174774-871c-4aa2-a55b-1d90113a3924",
@@ -237,7 +237,7 @@
     "subscriptionid_platform_idm1":"a44579f6-6460-4913-b2dc-ece5e4154085",
     "subscriptionid_lz_byn1":"26c57656-a7b7-4952-82e4-9f39ac98ce9f"
   },
-  "mhbstg": {
+  "pqrstg": {
     "environment": "stg",
     "diag_sa_encryption_kv_access_policy_group1_oid": "bf230102-9680-4af5-a6c4-d76b55f95459",
     "launchpad_sa_encryption_kv_access_policy_group1_oid": "26b708c2-a10a-43b9-9a73-52c6c8494828",
@@ -314,7 +314,7 @@
     "subscriptionid_platform_idm1":"b143f418-edc1-4997-bdee-d546576c25b1",
     "subscriptionid_lz_byn1":"2b44c40d-6a98-4d92-b84a-4bf30b2ddcc5"
   },
-  "mhbprd": {
+  "pqrprd": {
     "environment": "prd",
     "diag_sa_encryption_kv_access_policy_group1_oid": "e220abf5-24a9-462e-8045-2026f4dc90b2",
     "launchpad_sa_encryption_kv_access_policy_group1_oid": "a609f812-e2fc-4d91-953f-1370d78dda31",

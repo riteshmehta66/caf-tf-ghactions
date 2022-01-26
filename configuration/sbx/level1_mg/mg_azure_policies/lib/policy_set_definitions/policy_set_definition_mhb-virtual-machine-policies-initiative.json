@@ -1,11 +1,11 @@
 {
-  "name": "mhb-sbx-vm-pol",
+  "name": "pqr-sbx-vm-pol",
   "type": "Microsoft.Authorization/policySetDefinitions",
   "apiVersion": "2021-06-01",
   "scope": null,
   "properties": {
     "policyType": "Custom",
-    "displayName": "mhb-sbx-virtual-machine-policy-initiative",
+    "displayName": "pqr-sbx-virtual-machine-policy-initiative",
     "description": "Group of policies in virtual machine category",
     "metadata": {
       "version": "1.0.0",

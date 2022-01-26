@@ -1,11 +1,11 @@
 {
-  "name": "mhb-{{configs.environment}}-automation-pol",
+  "name": "pqr-{{configs.environment}}-automation-pol",
   "type": "Microsoft.Authorization/policySetDefinitions",
   "apiVersion": "2021-06-01",
   "scope": null,
   "properties": {
     "policyType": "Custom",
-    "displayName": "mhb-{{configs.environment}}-automation-policy-initiative",
+    "displayName": "pqr-{{configs.environment}}-automation-policy-initiative",
     "description": "Group of policies in automation category",
     "metadata": {
       "version": "1.0.0",

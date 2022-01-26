@@ -1,11 +1,11 @@
 {
-  "name": "mhb-sbx-app-pol",
+  "name": "pqr-sbx-app-pol",
   "type": "Microsoft.Authorization/policySetDefinitions",
   "apiVersion": "2021-06-01",
   "scope": null,
   "properties": {
     "policyType": "Custom",
-    "displayName": "mhb-sbx-app-policy-initiative",
+    "displayName": "pqr-sbx-app-policy-initiative",
     "description": "Group of policies in app-service category",
     "metadata": {
       "version": "1.0.0",

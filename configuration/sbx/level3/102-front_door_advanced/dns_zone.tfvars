@@ -1,7 +1,7 @@
 dns_zones = {
   dns_zone1 = {
     //# name when left empty generate a random domain name. Mainly used in CI
-    // name               = "www.randommhb.com"
+    // name               = "www.randompqr.com"
     name               = "mobileheartbeats.com"  
     region             = "region1"
     resource_group_key = "front_door"
@@ -33,8 +33,8 @@ dns_zones = {
       //   }
       // }
       cname = {
-        mhbtest1 = {
-          name   = "mhbtest1"
+        pqrtest1 = {
+          name   = "pqrtest1"
           record = "con-sbx-hub-ntw-00-00-a-fd-00-e2.azurefd.net"
         }
         // ftp_co_uk = {

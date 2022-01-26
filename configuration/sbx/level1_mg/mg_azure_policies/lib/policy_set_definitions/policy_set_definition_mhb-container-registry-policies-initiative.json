@@ -1,11 +1,11 @@
 {
-  "name": "mhb-sbx-cr-pol",
+  "name": "pqr-sbx-cr-pol",
   "type": "Microsoft.Authorization/policySetDefinitions",
   "apiVersion": "2021-06-01",
   "scope": null,
   "properties": {
     "policyType": "Custom",
-    "displayName": "mhb-sbx-container-registry-policy-initiative",
+    "displayName": "pqr-sbx-container-registry-policy-initiative",
     "description": "Group of policies in container registry category",
     "metadata": {
       "version": "1.0.0",

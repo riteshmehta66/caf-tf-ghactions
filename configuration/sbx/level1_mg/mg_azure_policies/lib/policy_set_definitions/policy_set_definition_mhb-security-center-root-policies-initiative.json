@@ -1,11 +1,11 @@
 {
-  "name": "mhb-sbx-asc-root-pol",
+  "name": "pqr-sbx-asc-root-pol",
   "type": "Microsoft.Authorization/policySetDefinitions",
   "apiVersion": "2021-06-01",
   "scope": null,
   "properties": {
     "policyType": "Custom",
-    "displayName": "mhb-sbx-asc-root-policy-initiative",
+    "displayName": "pqr-sbx-asc-root-policy-initiative",
     "description": "Group of policies in Azure Security Center category",
     "metadata": {
       "version": "1.0.0",

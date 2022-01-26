@@ -1,11 +1,11 @@
 {
-  "name": "mhb-{{configs.environment}}-general-pol",
+  "name": "pqr-{{configs.environment}}-general-pol",
   "type": "Microsoft.Authorization/policySetDefinitions",
   "apiVersion": "2021-06-01",
   "scope": null,
   "properties": {
     "policyType": "Custom",
-    "displayName": "mhb-{{configs.environment}}-general-policy-initiative",
+    "displayName": "pqr-{{configs.environment}}-general-policy-initiative",
     "description": "Group of policies in general category",
     "metadata": {
       "version": "1.0.0",

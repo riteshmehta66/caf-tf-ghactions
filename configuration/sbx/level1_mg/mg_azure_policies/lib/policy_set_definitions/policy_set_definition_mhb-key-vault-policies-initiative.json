@@ -1,11 +1,11 @@
 {
-  "name": "mhb-sbx-kv-pol",
+  "name": "pqr-sbx-kv-pol",
   "type": "Microsoft.Authorization/policySetDefinitions",
   "apiVersion": "2021-06-01",
   "scope": null,
   "properties": {
     "policyType": "Custom",
-    "displayName": "mhb-sbx-key-vault-policy-initiative",
+    "displayName": "pqr-sbx-key-vault-policy-initiative",
     "description": "Group of policies in key-vault category",
     "metadata": {
       "version": "1.0.0",

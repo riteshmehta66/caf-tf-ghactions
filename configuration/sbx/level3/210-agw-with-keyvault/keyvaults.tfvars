@@ -1,6 +1,6 @@
 keyvaults = {
   certificates = {
-    name               = "consbxmhbaappgwkv00e2"
+    name               = "consbxpqraappgwkv00e2"
     resource_group_key = "eus2_appgw_rg_01"
     sku_name           = "standard"
 

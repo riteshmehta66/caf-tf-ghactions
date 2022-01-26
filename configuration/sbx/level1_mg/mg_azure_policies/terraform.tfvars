@@ -1,5 +1,5 @@
-root_id                        = "mhb-sbx-rt"
-root_name                      = "mhb-sbx-mg"
+root_id                        = "pqr-sbx-rt"
+root_name                      = "pqr-sbx-mg"
 default_location               = "eastus2"
 deploy_corp_landing_zones      = false
 deploy_online_landing_zones    = false

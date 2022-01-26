@@ -1,10 +1,10 @@
 {
-  "name": "mhb-{{configs.environment}}-inherit-tag-pol",
+  "name": "pqr-{{configs.environment}}-inherit-tag-pol",
   "type": "Microsoft.Authorization/policyDefinitions",
   "apiVersion": "2021-06-01",
   "scope": null,
   "properties": {
-    "displayName": "mhb-{{configs.environment}}-inherit-a-tag-from-the-resource-group",
+    "displayName": "pqr-{{configs.environment}}-inherit-a-tag-from-the-resource-group",
     "policyType": "Custom",
     "mode": "All",
     "description": "Adds or replaces the specified tag and value from the parent resource group when any resource is created or updated. Existing resources can be remediated by triggering a remediation task",

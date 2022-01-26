@@ -4,7 +4,7 @@
 # For dev deployments, make sure you set passthrough=false in launchpad
 storage_accounts = {
   level0 = {
-    name                     = "{{configs.environment}}cf0stdvopse2"          # change name to caf{{configs.environment}}cf0mhbastdvop00e2 for actual deployments
+    name                     = "{{configs.environment}}cf0stdvopse2"          # change name to caf{{configs.environment}}cf0pqrastdvop00e2 for actual deployments
     resource_group_key       = "level0"
     account_kind             = "BlobStorage"
     account_tier             = "Standard"
@@ -51,7 +51,7 @@ storage_accounts = {
 
 
   level1 = {
-    name                     = "{{configs.environment}}cf1stdvopse2"          # change name to caf{{configs.environment}}cf1mhbastdvop00e2 for actual deployments
+    name                     = "{{configs.environment}}cf1stdvopse2"          # change name to caf{{configs.environment}}cf1pqrastdvop00e2 for actual deployments
     resource_group_key       = "level1"
     account_kind             = "BlobStorage"
     account_tier             = "Standard"
@@ -97,7 +97,7 @@ storage_accounts = {
   }
 
   level2 = {
-    name                     = "{{configs.environment}}cf2stdvopse2"          # change name to caf{{configs.environment}}cf2mhbastdvop00e2 for actual deployments
+    name                     = "{{configs.environment}}cf2stdvopse2"          # change name to caf{{configs.environment}}cf2pqrastdvop00e2 for actual deployments
     resource_group_key       = "level2"
     account_kind             = "BlobStorage"
     account_tier             = "Standard"
@@ -143,7 +143,7 @@ storage_accounts = {
   }
 
   level3 = {
-    name                     = "{{configs.environment}}cf3stdvopse2"          # change name to caf{{configs.environment}}cf3mhbastdvop00e2 for actual deployments          
+    name                     = "{{configs.environment}}cf3stdvopse2"          # change name to caf{{configs.environment}}cf3pqrastdvop00e2 for actual deployments          
     resource_group_key       = "level3"
     account_kind             = "BlobStorage"
     account_tier             = "Standard"
@@ -189,7 +189,7 @@ storage_accounts = {
   }
 
   level4 = {
-    name                     = "{{configs.environment}}cf4stdvopse2"          # change name to caf{{configs.environment}}cf4mhbastdvop00e2 for actual deployments
+    name                     = "{{configs.environment}}cf4stdvopse2"          # change name to caf{{configs.environment}}cf4pqrastdvop00e2 for actual deployments
     resource_group_key       = "level4"
     account_kind             = "BlobStorage"
     account_tier             = "Standard"

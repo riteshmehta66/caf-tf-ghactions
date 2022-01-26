@@ -14,8 +14,8 @@ terraform {
     }
   }
   backend "azurerm" {
-    resource_group_name  = "caf-{{configs.environment}}-00-ss-cf1-00-mhb-a-rg-00dvops-e2"
-    storage_account_name = "caf{{configs.environment}}cf1mhbastdvop15e2"
+    resource_group_name  = "caf-{{configs.environment}}-00-ss-cf1-00-pqr-a-rg-00dvops-e2"
+    storage_account_name = "caf{{configs.environment}}cf1pqrastdvop15e2"
     container_name       = "tfstate"
     key                  = "mg_azure_policies.tfstate"
   }

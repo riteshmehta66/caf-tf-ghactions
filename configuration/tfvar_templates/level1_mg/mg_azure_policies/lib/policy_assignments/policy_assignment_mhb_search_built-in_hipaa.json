@@ -1,10 +1,10 @@
 {
-  "name": "mhb-{{configs.environment}}-search-pol",
+  "name": "pqr-{{configs.environment}}-search-pol",
   "type": "Microsoft.Authorization/policyAssignments",
   "apiVersion": "2019-09-01",
   "properties": {
     "description": "Audit enabling of resource logs. This enables you to recreate activity trails to use for investigation purposes; when a security incident occurs or when your network is compromised",
-    "displayName": "mhb-{{configs.environment}}-resource-logs-in-search-services-should-be-enabled",
+    "displayName": "pqr-{{configs.environment}}-resource-logs-in-search-services-should-be-enabled",
     "notScopes": [],
     "parameters": {},
     "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/b4330a05-a843-4bc8-bf9a-cacce50c67f4",

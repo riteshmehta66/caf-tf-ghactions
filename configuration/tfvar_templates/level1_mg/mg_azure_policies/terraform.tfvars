@@ -1,5 +1,5 @@
-root_id                        = "mhb-{{configs.environment}}-rt"
-root_name                      = "mhb-{{configs.environment}}-mg"
+root_id                        = "pqr-{{configs.environment}}-rt"
+root_name                      = "pqr-{{configs.environment}}-mg"
 default_location               = "eastus2"
 deploy_corp_landing_zones      = false
 deploy_online_landing_zones    = false

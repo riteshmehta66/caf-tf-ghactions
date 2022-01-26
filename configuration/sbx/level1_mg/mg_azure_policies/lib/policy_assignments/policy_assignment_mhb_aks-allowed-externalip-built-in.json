@@ -1,10 +1,10 @@
 {
-  "name": "mhb-sbx-aks-eip-pol",
+  "name": "pqr-sbx-aks-eip-pol",
   "type": "Microsoft.Authorization/policyAssignments",
   "apiVersion": "2019-09-01",
   "properties": {
     "description": "Use allowed external IPs to avoid the potential attack (CVE-2020-8554) in a Kubernetes cluster. For more information, see https://aka.ms/kubepolicydoc",
-    "displayName": "mhb-sbx-kubernetes-cluster-services-should-only-use-allowed-external-Ips",
+    "displayName": "pqr-sbx-kubernetes-cluster-services-should-only-use-allowed-external-Ips",
     "notScopes": [],
     "parameters": {
     },

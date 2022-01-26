@@ -1,7 +1,7 @@
 {
     "lz-{{configs.environment}}": {
         "policy_assignments": [
-        "mhb-{{configs.environment}}-asc-lz-pol"  
+        "pqr-{{configs.environment}}-asc-lz-pol"  
         ],
         "policy_definitions": [],
         "policy_set_definitions": [],

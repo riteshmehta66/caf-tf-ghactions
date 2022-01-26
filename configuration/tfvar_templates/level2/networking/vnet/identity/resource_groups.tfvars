@@ -1,7 +1,7 @@
 resource_groups = {
 
   eus2_vnet_rg_01 = {
-    name   = "idm-{{configs.environment}}-00-idm-00-mhb-a-rg-vnet-e2"
+    name   = "idm-{{configs.environment}}-00-idm-00-pqr-a-rg-vnet-e2"
     region = "region1"
     tags   = {
       "application name"  = "identity services"
@@ -11,13 +11,13 @@ resource_groups = {
       "environment type" =  "{{configs.environment}}"
       "operations team" =  "tech services"
       "owner name" = "thomas.stokkeland@mobileheartbeat.com "
-      "customer name"  =  "mhb"
+      "customer name"  =  "pqr"
       "customer contact"  =  "chris.sego@mobileheartbeat.com"
       "data classification"  =  "confidential"
     }
   }
   cus_vnet_rg_01 = {
-    name   = "idm-{{configs.environment}}-00-idm-00-mhb-a-rg-vnet-c1"
+    name   = "idm-{{configs.environment}}-00-idm-00-pqr-a-rg-vnet-c1"
     region = "region2"
     tags   = {
       "application name"  = "identity services"
@@ -27,19 +27,19 @@ resource_groups = {
       "environment type" =  "{{configs.environment}}"
       "operations team" =  "tech services"
       "owner name" = "thomas.stokkeland@mobileheartbeat.com "
-      "customer name"  =  "mhb"
+      "customer name"  =  "pqr"
       "customer contact"  =  "chris.sego@mobileheartbeat.com"
       "data classification"  =  "confidential"
     }
   }
 
   // eus2_nsg_rg_01 = {
-  //   name   = "idm-{{configs.environment}}-00-idm-00-mhb-a-rg-nsg-e2"
+  //   name   = "idm-{{configs.environment}}-00-idm-00-pqr-a-rg-nsg-e2"
   //   region = "region1"  
   // }
 
   // cus_nsg_rg_01 = {
-  //   name   = "idm-{{configs.environment}}-00-idm-00-mhb-a-rg-nsg-c1"
+  //   name   = "idm-{{configs.environment}}-00-idm-00-pqr-a-rg-nsg-c1"
   //   region = "region2"  
   // }
   

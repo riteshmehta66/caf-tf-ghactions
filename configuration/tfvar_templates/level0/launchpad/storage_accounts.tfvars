@@ -1,7 +1,7 @@
 
 storage_accounts = {
   level0 = {
-    name                     = "caf{{configs.environment}}cf0mhbastdvop15e2"
+    name                     = "caf{{configs.environment}}cf0pqrastdvop15e2"
     resource_group_key       = "level0"
     account_kind             = "BlobStorage"
     account_tier             = "Standard"
@@ -48,7 +48,7 @@ storage_accounts = {
 
 
   level1 = {
-    name                     = "caf{{configs.environment}}cf1mhbastdvop15e2"
+    name                     = "caf{{configs.environment}}cf1pqrastdvop15e2"
     resource_group_key       = "level1"
     account_kind             = "BlobStorage"
     account_tier             = "Standard"
@@ -94,7 +94,7 @@ storage_accounts = {
   }
 
   level2 = {
-    name                     = "caf{{configs.environment}}cf2mhbastdvop15e2"
+    name                     = "caf{{configs.environment}}cf2pqrastdvop15e2"
     resource_group_key       = "level2"
     account_kind             = "BlobStorage"
     account_tier             = "Standard"
@@ -140,7 +140,7 @@ storage_accounts = {
   }
 
   level3 = {
-    name                     = "caf{{configs.environment}}cf3mhbastdvop15e2"
+    name                     = "caf{{configs.environment}}cf3pqrastdvop15e2"
     resource_group_key       = "level3"
     account_kind             = "BlobStorage"
     account_tier             = "Standard"
@@ -186,7 +186,7 @@ storage_accounts = {
   }
 
   level4 = {
-    name                     = "caf{{configs.environment}}cf4mhbastdvop15e2"
+    name                     = "caf{{configs.environment}}cf4pqrastdvop15e2"
     resource_group_key       = "level4"
     account_kind             = "BlobStorage"
     account_tier             = "Standard"

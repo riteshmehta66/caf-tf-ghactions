@@ -2,7 +2,7 @@ network_security_group_definition = {
 
   eus2_nsg_default = {
     resource_group_key = "eus2_vnet_rg_01"
-    name               = "idm-sbx-00-idm-00-mhb-a-nsg-ads-e2"    
+    name               = "idm-sbx-00-idm-00-pqr-a-nsg-ads-e2"    
     version             = 1
 
     flow_logs = {
@@ -97,7 +97,7 @@ network_security_group_definition = {
 
   cus_nsg_default = {
     resource_group_key = "cus_vnet_rg_01"
-    name               = "idm-sbx-00-idm-00-mhb-a-nsg-ads-c1"    
+    name               = "idm-sbx-00-idm-00-pqr-a-nsg-ads-c1"    
     version             = 1
 
     flow_logs = {

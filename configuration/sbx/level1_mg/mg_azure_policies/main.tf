@@ -1,6 +1,6 @@
 # removed following policy assignments from archetype_definition_banyan_app_dev.json 
-#     "mhb-sbx-add-tag-pol",
-#     "mhb-sbx-inherit-tag-pol"
+#     "pqr-sbx-add-tag-pol",
+#     "pqr-sbx-inherit-tag-pol"
 
 
 
@@ -46,11 +46,11 @@ module "enterprise_scale" {
   custom_landing_zones = {
 
     "${local.root_id}" = {
-      display_name               = "mhb-sbx-mg"
+      display_name               = "pqr-sbx-mg"
       parent_management_group_id = ""
       subscription_ids           = []
       archetype_config = {
-        archetype_id   = "mhb-sbx-rt"
+        archetype_id   = "pqr-sbx-rt"
         parameters     = {}
         access_control = {
           "Owner": [
@@ -61,7 +61,7 @@ module "enterprise_scale" {
       }
     }
     "${local.root_id}-platform-sbx" = {
-      display_name               = "mhb-sbx-platform-mg"
+      display_name               = "pqr-sbx-platform-mg"
       parent_management_group_id = "${local.root_id}"
       subscription_ids           = []
       archetype_config = {
@@ -71,7 +71,7 @@ module "enterprise_scale" {
       }
     }
     "${local.root_id}-platform-sbx-con-sbx" = {
-      display_name               = "mhb-sbx-platform-con-mg"
+      display_name               = "pqr-sbx-platform-con-mg"
       parent_management_group_id = "${local.root_id}-platform-sbx"
       subscription_ids           = ["62d86ea5-6f86-4157-be46-57282363ba93"]
       archetype_config = {
@@ -85,7 +85,7 @@ module "enterprise_scale" {
       }
     }
     "${local.root_id}-platform-sbx-mgmt-sbx" = {
-      display_name               = "mhb-sbx-platform-mgt-mg"
+      display_name               = "pqr-sbx-platform-mgt-mg"
       parent_management_group_id = "${local.root_id}-platform-sbx"
       subscription_ids           = ["62d86ea5-6f86-4157-be46-57282363ba93"]
       archetype_config = {
@@ -100,7 +100,7 @@ module "enterprise_scale" {
       }
     }
     "${local.root_id}-platform-sbx-idm-sbx" = {
-      display_name               = "mhb-sbx-platform-idm-mg"
+      display_name               = "pqr-sbx-platform-idm-mg"
       parent_management_group_id = "${local.root_id}-platform-sbx"
       subscription_ids           = ["62d86ea5-6f86-4157-be46-57282363ba93"]
       archetype_config = {
@@ -114,7 +114,7 @@ module "enterprise_scale" {
       }
     }
     "${local.root_id}-platform-sbx-devops-sbx" = {
-      display_name               = "mhb-sbx-platform-devops-mg"
+      display_name               = "pqr-sbx-platform-devops-mg"
       parent_management_group_id = "${local.root_id}-platform-sbx"
       subscription_ids           = ["62d86ea5-6f86-4157-be46-57282363ba93"]
       archetype_config = {
@@ -128,7 +128,7 @@ module "enterprise_scale" {
       }
     }
     "${local.root_id}-lz-sbx" = {
-      display_name               = "mhb-sbx-lz-mg"
+      display_name               = "pqr-sbx-lz-mg"
       parent_management_group_id = "${local.root_id}"
       subscription_ids           = []
       archetype_config = {
@@ -138,7 +138,7 @@ module "enterprise_scale" {
       }
     }
     "${local.root_id}-lz-sbx-byn-sbx" = {
-      display_name               = "mhb-sbx-lz-byn-sbx-mg"
+      display_name               = "pqr-sbx-lz-byn-sbx-mg"
       parent_management_group_id = "${local.root_id}-lz-sbx"
       subscription_ids           = ["62d86ea5-6f86-4157-be46-57282363ba93"]
       archetype_config = {
@@ -154,7 +154,7 @@ module "enterprise_scale" {
       }
     }
     "${local.root_id}-lz-sbx-byn-dvl" = {
-      display_name               = "mhb-sbx-lz-byn-dvl-mg"
+      display_name               = "pqr-sbx-lz-byn-dvl-mg"
       parent_management_group_id = "${local.root_id}-lz-sbx"
       subscription_ids           = []
       archetype_config = {
@@ -164,7 +164,7 @@ module "enterprise_scale" {
       }
     }
     "${local.root_id}-sbx-sbx" = {
-      display_name               = "mhb-sbx-sbx-mg"
+      display_name               = "pqr-sbx-sbx-mg"
       parent_management_group_id = "${local.root_id}"
       subscription_ids           = []
       archetype_config = {
@@ -174,7 +174,7 @@ module "enterprise_scale" {
       }
     }
     "${local.root_id}-decom-sbx" = {
-      display_name               = "mhb-sbx-decom-mg"
+      display_name               = "pqr-sbx-decom-mg"
       parent_management_group_id = "${local.root_id}"
       subscription_ids           = []
       archetype_config = {

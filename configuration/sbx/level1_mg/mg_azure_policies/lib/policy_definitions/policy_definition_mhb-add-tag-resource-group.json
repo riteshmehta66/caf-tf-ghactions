@@ -1,10 +1,10 @@
 {
-  "name": "mhb-sbx-add-tag-pol",
+  "name": "pqr-sbx-add-tag-pol",
   "type": "Microsoft.Authorization/policyDefinitions",
   "apiVersion": "2021-06-01",
   "scope": null,
   "properties": {
-    "displayName": "mhb-sbx-add-a-tag-to-resource-group",
+    "displayName": "pqr-sbx-add-a-tag-to-resource-group",
     "policyType": "Custom",
     "mode": "All",
     "description": "Adds the specified tag and value when any resource group missing this tag is created or updated. Existing resource groups can be remediated by triggering a remediation task. If the tag exists with a different value it will not be changed.",
@@ -107,7 +107,7 @@
           "displayName": "Tag Value 6",
           "description": "Name of the Customer"
         },
-        "defaultValue": "hca, nyp, beu, mhb, 00"
+        "defaultValue": "hca, nyp, beu, pqr, 00"
       },
       "tagName7": {
         "type": "String",

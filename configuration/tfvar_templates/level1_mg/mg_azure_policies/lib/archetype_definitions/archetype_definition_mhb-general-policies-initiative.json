@@ -1,5 +1,5 @@
 {
-    "mhb-{{configs.environment}}-general-pol": {
+    "pqr-{{configs.environment}}-general-pol": {
         "policy_assignments": [
             "custom_subs_owner_roles_should_not_exist_hipaa",
             "audit_usage_of_custom_rbac_rules_hipaa"

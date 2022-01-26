@@ -1,5 +1,5 @@
 {
-    "mhb-sbx-fd-pol": {
+    "pqr-sbx-fd-pol": {
         "policy_assignments": [
             "web_app_waf_should_use_sp_mode_for_fd",
             "waf_should_be_enabled_for_fd_entry_points"

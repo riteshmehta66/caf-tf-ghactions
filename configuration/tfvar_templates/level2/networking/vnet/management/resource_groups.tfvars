@@ -10,7 +10,7 @@ resource_groups = {
       "environment type" =  "{{configs.environment}}"
       "operations team" =  "tech services"
       "owner name" = "thomas.stokkeland@mobileheartbeat.com "
-      "customer name"  =  "mhb"
+      "customer name"  =  "pqr"
       "customer contact"  =  "chris.sego@mobileheartbeat.com"
       "data classification"  =  "confidential"
     }
@@ -27,7 +27,7 @@ resource_groups = {
       "environment type" =  "{{configs.environment}}"
       "operations team" =  "tech services"
       "owner name" = "thomas.stokkeland@mobileheartbeat.com "
-      "customer name"  =  "mhb"
+      "customer name"  =  "pqr"
       "customer contact"  =  "chris.sego@mobileheartbeat.com"
       "data classification"  =  "confidential"
     }

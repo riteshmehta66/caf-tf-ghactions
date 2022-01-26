@@ -1,11 +1,11 @@
 {
-  "name": "mhb-sbx-general-pol",
+  "name": "pqr-sbx-general-pol",
   "type": "Microsoft.Authorization/policySetDefinitions",
   "apiVersion": "2021-06-01",
   "scope": null,
   "properties": {
     "policyType": "Custom",
-    "displayName": "mhb-sbx-general-policy-initiative",
+    "displayName": "pqr-sbx-general-policy-initiative",
     "description": "Group of policies in general category",
     "metadata": {
       "version": "1.0.0",

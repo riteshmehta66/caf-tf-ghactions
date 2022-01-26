@@ -1,10 +1,10 @@
 {
-  "name": "mhb-{{configs.environment}}-aks-pvt-clus-pol",
+  "name": "pqr-{{configs.environment}}-aks-pvt-clus-pol",
   "type": "Microsoft.Authorization/policyAssignments",
   "apiVersion": "2019-09-01",
   "properties": {
     "description": "Enable the private cluster feature for your Azure Kubernetes Service cluster to ensure network traffic between your API server and your node pools remains on the private network only. This is a common requirement in many regulatory and industry compliance standards",
-    "displayName": "mhb-{{configs.environment}}-azure-kubernetes-service-private-clusters-should-be-enabled",
+    "displayName": "pqr-{{configs.environment}}-azure-kubernetes-service-private-clusters-should-be-enabled",
     "notScopes": [],
     "parameters": {
     },

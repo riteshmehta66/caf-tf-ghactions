@@ -1,7 +1,7 @@
 {
     "platform-{{configs.environment}}-con-{{configs.environment}}": {
         "policy_assignments": [
-        "mhb-{{configs.environment}}-fd-pol"
+        "pqr-{{configs.environment}}-fd-pol"
         ],
         "policy_definitions": [],
         "policy_set_definitions": [],

@@ -1,6 +1,6 @@
 keyvaults = {
   cert_secrets = {
-    name               = "consbxfdmhbakvfd002e2"
+    name               = "consbxfdpqrakvfd002e2"
     resource_group_key = "front_door"
     sku_name           = "standard"
     creation_policies = {

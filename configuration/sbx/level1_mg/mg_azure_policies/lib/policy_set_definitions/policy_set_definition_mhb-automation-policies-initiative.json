@@ -1,11 +1,11 @@
 {
-  "name": "mhb-sbx-automation-pol",
+  "name": "pqr-sbx-automation-pol",
   "type": "Microsoft.Authorization/policySetDefinitions",
   "apiVersion": "2021-06-01",
   "scope": null,
   "properties": {
     "policyType": "Custom",
-    "displayName": "mhb-sbx-automation-policy-initiative",
+    "displayName": "pqr-sbx-automation-policy-initiative",
     "description": "Group of policies in automation category",
     "metadata": {
       "version": "1.0.0",

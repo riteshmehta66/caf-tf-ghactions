@@ -1,13 +1,13 @@
 {
-  "name": "mhb-sbx-asc-lz-pol",
+  "name": "pqr-sbx-asc-lz-pol",
   "type": "Microsoft.Authorization/policyAssignments",
   "apiVersion": "2019-09-01",
   "properties": {
-    "description": "Security Center policies for MHB",
-    "displayName": "mhb-sbx-security-center-lz-policy-initiative",
+    "description": "Security Center policies for pqr",
+    "displayName": "pqr-sbx-security-center-lz-policy-initiative",
     "notScopes": [],
     "parameters": {},
-    "policyDefinitionId": "${root_scope_resource_id}/providers/Microsoft.Authorization/policySetDefinitions/mhb-sbx-asc-lz-pol",
+    "policyDefinitionId": "${root_scope_resource_id}/providers/Microsoft.Authorization/policySetDefinitions/pqr-sbx-asc-lz-pol",
     "scope": "${current_scope_resource_id}",
     "enforcementMode": null
   },

@@ -1,35 +1,35 @@
 {
-  "mhb-{{configs.environment}}-rt": {
+  "pqr-{{configs.environment}}-rt": {
     "policy_assignments": [
-      "mhb-{{configs.environment}}-kv-pol",
-      "mhb-{{configs.environment}}-st-pol",
-      "mhb-{{configs.environment}}-vm-pol",
-      "mhb-{{configs.environment}}-general-pol",
-      "mhb-{{configs.environment}}-automation-pol",
-      "mhb-{{configs.environment}}-asc-root-pol",
-      "mhb-{{configs.environment}}-network-pol",
-      "mhb-{{configs.environment}}-monitoring-pol",
-      "mhb-{{configs.environment}}-allow-loc-pol",
-      "mhb-{{configs.environment}}-allow-loc-rg-pol"
+      "pqr-{{configs.environment}}-kv-pol",
+      "pqr-{{configs.environment}}-st-pol",
+      "pqr-{{configs.environment}}-vm-pol",
+      "pqr-{{configs.environment}}-general-pol",
+      "pqr-{{configs.environment}}-automation-pol",
+      "pqr-{{configs.environment}}-asc-root-pol",
+      "pqr-{{configs.environment}}-network-pol",
+      "pqr-{{configs.environment}}-monitoring-pol",
+      "pqr-{{configs.environment}}-allow-loc-pol",
+      "pqr-{{configs.environment}}-allow-loc-rg-pol"
      ],
     "policy_definitions": [
-      "mhb-{{configs.environment}}-add-tag-pol",
-      "mhb-{{configs.environment}}-inherit-tag-pol"
+      "pqr-{{configs.environment}}-add-tag-pol",
+      "pqr-{{configs.environment}}-inherit-tag-pol"
     ],
     "policy_set_definitions": [
-      "mhb-{{configs.environment}}-app-pol",
-      "mhb-{{configs.environment}}-kv-pol",
-      "mhb-{{configs.environment}}-st-pol",
-      "mhb-{{configs.environment}}-fd-pol",
-      "mhb-{{configs.environment}}-cr-pol",
-      "mhb-{{configs.environment}}-vm-pol",
-      "mhb-{{configs.environment}}-aks-pol",
-      "mhb-{{configs.environment}}-general-pol",
-      "mhb-{{configs.environment}}-automation-pol",
-      "mhb-{{configs.environment}}-asc-root-pol",
-      "mhb-{{configs.environment}}-asc-lz-pol",
-      "mhb-{{configs.environment}}-network-pol",
-      "mhb-{{configs.environment}}-monitoring-pol"
+      "pqr-{{configs.environment}}-app-pol",
+      "pqr-{{configs.environment}}-kv-pol",
+      "pqr-{{configs.environment}}-st-pol",
+      "pqr-{{configs.environment}}-fd-pol",
+      "pqr-{{configs.environment}}-cr-pol",
+      "pqr-{{configs.environment}}-vm-pol",
+      "pqr-{{configs.environment}}-aks-pol",
+      "pqr-{{configs.environment}}-general-pol",
+      "pqr-{{configs.environment}}-automation-pol",
+      "pqr-{{configs.environment}}-asc-root-pol",
+      "pqr-{{configs.environment}}-asc-lz-pol",
+      "pqr-{{configs.environment}}-network-pol",
+      "pqr-{{configs.environment}}-monitoring-pol"
       ],
     "role_definitions": [],
     "archetype_config": {

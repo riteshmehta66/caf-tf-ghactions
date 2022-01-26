@@ -1,5 +1,5 @@
 {
-    "mhb-{{configs.environment}}-monitoring-pol": {
+    "pqr-{{configs.environment}}-monitoring-pol": {
         "policy_assignments": [
             "azure_monitor_should_collect_activity_logs_from_all_regions_hipaa",
             "azure_monitor_log_profile_collect_logs_categories_write_delete_action_hipaa"

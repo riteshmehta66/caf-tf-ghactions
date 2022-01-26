@@ -15,7 +15,7 @@ ddos_services = {
       "environment type" =  "{{configs.environment}}"
       "operations team" =  "tech services"
       "owner name" = "thomas.stokkeland@mobileheartbeat.com "
-      "customer name"  =  "mhb"
+      "customer name"  =  "pqr"
       "customer contact"  =  "chris.sego@mobileheartbeat.com"
       "data classification"  =  "confidential"
     }
@@ -35,7 +35,7 @@ ddos_services = {
       "environment type" =  "{{configs.environment}}"
       "operations team" =  "tech services"
       "owner name" = "thomas.stokkeland@mobileheartbeat.com "
-      "customer name"  =  "mhb"
+      "customer name"  =  "pqr"
       "customer contact"  =  "chris.sego@mobileheartbeat.com"
       "data classification"  =  "confidential"
     }   
@@ -159,7 +159,7 @@ vnets = {
 //     // ddos_services_key = "ddos_plan_eastus2"
 
 //     vnet = {
-//       name          = "mhb-azeus2-nt-{{configs.environment}}-vnet-001"
+//       name          = "pqr-azeus2-nt-{{configs.environment}}-vnet-001"
 //       address_space = ["{{configs.connectivity_eus2_vnet_01_cidr}}"]
 //       // dns_servers         = ["10.127.139.4", "10.127.139.5"]                            # For testing
 //       // dns_servers         = ["10.127.139.36", "10.127.139.37"]
@@ -193,7 +193,7 @@ vnets = {
     
 
 //       // eus2_vnet_01_snet_01 = {
-//       //   name    = "mhb-azeus2-nt-{{configs.environment}}-vnet-001-azfw_public-snet-001" 
+//       //   name    = "pqr-azeus2-nt-{{configs.environment}}-vnet-001-azfw_public-snet-001" 
 //       //   cidr    = ["10.136.64.32/27"]
 //       //   nsg_key = "eus2_nsg_default"
 //       //   // route_table_key = "eus2_rt_01"
@@ -202,14 +202,14 @@ vnets = {
       
 
 //       eus2_vnet_01_snet_03 = {
-//         name    = "mhb-azeus2-nt-{{configs.environment}}-vnet-001-iaas-snet-001" 
+//         name    = "pqr-azeus2-nt-{{configs.environment}}-vnet-001-iaas-snet-001" 
 //         cidr    = ["{{configs.connectivity_eus2_vnet_01_snet_01_cidr}}"]
 //         nsg_key = "eus2_nsg_default"
 //         // route_table_key = "eus2_rt_01"
 //       }
 
 //       // eus2_vnet_01_snet_09 = {
-//       //   name    = "mhbazeus2nt{{configs.environment}}vnet001-pvt-endpoint-snet001" 
+//       //   name    = "pqrazeus2nt{{configs.environment}}vnet001-pvt-endpoint-snet001" 
 //       //   cidr    = ["10.127.130.0/23"]
 //       //   # No NSG for Pvt Endpoint
 //       //   // // route_table_key = "eus2_rt_01"

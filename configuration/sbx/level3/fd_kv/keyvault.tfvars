@@ -1,6 +1,6 @@
 keyvaults = {
   cert_secrets = {
-    name               = "consbxfdmhbakvfd002tste2"
+    name               = "consbxfdpqrakvfd002tste2"
     resource_group_key = "front_door_kv"
     sku_name           = "standard"
     creation_policies = {
@@ -41,7 +41,7 @@ dynamic_keyvault_secrets = {
   cert_secrets = { # Key of the keyvault
     cert-password = {
       secret_name = "cert-password"
-      value       = "mhb2022"
+      value       = "pqr2022"
     }
   }
 }

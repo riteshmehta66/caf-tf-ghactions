@@ -1,6 +1,6 @@
 keyvaults = {
   level0 = {
-    name                = "cafsbxcf0mhbastdvop15e2"
+    name                = "cafsbxcf0pqrastdvop15e2"
     resource_group_key  = "level0"
     sku_name            = "standard"
     soft_delete_enabled = true
@@ -55,7 +55,7 @@ keyvaults = {
   }
 
   level1 = {
-    name                = "cafsbxcf1mhbastdvop15e2"
+    name                = "cafsbxcf1pqrastdvop15e2"
     resource_group_key  = "level1"
     sku_name            = "standard"
     soft_delete_enabled = true
@@ -109,7 +109,7 @@ keyvaults = {
   }
 
   level2 = {
-    name                = "cafsbxcf2mhbastdvop15e2"
+    name                = "cafsbxcf2pqrastdvop15e2"
     resource_group_key  = "level2"
     sku_name            = "standard"
     soft_delete_enabled = true
@@ -163,7 +163,7 @@ keyvaults = {
   }
 
   level3 = {
-    name                = "cafsbxcf3mhbastdvop15e2"
+    name                = "cafsbxcf3pqrastdvop15e2"
     resource_group_key  = "level3"
     sku_name            = "standard"
     soft_delete_enabled = true
@@ -217,7 +217,7 @@ keyvaults = {
   }
 
   level4 = {
-    name                = "cafsbxcf4mhbastdvop15e2"
+    name                = "cafsbxcf4pqrastdvop15e2"
     resource_group_key  = "level4"
     sku_name            = "standard"
     soft_delete_enabled = true
@@ -271,7 +271,7 @@ keyvaults = {
   }
 
   // storage_byok = {
-  //   name               = "cafsbxstenmhbakvcmk15e2"
+  //   name               = "cafsbxstenpqrakvcmk15e2"
   //   resource_group_key = "level0"
   //   sku_name           = "standard"
   //   soft_delete_enabled = true

@@ -1,0 +1,62 @@
+name: Destroy Level0
+
+on:
+  workflow_dispatch:
+    inputs:
+      tfaction:
+        description: 'Action of Terraform'
+        required: true
+      environment:
+        description: 'Environment dev/prod'
+        required: true
+
+
+jobs:
+  destroy-launchpad:
+    environment: ${{github.event.inputs.environment}}
+    env:
+      AZURE_CREDENTIALS: '{"clientId":"${{ secrets.ARM_CLIENT_ID_LEVEL0 }}", "clientSecret":"${{ secrets.ARM_CLIENT_SECRET_LEVEL0 }}", "subscriptionId":"${{ secrets.ARM_Launchpad_SUBSCRIPTION_ID }}", "tenantId":"${{ secrets.ARM_TENANT_ID }}"}'
+      ARM_CLIENT_ID: ${{ secrets.ARM_CLIENT_ID }}
+      ARM_CLIENT_SECRET: ${{ secrets.ARM_CLIENT_SECRET }}
+      ARM_Launchpad_SUBSCRIPTION_ID: ${{ secrets.ARM_Launchpad_SUBSCRIPTION_ID }}
+      ARM_TENANT_ID: ${{ secrets.ARM_TENANT_ID }}
+      ROVER_RUNNER: true
+    runs-on: ubuntu-latest
+    container:
+      image: aztfmod/rover:1.0.9-2111.0103
+      options: --user 0
+    outputs:
+      prefix: ${{ steps.test.outputs.PREFIX }}
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+        with:
+          ref: dev
+      - name: Azure Login
+        uses: azure/login@v1
+        with:
+          creds: ${{ env.AZURE_CREDENTIALS }}
+      - name: Replace configs
+        run: |
+          cp -rs ${GITHUB_WORKSPACE}/configuration/tfvar_templates/* /tf/caf
+          cd /tf/caf
+          python3 ./replace.py -e ${{secrets.ENVIRONMENT}} -p level0
+
+
+      - name: Launchpad
+        run: |
+          chmod +x /tf/caf/scripts/deploy-scripts/launchpad.sh
+          export ENVIRONMENT=${{secrets.ENVIRONMENT}}
+          export ACTION=${{github.event.inputs.tfaction}}
+          /tf/caf/scripts/deploy-scripts/launchpad.sh
+      # - name: Test
+      #   id: test
+      #   run: |
+      #       cd /tf/caf/test
+      #       export ENVIRONMENT=${{secrets.ENVIRONMENT}}
+      #       prefix_output=$(cat /tf/caf/rover.output | jq -r .objects.value.launchpad.global_settings.prefixes[0])
+      #       echo $prefix_output
+      #       echo "PREFIX"
+      #       export PREFIX=$prefix_output
+      #       echo "::set-output name=PREFIX::$prefix_output"
+      #       go test -v launchpad/launchpad_test.go

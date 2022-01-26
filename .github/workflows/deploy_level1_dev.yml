@@ -1,0 +1,65 @@
+name: DEV - Deploy Level1
+on:
+  workflow_dispatch:
+  workflow_run:
+    workflows: ["DEV - Deploy Level0"]
+    types:
+      - completed
+  pull_request:
+    branches:
+      - dev
+    types:
+      - closed
+    paths:
+      - configuration/tfvar_templates/level1/**
+
+
+jobs:
+  deploy-dev-Level1:
+    environment: mhbdev
+    env:
+      AZURE_CREDENTIALS: '{"clientId":"${{ secrets.ARM_CLIENT_ID_LEVEL0 }}", "clientSecret":"${{ secrets.ARM_CLIENT_SECRET_LEVEL0 }}", "subscriptionId":"${{ secrets.ARM_Launchpad_SUBSCRIPTION_ID }}", "tenantId":"${{ secrets.ARM_TENANT_ID }}"}'
+      ARM_CLIENT_ID: ${{ secrets.ARM_CLIENT_ID }}
+      ARM_CLIENT_SECRET: ${{ secrets.ARM_CLIENT_SECRET }}
+      ARM_SUBSCRIPTION_ID: ${{ secrets.ARM_Launchpad_SUBSCRIPTION_ID }}
+      ARM_TENANT_ID: ${{ secrets.ARM_TENANT_ID }}
+      ROVER_RUNNER: true
+    runs-on: ubuntu-latest
+    container:
+      image: aztfmod/rover:1.0.9-2111.0103
+      options: --user 0
+    outputs:
+      prefix: ${{ steps.test.outputs.PREFIX }}
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+        with:
+          ref: dev
+
+      - name: Azure Login
+        uses: azure/login@v1
+        with:
+          creds: ${{ env.AZURE_CREDENTIALS }}
+      
+
+      - name: Replace configs
+        run: |
+          cp -rs ${GITHUB_WORKSPACE}/configuration/tfvar_templates/* /tf/caf
+          cd /tf/caf
+          python3 ./replace.py -e ${{secrets.ENVIRONMENT}} -p level1
+      - name: Deploy Level1
+        run: |
+            cd /tf/caf/
+            export ACTION="apply"
+            export ENVIRONMENT="${{secrets.ENVIRONMENT}}"
+            export LAUNCHPAD_SUB="${{secrets.ARM_LAUNCHPAD_SUBSCRIPTION_ID}}"
+            chmod +x /tf/caf/scripts/deploy-scripts/projects.sh
+            /tf/caf/scripts/deploy-scripts/projects.sh level1
+
+      - name: Deploy Management Policy
+        run: |
+            cd /tf/caf/configuration/tfvar_templates/level1/mg_azure_policies
+            ACCOUNT_KEY=$(az storage account keys list --resource-group caf-dev-00-ss-cf1-00-mhb-a-rg-dvops-e2 --account-name cafdevcf1mhbastdvop00e2 --query '[0].value' -o tsv)
+            export ARM_ACCESS_KEY=$ACCOUNT_KEY
+            terraform init -reconfigure
+            terraform apply -auto-approve

@@ -1,0 +1,71 @@
+name: Deploy Level1
+# The pipeline is triggered on:
+#  - PR/Issue comments "/deploy-all", "/deploy-launchpad", "/deploy-shared-services", "/deploy-networking-hub",
+#                      "/deploy-networking-spoke", "/deploy-aks", "/deploy-addons"
+
+# on:
+#   workflow_dispatch:
+#   push:
+#     branches:
+#       - starter
+  # issue_comment:
+  #   types:
+  #   - created
+
+on:
+  workflow_dispatch:
+    inputs:
+      tfaction:
+        description: 'Action of Terraform'
+        required: true
+      environment:
+        description: 'Environment dev/prod'
+        required: true
+      debug_enabled:
+        description: 'Run the build with tmate debugging enabled (https://github.com/marketplace/actions/debugging-with-tmate)'     
+        required: false
+        default: false
+
+
+jobs:
+  deploy-shared-services:
+    environment: ${{github.event.inputs.environment}}
+    env:
+      AZURE_CREDENTIALS: '{"clientId":"${{ secrets.ARM_CLIENT_ID_LEVEL0 }}", "clientSecret":"${{ secrets.ARM_CLIENT_SECRET_LEVEL0 }}", "subscriptionId":"${{ secrets.ARM_Launchpad_SUBSCRIPTION_ID }}", "tenantId":"${{ secrets.ARM_TENANT_ID }}"}'
+      ARM_CLIENT_ID: ${{ secrets.ARM_CLIENT_ID }}
+      ARM_CLIENT_SECRET: ${{ secrets.ARM_CLIENT_SECRET }}
+      ARM_SUBSCRIPTION_ID: ${{ secrets.ARM_Launchpad_SUBSCRIPTION_ID }}
+      ARM_TENANT_ID: ${{ secrets.ARM_TENANT_ID }}
+      ROVER_RUNNER: true
+    runs-on: ubuntu-latest
+    container:
+      image: aztfmod/rover:1.0.9-2111.0103
+      options: --user 0
+    outputs:
+      prefix: ${{ steps.test.outputs.PREFIX }}
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Azure Login
+        uses: azure/login@v1
+        with:
+          creds: ${{ env.AZURE_CREDENTIALS }}
+      
+
+      - name: Replace configs
+        run: |
+          cp -rs ${GITHUB_WORKSPACE}/configuration/tfvar_templates/* /tf/caf
+          cd /tf/caf
+          python3 ./replace.py -e ${{secrets.ENVIRONMENT}} -p level1
+      - name: Setup tmate session
+        uses: mxschmitt/action-tmate@v3
+        if: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.debug_enabled }}
+      - name: Deploy Level1
+        run: |
+            cd /tf/caf/
+            export ACTION=${{github.event.inputs.tfaction}}
+            export ENVIRONMENT="${{secrets.ENVIRONMENT}}"
+            export LAUNCHPAD_SUB="${{secrets.ARM_LAUNCHPAD_SUBSCRIPTION_ID}}"
+            chmod +x /tf/caf/scripts/deploy-scripts/projects.sh
+            /tf/caf/scripts/deploy-scripts/projects.sh level1

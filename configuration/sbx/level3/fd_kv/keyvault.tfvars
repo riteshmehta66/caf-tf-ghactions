@@ -9,23 +9,23 @@ keyvaults = {
       //   secret_permissions      = ["Set", "Get", "List", "Delete", "Purge"]
       // }
       dev-caf-tf-group-level1 = {
-        object_id        = "0eb00271-50f7-4a43-a915-a83d8f837603"
+        object_id        = "4c1a4ba5-59eb-4021-996f-0ef57dcba41f"
         certificate_permissions = ["Get", "List", "Update", "Create", "Import", "Delete", "Recover", "Backup", "Restore", "ManageContacts", "ManageIssuers", "GetIssuers", "ListIssuers", "SetIssuers", "DeleteIssuers", "Purge"]
         // key_permissions    = ["get", "list", "unwrapkey", "wrapkey", "encrypt", "decrypt", "sign", "verify"]
         secret_permissions = ["Set", "Get", "List", "Delete", "Recover", "Backup", "Restore", "Purge"]
       }
       dev-caf-tf-group-level3 = {
-        object_id        = "e7e49908-139c-4123-9126-9791396c0502"
+        object_id        = "d0424dc3-364d-44d5-a3db-3b120a25b8fd"
         certificate_permissions = ["Get", "List", "Update", "Create", "Import", "Delete", "Recover", "Backup", "Restore", "ManageContacts", "ManageIssuers", "GetIssuers", "ListIssuers", "SetIssuers", "DeleteIssuers", "Purge"]
         // key_permissions    = ["get", "list", "unwrapkey", "wrapkey", "encrypt", "decrypt", "sign", "verify"]
         secret_permissions = ["Set", "Get", "List", "Delete", "Recover", "Backup", "Restore", "Purge"]
       }
-      ritesh = {
-        object_id        = "4a19ec9a-95da-4721-a54f-ef7fb75e02c3"
-        certificate_permissions = ["Get", "List", "Update", "Create", "Import", "Delete", "Recover", "Backup", "Restore", "ManageContacts", "ManageIssuers", "GetIssuers", "ListIssuers", "SetIssuers", "DeleteIssuers", "Purge"]
-        // key_permissions    = ["get", "list", "unwrapkey", "wrapkey", "encrypt", "decrypt", "sign", "verify"]
-        secret_permissions = ["Set", "Get", "List", "Delete", "Recover", "Backup", "Restore", "Purge"]
-      }
+      // ritesh = {
+      //   object_id        = "fe9264d1-7055-45b2-9819-454dd2f99bed"
+      //   certificate_permissions = ["Get", "List", "Update", "Create", "Import", "Delete", "Recover", "Backup", "Restore", "ManageContacts", "ManageIssuers", "GetIssuers", "ListIssuers", "SetIssuers", "DeleteIssuers", "Purge"]
+      //   // key_permissions    = ["get", "list", "unwrapkey", "wrapkey", "encrypt", "decrypt", "sign", "verify"]
+      //   secret_permissions = ["Set", "Get", "List", "Delete", "Recover", "Backup", "Restore", "Purge"]
+      // }
       // front_door_app = {
       //   object_id        = "5f804554-93be-4ad6-8946-763a67748cde"
       //   certificate_permissions = ["Get", "List", "Update", "Create", "Import", "Delete", "Recover", "Backup", "Restore", "ManageContacts", "ManageIssuers", "GetIssuers", "ListIssuers", "SetIssuers", "DeleteIssuers", "Purge"]
@@ -41,7 +41,7 @@ dynamic_keyvault_secrets = {
   cert_secrets = { # Key of the keyvault
     cert-password = {
       secret_name = "cert-password"
-      value       = "pqr2022"
+      value       = "P@55w0rd1234"
     }
   }
 }

@@ -1,46 +1,46 @@
 
 # Tags are mandatory for DDoS services
-ddos_services = {
-  ddos_plan_eastus2 = {
-    name = "con-sbx-hub-ntw-00-00-a-ddos-00-e2"
-    resource_group_key = "eus2_vnet_rg_01"
-    region = "region1"
-    enable = true
+// ddos_services = {
+//   ddos_plan_eastus2 = {
+//     name = "con-sbx-hub-ntw-00-00-a-ddos-00-e2"
+//     resource_group_key = "eus2_vnet_rg_01"
+//     region = "region1"
+//     enable = true
     
-    tags   = {
-      "application name"  = "network hub"
-      "sbx hours" =  "7am-7pm EST WD's"
-      "business unit"  =  "sre"
-      "cost center"  =  "26839-200100"
-      "environment type" =  "sbx"
-      "operations team" =  "tech services"
-      "owner name" = "thomas.stokkeland@mobileheartbeat.com "
-      "customer name"  =  "pqr"
-      "customer contact"  =  "chris.sego@mobileheartbeat.com"
-      "data classification"  =  "confidential"
-    }
-  }
+//     tags   = {
+//       "application name"  = "network hub"
+//       "sbx hours" =  "7am-7pm EST WD's"
+//       "business unit"  =  "sre"
+//       "cost center"  =  "26839-200100"
+//       "environment type" =  "sbx"
+//       "operations team" =  "tech services"
+//       "owner name" = "thomas.stokkeland@mobileheartbeat.com "
+//       "customer name"  =  "pqr"
+//       "customer contact"  =  "chris.sego@mobileheartbeat.com"
+//       "data classification"  =  "confidential"
+//     }
+//   }
 
-  ddos_plan_centralus = {
-    name = "con-sbx-hub-ntw-00-00-a-ddos-00-c1"
-    resource_group_key = "cus_vnet_rg_01"
-    region = "region2"
-    enable = true 
+//   ddos_plan_centralus = {
+//     name = "con-sbx-hub-ntw-00-00-a-ddos-00-c1"
+//     resource_group_key = "cus_vnet_rg_01"
+//     region = "region2"
+//     enable = true 
 
-    tags   = {
-      "application name"  = "network hub"
-      "sbx hours" =  "7am-7pm EST WD's"
-      "business unit"  =  "sre"
-      "cost center"  =  "26839-200100"
-      "environment type" =  "sbx"
-      "operations team" =  "tech services"
-      "owner name" = "thomas.stokkeland@mobileheartbeat.com "
-      "customer name"  =  "pqr"
-      "customer contact"  =  "chris.sego@mobileheartbeat.com"
-      "data classification"  =  "confidential"
-    }   
-  }
-}
+//     tags   = {
+//       "application name"  = "network hub"
+//       "sbx hours" =  "7am-7pm EST WD's"
+//       "business unit"  =  "sre"
+//       "cost center"  =  "26839-200100"
+//       "environment type" =  "sbx"
+//       "operations team" =  "tech services"
+//       "owner name" = "thomas.stokkeland@mobileheartbeat.com "
+//       "customer name"  =  "pqr"
+//       "customer contact"  =  "chris.sego@mobileheartbeat.com"
+//       "data classification"  =  "confidential"
+//     }   
+//   }
+// }
 
 
 vnets = {
@@ -48,7 +48,7 @@ vnets = {
   eus2_vnet_01 = {
     resource_group_key = "eus2_vnet_rg_01"
     region             = "region1"
-    ddos_services_key = "ddos_plan_eastus2"
+    // ddos_services_key = "ddos_plan_eastus2"
 
     vnet = {
       name          = "con-sbx-hub-ntw-00-00-a-vnet-00-e2"
@@ -99,7 +99,7 @@ vnets = {
   cus_vnet_01 = {
     resource_group_key = "cus_vnet_rg_01"
     region             = "region2"
-    ddos_services_key = "ddos_plan_centralus"
+    // ddos_services_key = "ddos_plan_centralus"
 
     vnet = {
       name          = "con-sbx-hub-ntw-00-00-a-vnet-00-c1"

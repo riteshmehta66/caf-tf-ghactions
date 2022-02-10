@@ -1,7 +1,7 @@
 diagnostic_storage_accounts = {
   # Stores diagnostic logging for region1
   diaglogs_region1_ss = {
-    name                     = "mgtsbx00ss0008astlogde2"
+    name                     = "mgtsbx00ss0000astlogde2"
     region                   = "region1"
     resource_group_key       = "eus2_std_rg_01"
     account_kind             = "StorageV2"
@@ -17,7 +17,7 @@ diagnostic_storage_accounts = {
   }
   
   diaglogs_region2_ss = {
-    name                     = "mgtsbx00ss0008astlogdc1"
+    name                     = "mgtsbx00ss0000astlogdc1"
     region                   = "region2"
     resource_group_key       = "cus_std_rg_01"
     account_kind             = "StorageV2"

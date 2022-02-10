@@ -1,6 +1,6 @@
 front_doors = {
   front_door1 = {
-    name                   = "con-sbx-hub-ntw-00-00-a-fd-00-e2"
+    name                   = "con-sbx-hub-ntw-pqr-00-a-fd-00-e2"
     resource_group_key     = "front_door"
     certificate_name_check = false
     # Keyvault key hosting the ssl certificates
@@ -72,22 +72,22 @@ front_doors = {
         backend = {
           be1 = {
             enabled     = true
-            address     = "www.bing.com"
+            address     = "20.75.52.49"
             host_header = "www.bing.com"
             http_port   = 80
             https_port  = 443
             priority    = 1
             weight      = 50
           },
-          be2 = {
-            enabled     = true
-            address     = "www.bing.co.uk"
-            host_header = "www.bing.co.uk"
-            http_port   = 80
-            https_port  = 443
-            priority    = 1
-            weight      = 50
-          }
+          // be2 = {
+          //   enabled     = true
+          //   address     = "www.bing.co.uk"
+          //   host_header = "www.bing.co.uk"
+          //   http_port   = 80
+          //   https_port  = 443
+          //   priority    = 1
+          //   weight      = 50
+          // }
         }
 
       }
@@ -98,29 +98,30 @@ front_doors = {
       fe1 = {
         name = "exampleFrontendEndpoint1"
         // # host_name                         = "randomabcxyz-FrontDoor.azurefd.net" ?? not used in the code
-        host_name                         = "con-sbx-hub-ntw-00-00-a-fd-00-e2.azurefd.net"
+        host_name                         = "contosoritesh.jatinmehta.ca"
         session_affinity_enabled          = false
         session_affinity_ttl_seconds      = 0
-        custom_https_provisioning_enabled = false
+        custom_https_provisioning_enabled = true
         #Required if custom_https_provisioning_enabled is true
-        // custom_https_configuration = {
-        //   certificate_source = "AzureKeyVault"
-        //   #If certificate source is AzureKeyVault the below are required:
-        //   # azure_key_vault_certificate_vault_id       = "/subscriptions/[subscription_id]/resourceGroups/[resource_group_name]/providers/Microsoft.KeyVault/vaults/kv-certsecrets-ccmcj"
-        //   # azure_key_vault_certificate_secret_name    = "test"
-        //   # azure_key_vault_certificate_secret_version = "b672b38ce10245b8bd3ba75924c80d3d"
-        //   #
-        //   #### Or if created from CAF module
-        //   #
-        //   // certificate = {
-        //   //   key = "sales_application"
-        //   //   # lz_key = ""
-        //   // }
-        // }
+        custom_https_configuration = {
+          certificate_source = "FrontDoor"                # AzureKeyVault, "FrontDoor"
+          #If certificate source is AzureKeyVault the below are required:
+          // azure_key_vault_certificate_vault_id       = "/subscriptions/421faaf7-d2a0-4876-8f37-c2578e0a3a30/resourceGroups/con-sbx-fd-ntw-00-00-a-rg-fdkv-00-e2/providers/Microsoft.KeyVault/vaults/consbxfdpqrakvfd002tste2"
+          // azure_key_vault_certificate_secret_name    = "contosoritesh-jatinmehta-ca"
+          // azure_key_vault_certificate_secret_version = "da10841d62de4cdb8669d0a3cac29979"
+          #
+          #### Or if created from CAF module
+          #
+          // certificate = {
+          //   key = "sales_application"
+          //   # lz_key = ""
+          // }
+        }
+
         # custom_https_configuration = {
         #   certificate_source = "AzureKeyVault"
         #   #If certificate source is AzureKeyVault the below are required:
-        #   azure_key_vault_certificate_vault_id       = "/subscriptions/62d86ea5-6f86-4157-be46-57282363ba93/resourceGroups/con-sbx-fd-ntw-00-00-a-rg-fdkv-00-e2/providers/Microsoft.KeyVault/vaults/consbxfdpqrakvfd002tste2"
+        #   azure_key_vault_certificate_vault_id       = "/subscriptions/62d86ea5-6f86-4157-be46-57282363ba93/resourceGroups/con-sbx-fd-ntw-00-00-a-rg-fdkv-00-e2/providers/Microsoft.KeyVault/vaults/consbxfdmhbakvfd002tste2"
         #   azure_key_vault_certificate_secret_name    = "cert-password"
         #   azure_key_vault_certificate_secret_version = "ced56a6f62dd4c72a87d67bde9a02e34"
         #   #
@@ -131,6 +132,51 @@ front_doors = {
         #   //   # lz_key = ""
         #   // }
         # }
+        
+        front_door_waf_policy = {
+          key = "wp1"
+          # lz_key                    = ""
+        }
+      }
+
+      fe2 = {
+        name = "default"
+        // # host_name                         = "randomabcxyz-FrontDoor.azurefd.net" ?? not used in the code
+        host_name                         = "con-sbx-hub-ntw-pqr-00-a-fd-00-e2.azurefd.net"
+        session_affinity_enabled          = false
+        session_affinity_ttl_seconds      = 0
+        custom_https_provisioning_enabled = false
+        #Required if custom_https_provisioning_enabled is true
+        // custom_https_configuration = {
+        //   certificate_source = "AzureKeyVault"
+        //   #If certificate source is AzureKeyVault the below are required:
+        //   azure_key_vault_certificate_vault_id       = "/subscriptions/62d86ea5-6f86-4157-be46-57282363ba93/resourceGroups/con-sbx-fd-ntw-00-00-a-rg-fdkv-00-e2/providers/Microsoft.KeyVault/vaults/consbxfdmhbakvfd002tste2"
+        //   azure_key_vault_certificate_secret_name    = "mhbqapub"
+        //   azure_key_vault_certificate_secret_version = "580cb86faf3b49ac9b8bc834ccb4ae3f"
+        //   #
+        //   #### Or if created from CAF module
+        //   #
+        //   // certificate = {
+        //   //   key = "sales_application"
+        //   //   # lz_key = ""
+        //   // }
+        // }
+
+        # custom_https_configuration = {
+        #   certificate_source = "AzureKeyVault"
+        #   #If certificate source is AzureKeyVault the below are required:
+        #   azure_key_vault_certificate_vault_id       = "/subscriptions/62d86ea5-6f86-4157-be46-57282363ba93/resourceGroups/con-sbx-fd-ntw-00-00-a-rg-fdkv-00-e2/providers/Microsoft.KeyVault/vaults/consbxfdmhbakvfd002tste2"
+        #   azure_key_vault_certificate_secret_name    = "cert-password"
+        #   azure_key_vault_certificate_secret_version = "ced56a6f62dd4c72a87d67bde9a02e34"
+        #   #
+        #   #### Or if created from CAF module
+        #   #
+        #   // certificate = {
+        #   //   key = "sales_application"
+        #   //   # lz_key = ""
+        #   // }
+        # }
+        
         front_door_waf_policy = {
           key = "wp1"
           # lz_key                    = ""

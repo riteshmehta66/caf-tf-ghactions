@@ -1,6 +1,6 @@
 keyvaults = {
   level0 = {
-    name                = "cafsbxcf0pqrastdvop15e2"
+    name                = "cafsbxcf0pqrakvdvop00e2"
     resource_group_key  = "level0"
     sku_name            = "standard"
     soft_delete_enabled = true
@@ -15,33 +15,33 @@ keyvaults = {
       //   secret_permissions = ["Set", "Get", "List", "Delete", "Recover", "Backup", "Restore", "Purge"]
       // }
       dev-caf-tf-group-level0 = {
-        object_id        = "70a6b34e-8fe2-4909-8e02-1cdfab529912"
+        object_id        = "45f99ca0-f156-4fdc-ba87-d8fbb4633f40"
         key_permissions    = ["get", "create", "delete", "list", "restore", "recover", "unwrapkey", "wrapkey", "encrypt", "decrypt", "sign", "verify"]
         secret_permissions = ["Set", "Get", "List", "Delete", "Recover", "Backup", "Restore", "Purge"]
       }
       dev-caf-tf-group-level1 = {
-        object_id        = "0eb00271-50f7-4a43-a915-a83d8f837603"
-        key_permissions    = ["get", "list", "unwrapkey", "wrapkey", "encrypt", "decrypt", "sign", "verify"]
+        object_id        = "4c1a4ba5-59eb-4021-996f-0ef57dcba41f"
+        key_permissions    = ["get", "create", "delete", "list", "restore", "recover", "unwrapkey", "wrapkey", "encrypt", "decrypt", "sign", "verify"]
         secret_permissions = ["Set", "Get", "List", "Delete", "Recover", "Backup", "Restore", "Purge"]
       }
       dev-caf-tf-group-level1_mg = {
-        object_id        = "35e227ea-f27e-40aa-8f03-87f3ecf202e3"
+        object_id        = "f7e6ee0c-c889-48f8-bc87-4292588e8c0b"
         key_permissions    = ["get", "create", "delete", "list", "restore", "recover", "unwrapkey", "wrapkey", "encrypt", "decrypt", "sign", "verify"]
         secret_permissions = ["Set", "Get", "List", "Delete", "Recover", "Backup", "Restore", "Purge"]
       }
       dev-caf-tf-group-level2 = {
-        object_id        = "0fcee476-25b4-438a-9e7e-6b9f24effa76"
-        key_permissions    = ["get", "list", "unwrapkey", "wrapkey", "encrypt", "decrypt", "sign", "verify"]
+        object_id        = "562df38e-7da7-4c49-8fbf-a3813bd93931"
+        key_permissions    = ["get", "create", "delete", "list", "restore", "recover", "unwrapkey", "wrapkey", "encrypt", "decrypt", "sign", "verify"]
         secret_permissions = ["Set", "Get", "List", "Delete", "Recover", "Backup", "Restore", "Purge"]
       }
       dev-caf-tf-group-level3 = {
-        object_id        = "e7e49908-139c-4123-9126-9791396c0502"
-        key_permissions    = ["get", "list", "unwrapkey", "wrapkey", "encrypt", "decrypt", "sign", "verify"]
+        object_id        = "d0424dc3-364d-44d5-a3db-3b120a25b8fd"
+        key_permissions    = ["get", "create", "delete", "list", "restore", "recover", "unwrapkey", "wrapkey", "encrypt", "decrypt", "sign", "verify"]
         secret_permissions = ["Set", "Get", "List", "Delete", "Recover", "Backup", "Restore", "Purge"]
       }
       dev-caf-tf-group-level4 = {
-        object_id        = "dd2cb2c1-f31b-4f27-a896-4529a6983485"
-        key_permissions    = ["get", "list", "unwrapkey", "wrapkey", "encrypt", "decrypt", "sign", "verify"]
+        object_id        = "dc40ac7c-6cad-4e05-b84f-ed1ede414638"
+        key_permissions    = ["get", "create", "delete", "list", "restore", "recover", "unwrapkey", "wrapkey", "encrypt", "decrypt", "sign", "verify"]
         secret_permissions = ["Set", "Get", "List", "Delete", "Recover", "Backup", "Restore", "Purge"]
       }
       
@@ -55,7 +55,7 @@ keyvaults = {
   }
 
   level1 = {
-    name                = "cafsbxcf1pqrastdvop15e2"
+    name                = "cafsbxcf1pqrakvdvop00e2"
     resource_group_key  = "level1"
     sku_name            = "standard"
     soft_delete_enabled = true
@@ -71,33 +71,33 @@ keyvaults = {
       //   secret_permissions = ["Set", "Get", "List", "Delete", "Recover"]
       // }
       dev-caf-tf-group-level0 = {
-        object_id        = "70a6b34e-8fe2-4909-8e02-1cdfab529912"
+        object_id        = "45f99ca0-f156-4fdc-ba87-d8fbb4633f40"
         key_permissions    = ["get", "create", "delete", "list", "restore", "recover", "unwrapkey", "wrapkey", "encrypt", "decrypt", "sign", "verify"]
         secret_permissions = ["Set", "Get", "List", "Delete", "Recover", "Backup", "Restore", "Purge"]
       }
       dev-caf-tf-group-level1 = {
-        object_id        = "0eb00271-50f7-4a43-a915-a83d8f837603"
+        object_id        = "4c1a4ba5-59eb-4021-996f-0ef57dcba41f"
         key_permissions    = ["get", "create", "delete", "list", "restore", "recover", "unwrapkey", "wrapkey", "encrypt", "decrypt", "sign", "verify"]
         secret_permissions = ["Set", "Get", "List", "Delete", "Recover", "Backup", "Restore", "Purge"]
       }
       dev-caf-tf-group-level1_mg = {
-        object_id        = "35e227ea-f27e-40aa-8f03-87f3ecf202e3"
+        object_id        = "f7e6ee0c-c889-48f8-bc87-4292588e8c0b"
         key_permissions    = ["get", "create", "delete", "list", "restore", "recover", "unwrapkey", "wrapkey", "encrypt", "decrypt", "sign", "verify"]
         secret_permissions = ["Set", "Get", "List", "Delete", "Recover", "Backup", "Restore", "Purge"]
       }
       dev-caf-tf-group-level2 = {
-        object_id        = "0fcee476-25b4-438a-9e7e-6b9f24effa76"
-        key_permissions    = ["get", "list", "unwrapkey", "wrapkey", "encrypt", "decrypt", "sign", "verify"]
+        object_id        = "562df38e-7da7-4c49-8fbf-a3813bd93931"
+        key_permissions    = ["get", "create", "delete", "list", "restore", "recover", "unwrapkey", "wrapkey", "encrypt", "decrypt", "sign", "verify"]
         secret_permissions = ["Set", "Get", "List", "Delete", "Recover", "Backup", "Restore", "Purge"]
       }
       dev-caf-tf-group-level3 = {
-        object_id        = "e7e49908-139c-4123-9126-9791396c0502"
-        key_permissions    = ["get", "list", "unwrapkey", "wrapkey", "encrypt", "decrypt", "sign", "verify"]
+        object_id        = "d0424dc3-364d-44d5-a3db-3b120a25b8fd"
+        key_permissions    = ["get", "create", "delete", "list", "restore", "recover", "unwrapkey", "wrapkey", "encrypt", "decrypt", "sign", "verify"]
         secret_permissions = ["Set", "Get", "List", "Delete", "Recover", "Backup", "Restore", "Purge"]
       }
       dev-caf-tf-group-level4 = {
-        object_id        = "dd2cb2c1-f31b-4f27-a896-4529a6983485"
-        key_permissions    = ["get", "list", "unwrapkey", "wrapkey", "encrypt", "decrypt", "sign", "verify"]
+        object_id        = "dc40ac7c-6cad-4e05-b84f-ed1ede414638"
+        key_permissions    = ["get", "create", "delete", "list", "restore", "recover", "unwrapkey", "wrapkey", "encrypt", "decrypt", "sign", "verify"]
         secret_permissions = ["Set", "Get", "List", "Delete", "Recover", "Backup", "Restore", "Purge"]
       }
     }    
@@ -109,7 +109,7 @@ keyvaults = {
   }
 
   level2 = {
-    name                = "cafsbxcf2pqrastdvop15e2"
+    name                = "cafsbxcf2pqrakvdvop00e2"
     resource_group_key  = "level2"
     sku_name            = "standard"
     soft_delete_enabled = true
@@ -124,33 +124,33 @@ keyvaults = {
       //   secret_permissions = ["Set", "Get", "List", "Delete", "Recover"]
       // }
       dev-caf-tf-group-level0 = {
-        object_id        = "70a6b34e-8fe2-4909-8e02-1cdfab529912"
+        object_id        = "45f99ca0-f156-4fdc-ba87-d8fbb4633f40"
         key_permissions    = ["get", "create", "delete", "list", "restore", "recover", "unwrapkey", "wrapkey", "encrypt", "decrypt", "sign", "verify"]
         secret_permissions = ["Set", "Get", "List", "Delete", "Recover", "Backup", "Restore", "Purge"]
       }
       dev-caf-tf-group-level1 = {
-        object_id        = "0eb00271-50f7-4a43-a915-a83d8f837603"
-        key_permissions    = ["get", "list", "unwrapkey", "wrapkey", "encrypt", "decrypt", "sign", "verify"]
+        object_id        = "4c1a4ba5-59eb-4021-996f-0ef57dcba41f"
+        key_permissions    = ["get", "create", "delete", "list", "restore", "recover", "unwrapkey", "wrapkey", "encrypt", "decrypt", "sign", "verify"]
         secret_permissions = ["Set", "Get", "List", "Delete", "Recover", "Backup", "Restore", "Purge"]
       }
       dev-caf-tf-group-level1_mg = {
-        object_id        = "35e227ea-f27e-40aa-8f03-87f3ecf202e3"
+        object_id        = "f7e6ee0c-c889-48f8-bc87-4292588e8c0b"
         key_permissions    = ["get", "create", "delete", "list", "restore", "recover", "unwrapkey", "wrapkey", "encrypt", "decrypt", "sign", "verify"]
         secret_permissions = ["Set", "Get", "List", "Delete", "Recover", "Backup", "Restore", "Purge"]
       }
       dev-caf-tf-group-level2 = {
-        object_id        = "0fcee476-25b4-438a-9e7e-6b9f24effa76"
+        object_id        = "562df38e-7da7-4c49-8fbf-a3813bd93931"
         key_permissions    = ["get", "create", "delete", "list", "restore", "recover", "unwrapkey", "wrapkey", "encrypt", "decrypt", "sign", "verify"]
         secret_permissions = ["Set", "Get", "List", "Delete", "Recover", "Backup", "Restore", "Purge"]
       }
       dev-caf-tf-group-level3 = {
-        object_id        = "e7e49908-139c-4123-9126-9791396c0502"
-        key_permissions    = ["get", "list", "unwrapkey", "wrapkey", "encrypt", "decrypt", "sign", "verify"]
+        object_id        = "d0424dc3-364d-44d5-a3db-3b120a25b8fd"
+        key_permissions    = ["get", "create", "delete", "list", "restore", "recover", "unwrapkey", "wrapkey", "encrypt", "decrypt", "sign", "verify"]
         secret_permissions = ["Set", "Get", "List", "Delete", "Recover", "Backup", "Restore", "Purge"]
       }
       dev-caf-tf-group-level4 = {
-        object_id        = "dd2cb2c1-f31b-4f27-a896-4529a6983485"
-        key_permissions    = ["get", "list", "unwrapkey", "wrapkey", "encrypt", "decrypt", "sign", "verify"]
+        object_id        = "dc40ac7c-6cad-4e05-b84f-ed1ede414638"
+        key_permissions    = ["get", "create", "delete", "list", "restore", "recover", "unwrapkey", "wrapkey", "encrypt", "decrypt", "sign", "verify"]
         secret_permissions = ["Set", "Get", "List", "Delete", "Recover", "Backup", "Restore", "Purge"]
       }
     }   
@@ -163,7 +163,7 @@ keyvaults = {
   }
 
   level3 = {
-    name                = "cafsbxcf3pqrastdvop15e2"
+    name                = "cafsbxcf3pqrakvdvop00e2"
     resource_group_key  = "level3"
     sku_name            = "standard"
     soft_delete_enabled = true
@@ -178,33 +178,33 @@ keyvaults = {
       //   secret_permissions = ["Set", "Get", "List", "Delete", "Recover"]
       // }
       dev-caf-tf-group-level0 = {
-        object_id        = "70a6b34e-8fe2-4909-8e02-1cdfab529912"
+        object_id        = "45f99ca0-f156-4fdc-ba87-d8fbb4633f40"
         key_permissions    = ["get", "create", "delete", "list", "restore", "recover", "unwrapkey", "wrapkey", "encrypt", "decrypt", "sign", "verify"]
         secret_permissions = ["Set", "Get", "List", "Delete", "Recover", "Backup", "Restore", "Purge"]
       }
       dev-caf-tf-group-level1 = {
-        object_id        = "0eb00271-50f7-4a43-a915-a83d8f837603"
-        key_permissions    = ["get", "list", "unwrapkey", "wrapkey", "encrypt", "decrypt", "sign", "verify"]
+        object_id        = "4c1a4ba5-59eb-4021-996f-0ef57dcba41f"
+        key_permissions    = ["get", "create", "delete", "list", "restore", "recover", "unwrapkey", "wrapkey", "encrypt", "decrypt", "sign", "verify"]
         secret_permissions = ["Set", "Get", "List", "Delete", "Recover", "Backup", "Restore", "Purge"]
       }
       dev-caf-tf-group-level1_mg = {
-        object_id        = "35e227ea-f27e-40aa-8f03-87f3ecf202e3"
+        object_id        = "f7e6ee0c-c889-48f8-bc87-4292588e8c0b"
         key_permissions    = ["get", "create", "delete", "list", "restore", "recover", "unwrapkey", "wrapkey", "encrypt", "decrypt", "sign", "verify"]
         secret_permissions = ["Set", "Get", "List", "Delete", "Recover", "Backup", "Restore", "Purge"]
       }
       dev-caf-tf-group-level2 = {
-        object_id        = "0fcee476-25b4-438a-9e7e-6b9f24effa76"
+        object_id        = "562df38e-7da7-4c49-8fbf-a3813bd93931"
         key_permissions    = ["get", "create", "delete", "list", "restore", "recover", "unwrapkey", "wrapkey", "encrypt", "decrypt", "sign", "verify"]
         secret_permissions = ["Set", "Get", "List", "Delete", "Recover", "Backup", "Restore", "Purge"]
       }
       dev-caf-tf-group-level3 = {
-        object_id        = "e7e49908-139c-4123-9126-9791396c0502"
+        object_id        = "d0424dc3-364d-44d5-a3db-3b120a25b8fd"
         key_permissions    = ["get", "create", "delete", "list", "restore", "recover", "unwrapkey", "wrapkey", "encrypt", "decrypt", "sign", "verify"]
         secret_permissions = ["Set", "Get", "List", "Delete", "Recover", "Backup", "Restore", "Purge"]
       }
       dev-caf-tf-group-level4 = {
-        object_id        = "dd2cb2c1-f31b-4f27-a896-4529a6983485"
-        key_permissions    = ["get", "list", "unwrapkey", "wrapkey", "encrypt", "decrypt", "sign", "verify"]
+        object_id        = "dc40ac7c-6cad-4e05-b84f-ed1ede414638"
+        key_permissions    = ["get", "create", "delete", "list", "restore", "recover", "unwrapkey", "wrapkey", "encrypt", "decrypt", "sign", "verify"]
         secret_permissions = ["Set", "Get", "List", "Delete", "Recover", "Backup", "Restore", "Purge"]
       }
     }
@@ -217,7 +217,7 @@ keyvaults = {
   }
 
   level4 = {
-    name                = "cafsbxcf4pqrastdvop15e2"
+    name                = "cafsbxcf4pqrakvdvop00e2"
     resource_group_key  = "level4"
     sku_name            = "standard"
     soft_delete_enabled = true
@@ -232,32 +232,32 @@ keyvaults = {
       //   secret_permissions = ["Set", "Get", "List", "Delete", "Purge", "Recover"]
       // }
       dev-caf-tf-group-level0 = {
-        object_id        = "70a6b34e-8fe2-4909-8e02-1cdfab529912"
+        object_id        = "45f99ca0-f156-4fdc-ba87-d8fbb4633f40"
         key_permissions    = ["get", "create", "delete", "list", "restore", "recover", "unwrapkey", "wrapkey", "encrypt", "decrypt", "sign", "verify"]
         secret_permissions = ["Set", "Get", "List", "Delete", "Recover", "Backup", "Restore", "Purge"]
       }
       dev-caf-tf-group-level1 = {
-        object_id        = "0eb00271-50f7-4a43-a915-a83d8f837603"
-        key_permissions    = ["get", "list", "unwrapkey", "wrapkey", "encrypt", "decrypt", "sign", "verify"]
+        object_id        = "4c1a4ba5-59eb-4021-996f-0ef57dcba41f"
+        key_permissions    = ["get", "create", "delete", "list", "restore", "recover", "unwrapkey", "wrapkey", "encrypt", "decrypt", "sign", "verify"]
         secret_permissions = ["Set", "Get", "List", "Delete", "Recover", "Backup", "Restore", "Purge"]
       }
       dev-caf-tf-group-level1_mg = {
-        object_id        = "35e227ea-f27e-40aa-8f03-87f3ecf202e3"
+        object_id        = "f7e6ee0c-c889-48f8-bc87-4292588e8c0b"
         key_permissions    = ["get", "create", "delete", "list", "restore", "recover", "unwrapkey", "wrapkey", "encrypt", "decrypt", "sign", "verify"]
         secret_permissions = ["Set", "Get", "List", "Delete", "Recover", "Backup", "Restore", "Purge"]
       }
       dev-caf-tf-group-level2 = {
-        object_id        = "0fcee476-25b4-438a-9e7e-6b9f24effa76"
+        object_id        = "562df38e-7da7-4c49-8fbf-a3813bd93931"
         key_permissions    = ["get", "create", "delete", "list", "restore", "recover", "unwrapkey", "wrapkey", "encrypt", "decrypt", "sign", "verify"]
         secret_permissions = ["Set", "Get", "List", "Delete", "Recover", "Backup", "Restore", "Purge"]
       }
       dev-caf-tf-group-level3 = {
-        object_id        = "e7e49908-139c-4123-9126-9791396c0502"
-        key_permissions    = ["get", "list", "unwrapkey", "wrapkey", "encrypt", "decrypt", "sign", "verify"]
+        object_id        = "d0424dc3-364d-44d5-a3db-3b120a25b8fd"
+        key_permissions    = ["get", "create", "delete", "list", "restore", "recover", "unwrapkey", "wrapkey", "encrypt", "decrypt", "sign", "verify"]
         secret_permissions = ["Set", "Get", "List", "Delete", "Recover", "Backup", "Restore", "Purge"]
       }
       dev-caf-tf-group-level4 = {
-        object_id        = "dd2cb2c1-f31b-4f27-a896-4529a6983485"
+        object_id        = "dc40ac7c-6cad-4e05-b84f-ed1ede414638"
         key_permissions    = ["get", "create", "delete", "list", "restore", "recover", "unwrapkey", "wrapkey", "encrypt", "decrypt", "sign", "verify"]
         secret_permissions = ["Set", "Get", "List", "Delete", "Recover", "Backup", "Restore", "Purge"]
       }
@@ -271,7 +271,7 @@ keyvaults = {
   }
 
   // storage_byok = {
-  //   name               = "cafsbxstenpqrakvcmk15e2"
+  //   name               = "cafsbxstenpqrakvcmk00e2"
   //   resource_group_key = "level0"
   //   sku_name           = "standard"
   //   soft_delete_enabled = true
@@ -289,37 +289,37 @@ keyvaults = {
   //     //   secret_permissions = ["Set", "Get", "List", "Delete", "Recover"]
   //     // }
   //     dev-caf-tf-group-level0 = {
-  //       object_id        = "70a6b34e-8fe2-4909-8e02-1cdfab529912"
+  //       object_id        = "45f99ca0-f156-4fdc-ba87-d8fbb4633f40"
   //       key_permissions    = ["get", "create", "delete", "list", "restore", "recover", "unwrapkey", "wrapkey", "encrypt", "decrypt", "sign", "verify"]
   //       secret_permissions = ["Set", "Get", "List", "Delete", "Recover"]
   //     }
   //     dev-caf-tf-group-level1 = {
-  //       object_id        = "0eb00271-50f7-4a43-a915-a83d8f837603"
+  //       object_id        = "4c1a4ba5-59eb-4021-996f-0ef57dcba41f"
   //       key_permissions    = ["get", "list", "unwrapkey", "wrapkey", "encrypt", "decrypt", "sign", "verify"]
   //       secret_permissions = ["Get", "List"]
   //     }
   //     dev-caf-tf-group-level1_mg = {
-  //       object_id        = "35e227ea-f27e-40aa-8f03-87f3ecf202e3"
+  //       object_id        = "f7e6ee0c-c889-48f8-bc87-4292588e8c0b"
   //       key_permissions    = ["get", "list", "unwrapkey", "wrapkey", "encrypt", "decrypt", "sign", "verify"]
   //       secret_permissions = ["Get", "List"]
   //     }
   //     dev-caf-tf-group-level2 = {
-  //       object_id        = "0fcee476-25b4-438a-9e7e-6b9f24effa76"
+  //       object_id        = "562df38e-7da7-4c49-8fbf-a3813bd93931"
   //       key_permissions    = ["get", "list", "unwrapkey", "wrapkey", "encrypt", "decrypt", "sign", "verify"]
   //       secret_permissions = ["Get", "List"]
   //     }
   //     dev-caf-tf-group-level3 = {
-  //       object_id        = "e7e49908-139c-4123-9126-9791396c0502"
+  //       object_id        = "d0424dc3-364d-44d5-a3db-3b120a25b8fd"
   //       key_permissions    = ["get", "list", "unwrapkey", "wrapkey", "encrypt", "decrypt", "sign", "verify"]
   //       secret_permissions = ["Get", "List"]
   //     }
   //     dev-caf-tf-group-level4 = {
-  //       object_id        = "dd2cb2c1-f31b-4f27-a896-4529a6983485"
+  //       object_id        = "dc40ac7c-6cad-4e05-b84f-ed1ede414638"
   //       key_permissions    = ["get", "list", "unwrapkey", "wrapkey", "encrypt", "decrypt", "sign", "verify"]
   //       secret_permissions = ["Get", "List"]
   //     }      
   //     caf-launchpad-kv-cmk = {
-  //       object_id        = "70a6b34e-8fe2-4909-8e02-1cdfab529912"
+  //       object_id        = "45f99ca0-f156-4fdc-ba87-d8fbb4633f40"
   //       key_permissions    = ["get", "create", "delete", "list", "restore", "recover", "unwrapkey", "wrapkey", "encrypt", "decrypt", "sign", "verify"]
   //       secret_permissions = ["Set", "Get", "List", "Delete", "Recover"]
   //     }

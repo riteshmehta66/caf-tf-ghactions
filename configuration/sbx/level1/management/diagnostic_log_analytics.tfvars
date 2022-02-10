@@ -1,7 +1,7 @@
 diagnostic_log_analytics = {
   eus2_logs_ss = {
     region             = "region1"
-    name               = "mgt-sbx-00-log-00-00-a-log-03-e2"
+    name               = "mgt-sbx-00-log-00-00-a-log-00-e2"
     resource_group_key = "eus2_la_rg_01"
 
     # you can setup up to 5 key
@@ -48,7 +48,7 @@ diagnostic_log_analytics = {
 
   cus_logs_ss = {
     region             = "region2"
-    name               = "mgt-sbx-00-log-00-00-a-log-03-c1"
+    name               = "mgt-sbx-00-log-00-00-a-log-00-c1"
     resource_group_key = "cus_la_rg_01"
 
     # you can setup up to 5 key
